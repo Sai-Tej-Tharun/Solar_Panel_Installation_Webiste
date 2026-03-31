@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" fill="none" role="img" aria-label="Solar-Echos logo">
+  <!-- Solar panel icon -->
+  <g>
+    <!-- Panel grid -->
+    <rect x="4" y="10" width="40" height="28" rx="3" fill="#045097"/>
+    <!-- Grid lines horizontal -->
+    <line x1="4" y1="19.3" x2="44" y2="19.3" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+    <line x1="4" y1="28.7" x2="44" y2="28.7" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+    <!-- Grid lines vertical -->
+    <line x1="17.3" y1="10" x2="17.3" y2="38" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+    <line x1="30.7" y1="10" x2="30.7" y2="38" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+    <!-- Solar cell highlights -->
+    <rect x="6" y="12" width="9.3" height="5.3" rx="1" fill="rgba(255,215,0,0.18)"/>
+    <rect x="19.3" y="12" width="9.4" height="5.3" rx="1" fill="rgba(255,215,0,0.10)"/>
+    <rect x="32.7" y="12" width="9.3" height="5.3" rx="1" fill="rgba(255,215,0,0.18)"/>
+    <rect x="6" y="21.3" width="9.3" height="5.4" rx="1" fill="rgba(255,215,0,0.10)"/>
+    <rect x="19.3" y="21.3" width="9.4" height="5.4" rx="1" fill="rgba(255,215,0,0.22)"/>
+    <rect x="32.7" y="21.3" width="9.3" height="5.4" rx="1" fill="rgba(255,215,0,0.10)"/>
+    <rect x="6" y="30.7" width="9.3" height="5.3" rx="1" fill="rgba(255,215,0,0.18)"/>
+    <rect x="19.3" y="30.7" width="9.4" height="5.3" rx="1" fill="rgba(255,215,0,0.10)"/>
+    <rect x="32.7" y="30.7" width="9.3" height="5.3" rx="1" fill="rgba(255,215,0,0.18)"/>
+    <!-- Mount pole -->
+    <rect x="19" y="38" width="10" height="3" rx="1" fill="#045097"/>
+    <!-- Mount base -->
+    <rect x="14" y="41" width="20" height="2.5" rx="1.25" fill="#4DBD33"/>
+    <!-- Sun rays -->
+    <circle cx="50" cy="8" r="3.5" fill="#FFD700"/>
+    <line x1="50" y1="2" x2="50" y2="0.5" stroke="#FFD700" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="54.5" y1="3.5" x2="55.7" y2="2.3" stroke="#FFD700" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="56" y1="8" x2="57.5" y2="8" stroke="#FFD700" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="54.5" y1="12.5" x2="55.7" y2="13.7" stroke="#FFD700" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="45.5" y1="3.5" x2="44.3" y2="2.3" stroke="#FFD700" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Brand wordmark -->
+  <text x="66" y="30" font-family="'Poppins', sans-serif" font-weight="700" font-size="18" fill="#045097" letter-spacing="-0.3">Solar</text>
+  <text x="116" y="30" font-family="'Poppins', sans-serif" font-weight="700" font-size="18" fill="#e15c23" letter-spacing="-0.3">-Echos</text>
+
+  <!-- Tagline -->
+  <text x="66" y="40" font-family="'Inter', sans-serif" font-weight="400" font-size="7.5" fill="#4DBD33" letter-spacing="0.08em">CLEAN ENERGY SOLUTIONS</text>
+</svg>

@@ -1,0 +1,525 @@
+<!-- ============================================================
+     Solar-Echos | Navbar Component
+     Author: TechEchos Innovation | Version: 1.0.0
+     Loaded dynamically via global.js into #navbar-placeholder
+     ============================================================ -->
+
+<style>
+/* ── Navbar Styles ── */
+#main-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--navbar-height);
+  z-index: var(--z-sticky);
+  background: transparent;
+  transition: background var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+  border-bottom: 1px solid transparent;
+}
+
+#main-navbar.scrolled {
+  background: var(--bg-surface);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-color);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.navbar__inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+/* Logo */
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.navbar__logo-icon {
+  width: 38px;
+  height: 38px;
+  background: linear-gradient(135deg, var(--color-accent-orange), var(--color-accent-yellow));
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  box-shadow: 0 4px 12px rgba(225,92,35,0.35);
+  flex-shrink: 0;
+}
+
+.navbar__logo-text {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-extrabold);
+  font-size: var(--text-lg);
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.navbar__logo-text span {
+  color: var(--color-accent-orange);
+}
+
+/* Desktop nav links */
+.navbar__nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  list-style: none;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 14px;
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-secondary);
+  border-radius: var(--border-radius);
+  transition: color var(--transition-fast), background var(--transition-fast);
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 14px;
+  right: 14px;
+  height: 2px;
+  background: var(--color-accent-orange);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transition: transform var(--transition-fast);
+  transform-origin: left;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--text-primary);
+  background: var(--bg-overlay);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+/* Right actions */
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* Theme toggle */
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--border-radius-full);
+  background: var(--bg-surface-alt);
+  border: 1.5px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  background: var(--bg-surface);
+  color: var(--color-accent-yellow);
+  border-color: var(--color-accent-yellow);
+  box-shadow: 0 0 12px rgba(255,215,0,0.2);
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  gap: 5px;
+  background: none;
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  padding: 8px;
+  transition: border-color var(--transition-fast);
+}
+
+.hamburger:hover { border-color: var(--color-accent-orange); }
+
+.hamburger span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--text-primary);
+  border-radius: 2px;
+  transition: transform var(--transition-base), opacity var(--transition-fast);
+  transform-origin: center;
+}
+
+.hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Mobile overlay */
+#mobile-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(4px);
+  z-index: calc(var(--z-sticky) - 1);
+}
+
+#mobile-overlay.active { display: block; }
+
+/* Mobile menu */
+#mobile-menu {
+  position: fixed;
+  top: var(--navbar-height);
+  left: 0;
+  right: 0;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--shadow-xl);
+  z-index: var(--z-sticky);
+  padding: var(--space-2) var(--container-padding) var(--space-3);
+  
+  /* Use visibility instead of display:none so transitions work */
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-12px);
+  transition: opacity var(--transition-base), transform var(--transition-base), visibility var(--transition-base);
+  overflow-y: auto;
+  max-height: calc(100vh - var(--navbar-height));
+  pointer-events: none;
+    max-height: calc(100dvh - var(--navbar-height));
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
+}
+
+#mobile-menu.open {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.mobile-nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: var(--space-2);
+   overflow: visible;
+  flex-shrink: 0;
+}
+
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-secondary);
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.active {
+  background: var(--bg-overlay);
+  color: var(--color-accent-orange);
+}
+
+.mobile-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--border-color);
+}
+
+@media (max-width: 1024px) {
+  .navbar__nav,
+  .navbar__actions .hide-mobile { display: none; }
+  .hamburger { display: flex; }
+}
+
+@media (max-width: 640px) {
+  .navbar__actions .btn-sm { display: none; }
+}
+/* ── Dropdown (Desktop) ── */
+.nav-item {
+  position: relative;
+}
+.nav-item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 12px; /* hover gap bridge */
+}
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-lg);
+  padding: 8px;
+
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.nav-item:hover .dropdown,
+.nav-item .dropdown:hover {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.dropdown a {
+  display: block;
+  padding: 10px 12px;
+  border-radius: var(--border-radius);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.dropdown a:hover {
+  background: var(--bg-overlay);
+  color: var(--color-accent-orange);
+}
+
+/* ── Mobile Dropdown ── */
+.mobile-dropdown {
+  display: none;
+  flex-direction: column;
+  margin-left: 20px;
+  gap: 2px;
+}
+
+.mobile-parent.open .mobile-dropdown {
+  display: flex;
+}
+
+.mobile-dropdown a {
+  font-size: 14px;
+  padding: 8px 12px;
+}
+
+.mobile-parent.open .mobile-dropdown {
+  display: flex;
+}
+</style>
+
+<header id="main-navbar" role="banner">
+  <div class="container navbar__inner">
+
+    <!-- Logo -->
+    <a href="../home-1/home.html" class="navbar__logo" aria-label="Solar Echos – Home">
+      <div class="navbar__logo-icon" aria-hidden="true">
+        <!-- Sun SVG -->
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+        </svg>
+      </div>
+      <span class="navbar__logo-text">Solar<span>Echos</span></span>
+    </a>
+
+    <!-- Desktop Navigation -->
+<ul class="navbar__nav" role="list">
+
+  <!-- Home Dropdown -->
+  <li class="nav-item">
+    <a href="#" class="nav-link">Home</a>
+    <div class="dropdown">
+      <a href="../home-1/home.html">Home 1</a>
+      <a href="../home-2/home.html">Home 2</a>
+    </div>
+  </li>
+
+  <li><a href="../about/about.html" class="nav-link">About</a></li>
+
+  <!-- Services Dropdown -->
+  <li class="nav-item">
+    <a href="../services/services.html" class="nav-link">Services</a>
+    <div class="dropdown">
+      <a href="../service-details/service-details-1.html">Residential Solar</a>
+      <a href="../service-details/service-details-2.html">Commercial Solar</a>
+      <a href="../service-details/service-details-3.html">Battery Storage</a>
+      <a href="../service-details/service-details-4.html">EV Charging Setup</a>
+      <a href="../service-details/service-details-5.html">Solar Maintenance</a>
+      <a href="../service-details/service-details-6.html">Free Consultation</a>
+    </div>
+  </li>
+
+  <li><a href="../pricing/pricing.html" class="nav-link">Pricing</a></li>
+
+  <!-- Blog Dropdown -->
+  <li class="nav-item">
+    <a href="../blogs/blogs.html" class="nav-link">Blog</a>
+    <div class="dropdown">
+      <a href="../blog-details/blog-details-1.html">Solar Subsidies</a>
+      <a href="../blog-details/blog-details-2.html">Return of Investment</a>
+      <a href="../blog-details/blog-details-3.html">Solar Cars</a>
+      <a href="../blog-details/blog-details-4.html">Brand Guide</a>
+      <a href="../blog-details/blog-details-5.html">Solar Maintenance</a>
+      <a href="../blog-details/blog-details-6.html">Selling Solar</a>
+    </div>
+  </li>
+
+  <li><a href="../contact/contact.html" class="nav-link">Contact</a></li>
+
+</ul>
+    </nav>
+
+    <!-- Right Actions -->
+    <div class="navbar__actions">
+
+      <!-- Theme toggle -->
+      <button class="theme-toggle"
+              data-theme-toggle
+              aria-label="Switch to dark mode"
+              aria-pressed="false">
+        <span data-theme-icon aria-hidden="true">
+          <!-- Moon icon (default) -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+               viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </span>
+      </button>
+
+      <!-- Get a Quote -->
+      <a href="../contact/contact.html#quote-form"
+         class="btn btn-primary btn-sm hide-mobile"
+         aria-label="Get a free solar quote">
+        Get a Quote
+      </a>
+
+      <!-- Login -->
+      <a href="../login/login.html"
+         class="btn btn-outline btn-sm hide-mobile"
+         aria-label="Login to your account">
+        Login
+      </a>
+
+      <!-- Hamburger (mobile) -->
+      <button id="hamburger"
+              class="hamburger"
+              aria-label="Open navigation menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+    </div><!-- /navbar__actions -->
+
+  </div><!-- /navbar__inner -->
+</header>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-overlay" aria-hidden="true"></div>
+
+<!-- Mobile Menu -->
+<nav id="mobile-menu" aria-label="Mobile navigation" aria-hidden="true">
+<ul class="mobile-nav-list" role="list">
+
+  <!-- Home -->
+  <li class="mobile-parent">
+    <a href="javascript:void(0)" class="mobile-nav-link">Home</a>
+    <div class="mobile-dropdown">
+      <a href="../home-1/home.html">Home 1</a>
+      <a href="../home-2/home.html">Home 2</a>
+    </div>
+  </li>
+
+  <li><a href="../about/about.html" class="mobile-nav-link">About</a></li>
+
+<!-- Services -->
+<li class="mobile-parent">
+  <a href="javascript:void(0)" class="mobile-nav-link">Services</a>
+  <div class="mobile-dropdown">
+    <a href="../service-details/service-details-1.html">Residential Solar</a>
+    <a href="../service-details/service-details-2.html">Commercial Solar</a>
+    <a href="../service-details/service-details-3.html">Battery Storage</a>
+    <a href="../service-details/service-details-4.html">EV Charging Setup</a>
+    <a href="../service-details/service-details-5.html">Solar Maintenance</a>
+    <a href="../service-details/service-details-6.html">Free Consultation</a>
+  </div>
+</li>
+
+  <li><a href="../pricing/pricing.html" class="mobile-nav-link">Pricing</a></li>
+
+<!-- Blog -->
+<li class="mobile-parent">
+  <a href="javascript:void(0)" class="mobile-nav-link">Blog</a>
+  <div class="mobile-dropdown">
+    <a href="../blog-details/blog-details-1.html">Solar Subsidies</a>
+    <a href="../blog-details/blog-details-2.html">Return of Investment</a>
+    <a href="../blog-details/blog-details-3.html">Solar Cars</a>
+    <a href="../blog-details/blog-details-4.html">Brand Guide</a>
+    <a href="../blog-details/blog-details-5.html">Solar Maintenance</a>
+    <a href="../blog-details/blog-details-6.html">Selling Solar</a>
+  </div>
+</li>
+
+  <li><a href="../contact/contact.html" class="mobile-nav-link">Contact</a></li>
+
+</ul>
+  <div class="mobile-actions">
+    <a href="../contact/contact.html#quote-form" class="btn btn-primary" aria-label="Get free quote">
+      Get Free Quote
+    </a>
+    <a href="../login/login.html" class="btn btn-outline" aria-label="Login">
+      Login
+    </a>
+  </div>
+</nav>
+<script>
+  // Mobile dropdown toggle
+document.querySelectorAll('.mobile-parent > a').forEach(item => {
+  item.addEventListener('click', function(e) {
+    e.preventDefault();
+    const parent = this.parentElement;
+    parent.classList.toggle('open');
+  });
+});
+
+</script>

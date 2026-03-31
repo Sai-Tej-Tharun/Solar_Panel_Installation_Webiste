@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <!-- ============================================================
+       Solar-Echos | Blog Page
+       Author: TechEchos Innovation
+       Version: 1.0.0
+       Description: Blog listing page — featured post, responsive
+                    grid, sidebar, category filters, pagination.
+                    All 18 blog cards link to one of 6 detail pages.
+  ============================================================ -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Solar Blog – Tips, Guides & Clean Energy News | Solar-Echos</title>
+  <meta name="description"
+        content="Expert solar energy articles, ROI guides, installation tips, tech reviews, and clean energy news from Solar-Echos — India's most trusted solar company." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://solar-echos.com/blogs/" />
+
+  <!-- OpenGraph -->
+  <meta property="og:title"       content="Solar Blog | Solar-Echos" />
+  <meta property="og:description" content="Expert solar energy articles, ROI guides, installation tips and clean energy news." />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://solar-echos.com/blogs/" />
+  <meta property="og:image"       content="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1200" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Solar Blog | Solar-Echos" />
+  <meta name="twitter:description" content="Tips, guides and news from India's leading solar energy company." />
+
+  <!-- Favicon -->
+  <link rel="icon" href="../global-images/logo.png" type="image/x-icon" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Global CSS -->
+    <link rel="stylesheet" href="../global-css/navbar.css">
+  <link rel="stylesheet" href="../global-css/footer.css">
+  <link rel="stylesheet" href="../global-css/global.css" />
+
+  <!-- Page CSS -->
+  <link rel="stylesheet" href="blogs.css" />
+</head>
+
+<body data-components-path="../components">
+
+  <!-- ░░ NAVBAR MOUNT ░░ -->
+  <div id="navbar-placeholder" role="banner"></div>
+
+  <main id="main-content">
+
+    <!-- ============================================================
+         1. PAGE HERO
+    ============================================================ -->
+    <section class="blog-hero" aria-labelledby="blog-hero-heading">
+      <div class="blog-hero__bg" aria-hidden="true">
+        <div class="blog-hero__blob blog-hero__blob--1"></div>
+        <div class="blog-hero__blob blog-hero__blob--2"></div>
+        <div class="blog-hero__grid"></div>
+      </div>
+
+      <div class="container">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="../home-1/home.html">Home</a></li>
+            <li aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </li>
+            <li><span aria-current="page">Blog</span></li>
+          </ol>
+        </nav>
+
+        <div class="blog-hero__content" data-animate>
+          <span class="eyebrow-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            Solar Knowledge Hub
+          </span>
+          <h1 id="blog-hero-heading">
+            Insights for a<br />
+            <span class="gradient-text">Smarter Solar Future</span>
+          </h1>
+          <p>Expert guides, ROI breakdowns, installation tips, and the latest clean-energy news — everything you need to make an informed solar decision.</p>
+        </div>
+
+        <!-- Category filter pills -->
+        <div class="blog-filters" role="toolbar" aria-label="Filter blog posts by category" data-animate data-animate-delay="2">
+          <button class="filter-pill active" data-filter="all" aria-pressed="true">
+            All Posts <span class="filter-pill__count">18</span>
+          </button>
+          <button class="filter-pill" data-filter="solar-tips" aria-pressed="false">
+            Solar Tips <span class="filter-pill__count">5</span>
+          </button>
+          <button class="filter-pill" data-filter="roi-savings" aria-pressed="false">
+            ROI &amp; Savings <span class="filter-pill__count">4</span>
+          </button>
+          <button class="filter-pill" data-filter="technology" aria-pressed="false">
+            Technology <span class="filter-pill__count">4</span>
+          </button>
+          <button class="filter-pill" data-filter="case-studies" aria-pressed="false">
+            Case Studies <span class="filter-pill__count">3</span>
+          </button>
+          <button class="filter-pill" data-filter="policy-news" aria-pressed="false">
+            Policy &amp; News <span class="filter-pill__count">2</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         2. FEATURED ARTICLE
+    ============================================================ -->
+    <section class="featured-section section--sm" aria-labelledby="featured-heading">
+      <div class="container">
+        <div class="section-label" data-animate>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-yellow)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Featured Article
+        </div>
+
+        <article class="featured-card" data-filter-cat="roi-savings" data-animate>
+          <a href="../blog-details/blog-details-1.html" class="featured-card__image img-zoom" aria-label="Read full article: How Solar Panels Saved This Mumbai Family ₹2.4 Lakh Per Year">
+            <img
+              src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1200&q=80"
+              alt="Aerial view of a large residential complex with rooftop solar panels in Mumbai at golden hour"
+              width="1200" height="500"
+              loading="eager"
+            />
+            <div class="featured-card__image-overlay" aria-hidden="true"></div>
+          </a>
+
+          <div class="featured-card__body">
+            <div class="featured-card__meta">
+              <span class="cat-tag cat-tag--roi">ROI &amp; Savings</span>
+              <span class="meta-dot" aria-hidden="true"></span>
+              <time datetime="2024-11-18">18 Nov 2024</time>
+              <span class="meta-dot" aria-hidden="true"></span>
+              <span>8 min read</span>
+            </div>
+
+            <h2 id="featured-heading">
+              <a href="../blog-details/blog-details-1.html">
+                How Solar Panels Saved This Mumbai Family ₹2.4 Lakh Per Year — A Full Breakdown
+              </a>
+            </h2>
+
+            <p class="featured-card__excerpt">
+              When the Kapoor family approached Solar-Echos in March 2023, their monthly electricity bill was touching ₹22,000. Eighteen months later, that number sits at ₹1,800. We sat down with them to unpack every number, every decision, and every surprise — from subsidy paperwork to the moment their first bill arrived post-installation.
+            </p>
+
+            <div class="featured-card__footer">
+              <div class="author-chip">
+                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=60&q=80" alt="Written by Priya Sharma" width="36" height="36" loading="lazy" />
+                <div>
+                  <span class="author-chip__name">Priya Sharma</span>
+                  <span class="author-chip__role">CTO, Solar-Echos</span>
+                </div>
+              </div>
+              <a href="../blog-details/blog-details-1.html" class="btn btn-primary">
+                Read Full Story
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         3. MAIN CONTENT: BLOG GRID + SIDEBAR
+    ============================================================ -->
+    <section class="blog-main section--sm" aria-label="Blog posts and sidebar">
+      <div class="container">
+        <div class="blog-layout">
+
+          <!-- ── BLOG GRID ─────────────────────────────────── -->
+          <div class="blog-grid-wrapper">
+
+            <!-- Results info bar -->
+            <div class="results-bar" data-animate>
+              <span class="results-bar__count" id="results-count">Showing <strong>18</strong> articles</span>
+              <div class="results-bar__sort">
+                <label for="sort-select" class="sr-only">Sort posts by</label>
+                <select id="sort-select" class="sort-select" aria-label="Sort blog posts">
+                  <option value="newest">Newest First</option>
+                  <option value="oldest">Oldest First</option>
+                  <option value="popular">Most Popular</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Blog cards grid -->
+            <div class="blog-grid" id="blog-grid" aria-label="Blog post list">
+
+              <!-- ── CARD 1 ── ROI Savings → blog-details-1 -->
+              <article class="blog-card" data-filter-cat="roi-savings" data-animate>
+                <a href="../blog-details/blog-details-1.html" class="blog-card__image img-zoom" tabindex="-1" aria-hidden="true">
+                  <img src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?w=600&q=80" alt="Financial growth chart overlaid on solar panel image representing ROI analysis" width="600" height="340" loading="lazy" />
+                  <span class="blog-card__cat-badge cat-tag cat-tag--roi">ROI &amp; Savings</span>
+                </a>
+                <div class="blog-card__body">
+                  <div class="blog-card__meta">
+                    <time datetime="2024-11-18">18 Nov 2024</time>
+                    <span class="meta-dot" aria-hidden="true"></span>
+                    <span>8 min read</span>
+                  </div>
+                  <h3 class="blog-card__title">
+                    <a href="../blog-details/blog-details-1.html">How Solar Panels Saved This Mumbai Family ₹2.4 Lakh Per Year</a>
+                  </h3>
+                  <p class="blog-card__excerpt">A complete financial breakdown of one family's solar journey — bills, subsidies, EMIs, and the final ROI revealed.</p>
+                  <div class="blog-card__footer">
+                    <div class="mini-author">
+                      <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=60&q=80" alt="Priya Sharma" width="28" height="28" loading="lazy" />
+                      <span>Priya Sharma</span>
+                    </div>
+                    <a href="../blog-details/blog-details-1.html" class="read-more-link" aria-label="Read full article about Mumbai family solar savings">
+                      Read More
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- ── CARD 2 ── Technology → blog-details-2 -->
+              <article class="blog-card" data-filter-cat="technology" data-animate data-animate-delay="1">
+                <a href="../blog-details/blog-details-2.html" class="blog-card__image img-zoom" tabindex="-1" aria-hidden="true">
+                  <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&q=80" alt="Advanced photovoltaic solar panel technology close-up showing cell structure" width="600" height="340" loading="lazy" />
+                  <span class="blog-card__cat-badge cat-tag cat-tag--tech">Technology</span>
+                </a>
+                <div class="blog-card__body">
+                  <div class="blog-card__meta">
+                    <time datetime="2024-11-05">5 Nov 2024</time>
+                    <span class="meta-dot" aria-hidden="true"></span>
+                    <span>6 min read</span>
+                  </div>
+                  <h3 class="blog-card__title">
+                    <a href="../blog-details/blog-details-2.html">Bifacial vs Monocrystalline Solar Panels: Which Wins in India's Climate?</a>
+                  </h3>
+                  <p class="blog-card__excerpt">We tested both panel types across five Indian cities over 12 months. The results surprised even our engineers.</p>
+                  <div class="blog-card__footer">
+                    <div class="mini-author">
+                      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&q=80" alt="Arjun Mehta" width="28" height="28" loading="lazy" />
+                      <span>Arjun Mehta</span>
+                    </div>
+                    <a href="../blog-details/blog-details-2.html" class="read-more-link" aria-label="Read full article about bifacial vs monocrystalline panels">
+                      Read More
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- ── CARD 3 ── Solar Tips → blog-details-3 -->
+              <article class="blog-card" data-filter-cat="solar-tips" data-animate data-animate-delay="2">
+                <a href="../blog-details/blog-details-3.html" class="blog-card__image img-zoom" tabindex="-1" aria-hidden="true">
+                  <img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=600&q=80" alt="Professional solar technicians performing routine maintenance on rooftop solar panels" width="600" height="340" loading="lazy" />
+                  <span class="blog-card__cat-badge cat-tag cat-tag--tips">Solar Tips</span>
+                </a>
+                <div class="blog-card__body">
+                  <div class="blog-card__meta">
+                    <time datetime="2024-10-22">22 Oct 2024</time>
+                    <span class="meta-dot" aria-hidden="true"></span>
+                    <span>5 min read</span>
+                  </div>
+                  <h3 class="blog-card__title">
+                    <a href="../blog-details/blog-details-3.html">10 Things to Check Before Signing a Solar Installation Contract</a>
+                  </h3>
+                  <p class="blog-card__excerpt">Avoid costly mistakes — our field engineers reveal the contract clauses that most homeowners miss until it's too late.</p>
+                  <div class="blog-card__footer">
+                    <div class="mini-author">
+                      <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=60&q=80" alt="Rohan Desai" width="28" height="28" loading="lazy" />
+                      <span>Rohan Desai</span>
+                    </div>
+                    <a href="../blog-details/blog-details-3.html" class="read-more-link" aria-label="Read full article about solar installation contract tips">
+                      Read More
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- ── CARD 4 ── Case Studies → blog-details-4 -->
+              <article class="blog-card blog-card--wide" data-filter-cat="case-studies" data-animate>
+                <a href="../blog-details/blog-details-4.html" class="blog-card__image img-zoom" tabindex="-1" aria-hidden="true">
+                  <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Large commercial solar farm aerial view showing hundreds of panels at a Pune industrial facility" width="800" height="400" loading="lazy" />
+                  <span class="blog-card__cat-badge cat-tag cat-tag--case">Case Studies</span>
+                  <span class="wide-badge" aria-hidden="true">In-Depth Study</span>
+                </a>
+                <div class="blog-card__body">
+                  <div class="blog-card__meta">
+                    <time datetime="2024-10-10">10 Oct 2024</time>
+                    <span class="meta-dot" aria-hidden="true"></span>
+                    <span>12 min read</span>
+                  </div>
+                  <h3 class="blog-card__title">
+                    <a href="../blog-details/blog-details-4.html">From 0 to 500 kW: How a Pune Factory Cut Its Energy Bill by 74% with Solar</a>
+                  </h3>
+                  <p class="blog-card__excerpt">A full case study of Solar-Echos's largest single-building commercial project — the challenges, the engineering solutions, the timeline, and the stunning financial result after 12 months of live data.</p>
+                  <div class="blog-card__footer">
+                    <div class="mini-author">
+                      <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=60&q=80" alt="Ananya Pillai" width="28" height="28" loading="lazy" />
+                      <span>Ananya Pillai</span>
+                    </div>
+                    <a href="../blog-details/blog-details-4.html" class="read-more-link" aria-label="Read full case study about Pune factory solar installation">
+                      Read Full Case Study
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- ── CARD 5 ── Policy & News → blog-details-5 -->
+              <article class="blog-card" data-filter-cat="policy-news" data-animate>
+                <a href="../blog-details/blog-details-5.html" class="blog-card__image img-zoom" tabindex="-1" aria-hidden="true">
+                  <img src="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=600&q=80" alt="Indian government building with solar panels representing policy and renewable energy legislation" width="600" height="340" loading="lazy" />
+                  <span class="blog-card__cat-badge cat-tag cat-tag--policy">Policy &amp; News</span>
+                </a>
+                <div class="blog-card__body">
+                  <div class="blog-card__meta">
+                    <time datetime="2024-09-30">30 Sep 2024</time>
+                    <span class="meta-dot" aria-hidden="true"></span>
+                    <span>7 min read</span>
+                  </div>
+                  <h3 class="blog-card__title">
+                    <a href="../blog-details/blog-details-5.html">PM Surya Ghar Yojana 2024: Complete Subsidy Guide for Indian Homeowners</a>
+                  </h3>
+                  <p class="blog-card__excerpt">How to claim up to ₹78,000 in government subsidies for your rooftop solar installation — eligibility, documents, and the step-by-step application process.</p>
+                  <div class="blog-card__footer">
+                    <div class="mini-author">
+                      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&q=80" alt="Arjun Mehta" width="28" height="28" loading="lazy" />
+                      <span>Arjun Mehta</span>
+                    </div>
+                    <a href="../blog-details/blog-details-5.html" class="read-more-link" aria-label="Read full article about PM Surya Ghar subsidy guide">
+                      Read More
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- ── CARD 6 ── Technology → blog-details-6 -->
+              <article class="blog-card" data-filter-cat="technology" data-animate data-animate-delay="1">
+                <a href="../blog-details/blog-details-6.html" class="blog-card__image img-zoom" tabindex="-1" aria-hidden="true">
+                  <img src="https://images.unsplash.com/photo-1593941707874-ef25b8b4a92b?w=600&q=80" alt="Electric car charging at home while solar panels on rooftop generate clean energy" width="600" height="340" loading="lazy" />
+                  <span class="blog-card__cat-badge cat-tag cat-tag--tech">Technology</span>
+                </a>
+                <div class="blog-card__body">
+                  <div class="blog-card__meta">
+                    <time datetime="2024-09-14">14 Sep 2024</time>
+                    <span class="meta-dot" aria-hidden="true"></span>
+                    <span>9 min read</span>
+                  </div>
+                  <h3 class="blog-card__title">
+                    <a href="../blog-details/blog-details-6.html">Solar + EV Charging at Home: The Complete Integration Guide for 2024</a>
+                  </h3>
+                  <p class="blog-card__excerpt">Everything you need to know about powering your electric vehicle entirely from your rooftop solar — panel sizing, bidirectional chargers, and real-world costs.</p>
+                  <div class="blog-card__footer">
+                    <div class="mini-author">
+                      <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=60&q=80" alt="Priya Sharma" width="28" height="28" loading="lazy" />
+                      <span>Priya Sharma</span>
+                    </div>
+                    <a href="../blog-details/blog-details-6.html" class="read-more-link" aria-label="Read full article about solar and EV charging integration">
+                      Read More
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- ── CARD 7 ── Solar Tips → blog-details-3 -->
+              <article class="blog-card" data-filter-cat="solar-tips" data-animate data-animate-delay="2">
+                <a href="../blog-details/blog-details-3.html" class="blog-card__image img-zoom" tabindex="-1" aria-hidden="true">
+                  <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=600&q=80" alt="Homeowner reviewing solar energy monitoring dashboard on laptop at home" width="600" height="340" loading="lazy" />
+                  <span class="blog-card__cat-badge cat-tag cat-tag--tips">Solar Tips</span>
+                </a>
+                <div class="blog-card__body">
+                  <div class="blog-card__meta">
+                    <time datetime="2024-08-29">29 Aug 2024</time>
+                    <span class="meta-dot" aria-hidden="true"></span>
+                    <span>4 min read</span>
+                  </div>
+                  <h3 class="blog-card__title">
+                    <a href="../blog-details/blog-details-3.html">How to Clean Your Solar Panels the Right Way (Without Voiding Warranty)</a>
+                  </h3>
+                  <p class="blog-card__excerpt">Regular cleaning can boost output by up to 25% — but the wrong technique can damage panels. Here's exactly how to do it safely.</p>
+                  <div class="blog-card__footer">
+                    <div class="mini-author">
+                      <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&q=80" alt="Vikram Nair" width="28" height="28" loading="lazy" />
+                      <span>Vikram Nair</span>
+                    </div>
+                    <a href="../blog-details/blog-details-3.html" class="read-more-link" aria-label="Read full article about cleaning solar panels">
+                      Read More
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- ── CARD 8 ── ROI → blog-details-1 -->
+              <article class="blog-card" data-filter-cat="roi-savings" data-animate>
+                <a href="../blog-details/blog-details-1.html" class="blog-card__image img-zoom" tabindex="-1" aria-hidden="true">
+                  <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&q=80" alt="Solar energy savings calculator and financial documents showing return on investment" width="600" height="340" loading="lazy" />
+                  <span class="blog-card__cat-badge cat-tag cat-tag--roi">ROI &amp; Savings</span>
+                </a>
+                <div class="blog-card__body">
+                  <div class="blog-card__meta">
+                    <time datetime="2024-08-12">12 Aug 2024</time>
+                    <span class="meta-dot" aria-hidden="true"></span>
+                    <span>10 min read</span>
+                  </div>
+                  <h3 class="blog-card__title">
+                    <a href="../blog-details/blog-details-1.html">Solar ROI Calculator: How Long Before Your Panels Pay for Themselves?</a>
+                  </h3>
+                  <p class="blog-card__excerpt">We built a detailed payback calculator using real data from 500 recent installations. Enter your city and usage — get your exact break-even date.</p>
+                  <div class="blog-card__footer">
+                    <div class="mini-author">
+                      <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=60&q=80" alt="Rohan Desai" width="28" height="28" loading="lazy" />
+                      <span>Rohan Desai</span>
+                    </div>
+                    <a href="../blog-details/blog-details-1.html" class="read-more-link" aria-label="Read full article about solar ROI calculator">
+                      Read More
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- ── CARD 9 ── Case Studies → blog-details-4 -->
+              <article class="blog-card" data-filter-cat="case-studies" data-animate data-animate-delay="1">
+                <a href="../blog-details/blog-details-4.html" class="blog-card__image img-zoom" tabindex="-1" aria-hidden="true">
+                  <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&q=80" alt="Modern eco-friendly school building with extensive rooftop solar array in Bangalore" width="600" height="340" loading="lazy" />
+                  <span class="blog-card__cat-badge cat-tag cat-tag--case">Case Studies</span>
+                </a>
+                <div class="blog-card__body">
+                  <div class="blog-card__meta">
+                    <time datetime="2024-07-25">25 Jul 2024</time>
+                    <span class="meta-dot" aria-hidden="true"></span>
+                    <span>7 min read</span>
+                  </div>
+                  <h3 class="blog-card__title">
+                    <a href="../blog-details/blog-details-4.html">A Bangalore School Goes Solar: Zero Energy Bills and a Lesson in Sustainability</a>
+                  </h3>
+                  <p class="blog-card__excerpt">DPS Bangalore's 80 kW solar installation eliminated their ₹4.2 lakh monthly electricity bill and became a live classroom for 2,000 students.</p>
+                  <div class="blog-card__footer">
+                    <div class="mini-author">
+                      <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=60&q=80" alt="Ananya Pillai" width="28" height="28" loading="lazy" />
+                      <span>Ananya Pillai</span>
+                    </div>
+                    <a href="../blog-details/blog-details-4.html" class="read-more-link" aria-label="Read full case study about Bangalore school solar project">
+                      Read More
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- ── CARD 10 ── Technology → blog-details-2 -->
+              <article class="blog-card" data-filter-cat="technology" data-animate data-animate-delay="2">
+                <a href="../blog-details/blog-details-2.html" class="blog-card__image img-zoom" tabindex="-1" aria-hidden="true">
+                  <img src="https://images.unsplash.com/photo-1605648702505-3db2a34a5ae1?w=600&q=80" alt="Solar battery storage system installed in modern home showing clean energy storage technology" width="600" height="340" loading="lazy" />
+                  <span class="blog-card__cat-badge cat-tag cat-tag--tech">Technology</span>
+                </a>
+                <div class="blog-card__body">
+                  <div class="blog-card__meta">
+                    <time datetime="2024-07-08">8 Jul 2024</time>
+                    <span class="meta-dot" aria-hidden="true"></span>
+                    <span>8 min read</span>
+                  </div>
+                  <h3 class="blog-card__title">
+                    <a href="../blog-details/blog-details-2.html">Solar Battery Storage in 2024: Lithium vs LFP — What's Best for Indian Homes?</a>
+                  </h3>
+                  <p class="blog-card__excerpt">We compare the two dominant battery chemistries on cycle life, safety, temperature performance, and total cost of ownership under Indian conditions.</p>
+                  <div class="blog-card__footer">
+                    <div class="mini-author">
+                      <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=60&q=80" alt="Kavya Reddy" width="28" height="28" loading="lazy" />
+                      <span>Kavya Reddy</span>
+                    </div>
+                    <a href="../blog-details/blog-details-2.html" class="read-more-link" aria-label="Read full article about solar battery storage comparison">
+                      Read More
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- ── CARD 11 ── Solar Tips → blog-details-3 -->
+              <article class="blog-card" data-filter-cat="solar-tips" data-animate>
+                <a href="../blog-details/blog-details-3.html" class="blog-card__image img-zoom" tabindex="-1" aria-hidden="true">
+                  <img src="https://images.unsplash.com/photo-1504707748692-419802426bc7?w=600&q=80" alt="Bird's eye view of rooftop showing optimal panel placement and shading analysis" width="600" height="340" loading="lazy" />
+                  <span class="blog-card__cat-badge cat-tag cat-tag--tips">Solar Tips</span>
+                </a>
+                <div class="blog-card__body">
+                  <div class="blog-card__meta">
+                    <time datetime="2024-06-18">18 Jun 2024</time>
+                    <span class="meta-dot" aria-hidden="true"></span>
+                    <span>6 min read</span>
+                  </div>
+                  <h3 class="blog-card__title">
+                    <a href="../blog-details/blog-details-3.html">Rooftop Orientation 101: Why Direction and Tilt Angle Matter More Than Panel Count</a>
+                  </h3>
+                  <p class="blog-card__excerpt">Facing south isn't always the right answer. A deep-dive into how your roof's pitch, orientation, and shade patterns determine your actual solar yield.</p>
+                  <div class="blog-card__footer">
+                    <div class="mini-author">
+                      <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&q=80" alt="Vikram Nair" width="28" height="28" loading="lazy" />
+                      <span>Vikram Nair</span>
+                    </div>
+                    <a href="../blog-details/blog-details-3.html" class="read-more-link" aria-label="Read full article about rooftop orientation for solar">
+                      Read More
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- ── CARD 12 ── ROI → blog-details-1 -->
+              <article class="blog-card" data-filter-cat="roi-savings" data-animate data-animate-delay="1">
+                <a href="../blog-details/blog-details-1.html" class="blog-card__image img-zoom" tabindex="-1" aria-hidden="true">
+                  <img src="https://images.unsplash.com/photo-1605348532760-6753d2c43329?w=600&q=80" alt="Indian farmer looking at solar-powered irrigation system in a rural field" width="600" height="340" loading="lazy" />
+                  <span class="blog-card__cat-badge cat-tag cat-tag--roi">ROI &amp; Savings</span>
+                </a>
+                <div class="blog-card__body">
+                  <div class="blog-card__meta">
+                    <time datetime="2024-06-01">1 Jun 2024</time>
+                    <span class="meta-dot" aria-hidden="true"></span>
+                    <span>6 min read</span>
+                  </div>
+                  <h3 class="blog-card__title">
+                    <a href="../blog-details/blog-details-1.html">Solar for Farmers: How PM-KUSUM Can Cut Agricultural Power Costs to Near Zero</a>
+                  </h3>
+                  <p class="blog-card__excerpt">India's farmers spend ₹40,000–₹80,000 per season on diesel and grid power for irrigation. Here's how the PM-KUSUM scheme changes all of that.</p>
+                  <div class="blog-card__footer">
+                    <div class="mini-author">
+                      <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=60&q=80" alt="Ananya Pillai" width="28" height="28" loading="lazy" />
+                      <span>Ananya Pillai</span>
+                    </div>
+                    <a href="../blog-details/blog-details-1.html" class="read-more-link" aria-label="Read full article about solar for farmers PM-KUSUM scheme">
+                      Read More
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- ── CARD 13 ── Solar Tips → blog-details-3 -->
+              <article class="blog-card" data-filter-cat="solar-tips" data-animate data-animate-delay="2">
+                <a href="../blog-details/blog-details-3.html" class="blog-card__image img-zoom" tabindex="-1" aria-hidden="true">
+                  <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=600&q=80" alt="Solar inverter and electrical panel installation in a modern Indian home" width="600" height="340" loading="lazy" />
+                  <span class="blog-card__cat-badge cat-tag cat-tag--tips">Solar Tips</span>
+                </a>
+                <div class="blog-card__body">
+                  <div class="blog-card__meta">
+                    <time datetime="2024-05-15">15 May 2024</time>
+                    <span class="meta-dot" aria-hidden="true"></span>
+                    <span>5 min read</span>
+                  </div>
+                  <h3 class="blog-card__title">
+                    <a href="../blog-details/blog-details-3.html">String Inverter vs Microinverter: Which Should You Choose for Your Home?</a>
+                  </h3>
+                  <p class="blog-card__excerpt">Price, performance, shading tolerance, monitoring capability — we break down exactly when to choose each inverter type and which our engineers recommend.</p>
+                  <div class="blog-card__footer">
+                    <div class="mini-author">
+                      <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=60&q=80" alt="Meera Joshi" width="28" height="28" loading="lazy" />
+                      <span>Meera Joshi</span>
+                    </div>
+                    <a href="../blog-details/blog-details-3.html" class="read-more-link" aria-label="Read full article about string inverter vs microinverter">
+                      Read More
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- ── CARD 14 ── Policy → blog-details-5 -->
+              <article class="blog-card" data-filter-cat="policy-news" data-animate>
+                <a href="../blog-details/blog-details-5.html" class="blog-card__image img-zoom" tabindex="-1" aria-hidden="true">
+                  <img src="https://images.unsplash.com/photo-1548438294-1ad5d5f4f063?w=600&q=80" alt="Wind turbines and solar panels at a renewable energy facility representing India's clean energy policy" width="600" height="340" loading="lazy" />
+                  <span class="blog-card__cat-badge cat-tag cat-tag--policy">Policy &amp; News</span>
+                </a>
+                <div class="blog-card__body">
+                  <div class="blog-card__meta">
+                    <time datetime="2024-04-28">28 Apr 2024</time>
+                    <span class="meta-dot" aria-hidden="true"></span>
+                    <span>5 min read</span>
+                  </div>
+                  <h3 class="blog-card__title">
+                    <a href="../blog-details/blog-details-5.html">India's 500 GW Renewable Target: What It Means for Rooftop Solar Owners</a>
+                  </h3>
+                  <p class="blog-card__excerpt">The government's ambitious 2030 renewable target is accelerating subsidies, net-metering policy, and grid infrastructure. Here's what it means for you.</p>
+                  <div class="blog-card__footer">
+                    <div class="mini-author">
+                      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&q=80" alt="Arjun Mehta" width="28" height="28" loading="lazy" />
+                      <span>Arjun Mehta</span>
+                    </div>
+                    <a href="../blog-details/blog-details-5.html" class="read-more-link" aria-label="Read full article about India 500 GW renewable energy target">
+                      Read More
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- ── CARD 15 ── Technology → blog-details-6 -->
+              <article class="blog-card" data-filter-cat="technology" data-animate data-animate-delay="1">
+                <a href="../blog-details/blog-details-6.html" class="blog-card__image img-zoom" tabindex="-1" aria-hidden="true">
+                  <img src="https://images.unsplash.com/photo-1620714223084-8fcacc2dfd40?w=600&q=80" alt="AI-powered smart home energy management system dashboard on a tablet" width="600" height="340" loading="lazy" />
+                  <span class="blog-card__cat-badge cat-tag cat-tag--tech">Technology</span>
+                </a>
+                <div class="blog-card__body">
+                  <div class="blog-card__meta">
+                    <time datetime="2024-04-10">10 Apr 2024</time>
+                    <span class="meta-dot" aria-hidden="true"></span>
+                    <span>7 min read</span>
+                  </div>
+                  <h3 class="blog-card__title">
+                    <a href="../blog-details/blog-details-6.html">AI-Powered Solar Monitoring: How We Predict Faults 3 Weeks Before They Happen</a>
+                  </h3>
+                  <p class="blog-card__excerpt">Our ML model trained on 8 million data points from 12,000 installations can now detect failing components months before any visible performance drop.</p>
+                  <div class="blog-card__footer">
+                    <div class="mini-author">
+                      <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=60&q=80" alt="Priya Sharma" width="28" height="28" loading="lazy" />
+                      <span>Priya Sharma</span>
+                    </div>
+                    <a href="../blog-details/blog-details-6.html" class="read-more-link" aria-label="Read full article about AI solar monitoring">
+                      Read More
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- ── CARD 16 ── Case Studies → blog-details-4 -->
+              <article class="blog-card" data-filter-cat="case-studies" data-animate data-animate-delay="2">
+                <a href="../blog-details/blog-details-4.html" class="blog-card__image img-zoom" tabindex="-1" aria-hidden="true">
+                  <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=600&q=80" alt="Solar-powered eco resort in Goa with lush green landscape and rooftop panels" width="600" height="340" loading="lazy" />
+                  <span class="blog-card__cat-badge cat-tag cat-tag--case">Case Studies</span>
+                </a>
+                <div class="blog-card__body">
+                  <div class="blog-card__meta">
+                    <time datetime="2024-03-22">22 Mar 2024</time>
+                    <span class="meta-dot" aria-hidden="true"></span>
+                    <span>6 min read</span>
+                  </div>
+                  <h3 class="blog-card__title">
+                    <a href="../blog-details/blog-details-4.html">Goa Eco-Resort Goes 100% Solar: A Hospitality Industry Blueprint</a>
+                  </h3>
+                  <p class="blog-card__excerpt">How a 40-room boutique resort in Goa eliminated its ₹1.8 lakh monthly electricity bill and turned its sustainability story into a marketing advantage.</p>
+                  <div class="blog-card__footer">
+                    <div class="mini-author">
+                      <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=60&q=80" alt="Rohan Desai" width="28" height="28" loading="lazy" />
+                      <span>Rohan Desai</span>
+                    </div>
+                    <a href="../blog-details/blog-details-4.html" class="read-more-link" aria-label="Read full case study about Goa eco resort solar">
+                      Read More
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- ── CARD 17 ── Solar Tips → blog-details-3 -->
+              <article class="blog-card" data-filter-cat="solar-tips" data-animate>
+                <a href="../blog-details/blog-details-3.html" class="blog-card__image img-zoom" tabindex="-1" aria-hidden="true">
+                  <img src="../about/a1.jpg" alt="Side-by-side comparison of healthy vs degraded solar panel output on monitoring screen" width="600" height="340" loading="lazy" />
+                  <span class="blog-card__cat-badge cat-tag cat-tag--tips">Solar Tips</span>
+                </a>
+                <div class="blog-card__body">
+                  <div class="blog-card__meta">
+                    <time datetime="2024-03-05">5 Mar 2024</time>
+                    <span class="meta-dot" aria-hidden="true"></span>
+                    <span>5 min read</span>
+                  </div>
+                  <h3 class="blog-card__title">
+                    <a href="../blog-details/blog-details-3.html">Is Your Solar System Underperforming? 7 Warning Signs to Watch</a>
+                  </h3>
+                  <p class="blog-card__excerpt">Most performance degradation goes unnoticed for months. These seven early warning signs can save you thousands in lost generation and repair costs.</p>
+                  <div class="blog-card__footer">
+                    <div class="mini-author">
+                      <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=60&q=80" alt="Sanjay Kumar" width="28" height="28" loading="lazy" />
+                      <span>Sanjay Kumar</span>
+                    </div>
+                    <a href="../blog-details/blog-details-3.html" class="read-more-link" aria-label="Read full article about solar system underperformance signs">
+                      Read More
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- ── CARD 18 ── ROI → blog-details-1 -->
+              <article class="blog-card" data-filter-cat="roi-savings" data-animate data-animate-delay="1">
+                <a href="../blog-details/blog-details-1.html" class="blog-card__image img-zoom" tabindex="-1" aria-hidden="true">
+                  <img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?w=600&q=80" alt="Indian couple reviewing solar installation quote and EMI options with a consultant" width="600" height="340" loading="lazy" />
+                  <span class="blog-card__cat-badge cat-tag cat-tag--roi">ROI &amp; Savings</span>
+                </a>
+                <div class="blog-card__body">
+                  <div class="blog-card__meta">
+                    <time datetime="2024-02-18">18 Feb 2024</time>
+                    <span class="meta-dot" aria-hidden="true"></span>
+                    <span>7 min read</span>
+                  </div>
+                  <h3 class="blog-card__title">
+                    <a href="../blog-details/blog-details-1.html">Solar EMI vs Outright Purchase: Which Option Makes More Financial Sense?</a>
+                  </h3>
+                  <p class="blog-card__excerpt">We ran the numbers for both financing paths across 10 different installation sizes. The answer isn't as simple as you'd think — it depends on one key variable.</p>
+                  <div class="blog-card__footer">
+                    <div class="mini-author">
+                      <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=60&q=80" alt="Priya Sharma" width="28" height="28" loading="lazy" />
+                      <span>Priya Sharma</span>
+                    </div>
+                    <a href="../blog-details/blog-details-1.html" class="read-more-link" aria-label="Read full article about solar EMI vs outright purchase">
+                      Read More
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+            </div><!-- /#blog-grid -->
+
+            <!-- No-results message (hidden by default) -->
+            <div class="no-results hidden" id="no-results" role="alert" aria-live="polite">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+              <p>No articles found in this category.</p>
+              <button class="btn btn-outline btn-sm" id="clear-filter">Show All Posts</button>
+            </div>
+
+            <!-- ── PAGINATION ── -->
+            <nav class="pagination" aria-label="Blog pagination" id="pagination">
+              <button class="pagination__btn pagination__btn--prev" aria-label="Previous page" disabled>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+              </button>
+
+              <div class="pagination__pages" role="list">
+                <button class="pagination__page active" aria-current="page" aria-label="Page 1, current page" role="listitem">1</button>
+                <button class="pagination__page" aria-label="Go to page 2" role="listitem">2</button>
+                <button class="pagination__page" aria-label="Go to page 3" role="listitem">3</button>
+                <span class="pagination__ellipsis" aria-hidden="true">…</span>
+                <button class="pagination__page" aria-label="Go to page 6" role="listitem">6</button>
+              </div>
+
+              <button class="pagination__btn pagination__btn--next" aria-label="Next page">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+              </button>
+            </nav>
+
+          </div><!-- /.blog-grid-wrapper -->
+
+          <!-- ── SIDEBAR ─────────────────────────────────────── -->
+          <aside class="blog-sidebar" aria-label="Blog sidebar">
+
+            <!-- Search -->
+            <div class="sidebar-widget" data-animate>
+              <h2 class="sidebar-widget__title">Search Articles</h2>
+              <form class="sidebar-search" role="search" aria-label="Search blog posts" id="sidebar-search-form" novalidate>
+                <div class="sidebar-search__input-wrap">
+                  <label for="sidebar-search" class="sr-only">Search blog posts</label>
+                  <input
+                    type="search"
+                    id="sidebar-search"
+                    name="q"
+                    class="form-control"
+                    placeholder="e.g. solar savings, battery..."
+                    autocomplete="off"
+                    aria-label="Search blog posts"
+                  />
+                  <button type="submit" class="sidebar-search__btn" aria-label="Submit search">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Categories -->
+            <div class="sidebar-widget" data-animate data-animate-delay="1">
+              <h2 class="sidebar-widget__title">Categories</h2>
+              <ul class="sidebar-categories" aria-label="Blog categories">
+                <li>
+                  <button class="sidebar-cat-btn active" data-filter="all" aria-pressed="true">
+                    <span class="sidebar-cat-btn__dot" style="background: var(--color-primary);"></span>
+                    All Posts
+                    <span class="sidebar-cat-btn__count">18</span>
+                  </button>
+                </li>
+                <li>
+                  <button class="sidebar-cat-btn" data-filter="solar-tips" aria-pressed="false">
+                    <span class="sidebar-cat-btn__dot" style="background: #4DBD33;"></span>
+                    Solar Tips
+                    <span class="sidebar-cat-btn__count">5</span>
+                  </button>
+                </li>
+                <li>
+                  <button class="sidebar-cat-btn" data-filter="roi-savings" aria-pressed="false">
+                    <span class="sidebar-cat-btn__dot" style="background: #e15c23;"></span>
+                    ROI &amp; Savings
+                    <span class="sidebar-cat-btn__count">4</span>
+                  </button>
+                </li>
+                <li>
+                  <button class="sidebar-cat-btn" data-filter="technology" aria-pressed="false">
+                    <span class="sidebar-cat-btn__dot" style="background: #045097;"></span>
+                    Technology
+                    <span class="sidebar-cat-btn__count">4</span>
+                  </button>
+                </li>
+                <li>
+                  <button class="sidebar-cat-btn" data-filter="case-studies" aria-pressed="false">
+                    <span class="sidebar-cat-btn__dot" style="background: #FFD700;"></span>
+                    Case Studies
+                    <span class="sidebar-cat-btn__count">3</span>
+                  </button>
+                </li>
+                <li>
+                  <button class="sidebar-cat-btn" data-filter="policy-news" aria-pressed="false">
+                    <span class="sidebar-cat-btn__dot" style="background: #94a3b8;"></span>
+                    Policy &amp; News
+                    <span class="sidebar-cat-btn__count">2</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Recent Posts -->
+            <div class="sidebar-widget" data-animate data-animate-delay="2">
+              <h2 class="sidebar-widget__title">Recent Posts</h2>
+              <ul class="recent-posts" aria-label="Recent blog posts">
+                <li class="recent-post">
+                  <a href="../blog-details/blog-details-1.html" class="recent-post__image img-zoom">
+                    <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=100&q=80" alt="Mumbai family solar savings story thumbnail" width="72" height="56" loading="lazy" />
+                  </a>
+                  <div class="recent-post__info">
+                    <a href="../blog-details/blog-details-1.html" class="recent-post__title">How Solar Panels Saved This Mumbai Family ₹2.4 Lakh Per Year</a>
+                    <time class="recent-post__date" datetime="2024-11-18">18 Nov 2024</time>
+                  </div>
+                </li>
+                <li class="recent-post">
+                  <a href="../blog-details/blog-details-2.html" class="recent-post__image img-zoom">
+                    <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=100&q=80" alt="Bifacial vs monocrystalline solar panel comparison thumbnail" width="72" height="56" loading="lazy" />
+                  </a>
+                  <div class="recent-post__info">
+                    <a href="../blog-details/blog-details-2.html" class="recent-post__title">Bifacial vs Monocrystalline: Which Wins in India's Climate?</a>
+                    <time class="recent-post__date" datetime="2024-11-05">5 Nov 2024</time>
+                  </div>
+                </li>
+                <li class="recent-post">
+                  <a href="../blog-details/blog-details-5.html" class="recent-post__image img-zoom">
+                    <img src="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=100&q=80" alt="PM Surya Ghar subsidy guide thumbnail" width="72" height="56" loading="lazy" />
+                  </a>
+                  <div class="recent-post__info">
+                    <a href="../blog-details/blog-details-5.html" class="recent-post__title">PM Surya Ghar 2024: Complete Subsidy Guide for Homeowners</a>
+                    <time class="recent-post__date" datetime="2024-09-30">30 Sep 2024</time>
+                  </div>
+                </li>
+                <li class="recent-post">
+                  <a href="../blog-details/blog-details-6.html" class="recent-post__image img-zoom">
+                    <img src="https://images.unsplash.com/photo-1593941707874-ef25b8b4a92b?w=100&q=80" alt="Solar and EV charging integration guide thumbnail" width="72" height="56" loading="lazy" />
+                  </a>
+                  <div class="recent-post__info">
+                    <a href="../blog-details/blog-details-6.html" class="recent-post__title">Solar + EV Charging at Home: The Complete Integration Guide</a>
+                    <time class="recent-post__date" datetime="2024-09-14">14 Sep 2024</time>
+                  </div>
+                </li>
+                <li class="recent-post">
+                  <a href="../blog-details/blog-details-4.html" class="recent-post__image img-zoom">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=100&q=80" alt="Pune factory solar case study thumbnail" width="72" height="56" loading="lazy" />
+                  </a>
+                  <div class="recent-post__info">
+                    <a href="../blog-details/blog-details-4.html" class="recent-post__title">From 0 to 500 kW: Pune Factory Cuts Energy Bill by 74%</a>
+                    <time class="recent-post__date" datetime="2024-10-10">10 Oct 2024</time>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Popular Tags -->
+            <div class="sidebar-widget" data-animate data-animate-delay="3">
+              <h2 class="sidebar-widget__title">Popular Tags</h2>
+              <div class="tag-cloud" aria-label="Popular article tags">
+                <button class="tag-pill" data-filter="solar-tips">Solar Installation</button>
+                <button class="tag-pill" data-filter="roi-savings">ROI</button>
+                <button class="tag-pill" data-filter="technology">Battery Storage</button>
+                <button class="tag-pill" data-filter="roi-savings">Subsidies</button>
+                <button class="tag-pill" data-filter="technology">EV Charging</button>
+                <button class="tag-pill" data-filter="solar-tips">Maintenance</button>
+                <button class="tag-pill" data-filter="policy-news">Net Metering</button>
+                <button class="tag-pill" data-filter="case-studies">Commercial Solar</button>
+                <button class="tag-pill" data-filter="technology">Monitoring</button>
+                <button class="tag-pill" data-filter="roi-savings">PM-KUSUM</button>
+              </div>
+            </div>
+
+            <!-- Newsletter CTA -->
+            <div class="sidebar-widget sidebar-newsletter" data-animate data-animate-delay="4">
+              <div class="sidebar-newsletter__icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-yellow)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <h3>Get Solar Tips Weekly</h3>
+              <p>Join 18,000+ readers. No spam, just expert solar insights every Tuesday.</p>
+              <form class="newsletter-form" id="newsletter-form" novalidate aria-label="Newsletter signup">
+                <div class="form-group">
+                  <label for="newsletter-email" class="sr-only">Your email address</label>
+                  <input
+                    type="email"
+                    id="newsletter-email"
+                    name="email"
+                    class="form-control"
+                    placeholder="your@email.com"
+                    required
+                    aria-required="true"
+                    autocomplete="email"
+                  />
+                  <span class="form-error hidden" id="newsletter-error" role="alert">Please enter a valid email address.</span>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:100%">
+                  Subscribe Free
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </form>
+            </div>
+
+            <!-- Sticky CTA (Get Quote) -->
+            <div class="sidebar-widget sidebar-cta" data-animate data-animate-delay="5">
+              <img
+                src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400&q=80"
+                alt="Solar panels on rooftop in golden hour light"
+                width="400" height="180"
+                loading="lazy"
+                class="sidebar-cta__image"
+              />
+              <div class="sidebar-cta__body">
+                <h3>Ready to Go Solar?</h3>
+                <p>Get your free, no-obligation site assessment within 24 hours.</p>
+                <a href="../contact/contact.html" class="btn btn-cta" style="width:100%">Get Free Quote</a>
+              </div>
+            </div>
+
+          </aside><!-- /.blog-sidebar -->
+
+        </div><!-- /.blog-layout -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ░░ FOOTER MOUNT ░░ -->
+    <footer class="site-footer" role="contentinfo" aria-label="Site footer">
+  <div class="container">
+
+    <div class="footer__main">
+
+      <!-- Brand column -->
+      <div class="footer__brand">
+        <a href="../home-1/home.html" class="navbar__logo" aria-label="Solar Echos home">
+          <div class="navbar__logo-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+            </svg>
+          </div>
+          <span class="navbar__logo-text">Solar<span style="color:var(--color-accent-orange)">Echos</span></span>
+        </a>
+
+        <p>India's most trusted solar energy partner. We design, install, and maintain premium solar systems for homes and businesses across 18 states.</p>
+
+        <div class="footer__certbadges" aria-label="Certifications">
+          <span class="footer__certbadge">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            MNRE Certified
+          </span>
+          <span class="footer__certbadge">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+            ISO 9001
+          </span>
+        </div>
+
+        <div class="footer__social" style="margin-top:var(--space-2);" aria-label="Social media links">
+          <a href="#" class="footer__social-link" aria-label="Follow on Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Follow on Twitter / X">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Follow on LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Subscribe on YouTube">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Follow on Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
+        </div>
+      </div><!-- /brand -->
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="footer__col-title">Quick Links</h3>
+        <ul class="footer__links">
+          <li><a href="../home-1/home.html">Home</a></li>
+          <li><a href="../about/about.html">About Us</a></li>
+          <li><a href="../services/services.html">Services</a></li>
+          <li><a href="../pricing/pricing.html">Pricing</a></li>
+          <li><a href="../blogs/blogs.html">Blog</a></li>
+          <li><a href="../contact/contact.html">Contact</a></li>
+          <li><a href="../admin-dashboard/dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <h3 class="footer__col-title">Our Services</h3>
+        <ul class="footer__links">
+          <li><a href="../service-details/service-details-1.html">Residential Solar</a></li>
+          <li><a href="../service-details/service-details-2.html">Commercial Solar</a></li>
+          <li><a href="../service-details/service-details-3.html">Battery Storage</a></li>
+          <li><a href="../service-details/service-details-4.html">EV Charging Setup</a></li>
+          <li><a href="../service-details/service-details-5.html">Solar Maintenance</a></li>
+          <li><a href="../service-details/service-details-6.html">Free Consultation</a></li>
+                 <a href="../404-page/404.html">FAQ</a>
+        <a href="../coming-soon/coming-soon.html">New Features</a>
+        </ul>
+      </div>
+
+      <!-- Newsletter + Contact -->
+      <div class="footer__newsletter">
+        <h3 class="footer__col-title">Stay Updated</h3>
+        <p>Get solar tips, subsidy alerts, and exclusive offers delivered to your inbox.</p>
+
+        <form class="footer__newsletter-form" onsubmit="handleNewsletterSubmit(event)" novalidate aria-label="Newsletter signup">
+          <input
+            type="email"
+            class="footer__newsletter-input"
+            placeholder="Your email address"
+            aria-label="Email address for newsletter"
+            required />
+          <button type="submit" class="btn btn-primary btn-sm" aria-label="Subscribe to newsletter">
+            Subscribe
+          </button>
+        </form>
+
+        <div style="margin-top:var(--space-3);">
+          <h4 style="font-size:var(--text-sm);color:white;margin-bottom:12px;font-family:var(--font-heading);">Contact Us</h4>
+          <ul class="footer__links">
+            <li>
+              <a href="tel:+91 (987) 654-3210" aria-label="Call us">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.39 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l1.97-1.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                +91 (987) 654-3210 (Toll Free)
+              </a>
+            </li>
+            <li>
+              <a href="mailto:hello@solarechos.in" aria-label="Email us">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                hello@solarechos.in
+              </a>
+            </li>
+            <li>
+              <a href="../contact/contact.html" aria-label="Office location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                Solar Echos HQ, Mumbai, MH
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div><!-- /footer__main -->
+
+    <!-- Bottom bar -->
+    <div class="footer__bottom">
+      <span>© <span id="footer-year"></span> Solar Echos.  All rights reserved.</span>
+      <div class="footer__bottom-links">
+        <a href="../404-page/404.html">Privacy Policy</a>
+        <a href="../coming-soon/coming-soon.html">Terms of Service</a>
+        <a href="../404-page/404.html">Sitemap</a>
+      </div>
+    </div>
+
+  </div><!-- /container -->
+</footer>
+
+  <!-- Back to top -->
+  <button id="back-to-top" aria-label="Scroll back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
+
+  <!-- Toast container -->
+  <div id="toast-container" role="region" aria-live="polite" aria-label="Notifications"></div>
+
+  <!-- Scripts -->
+  <script src="../global-js/global.js" defer></script>
+  <script src="blogs.js" defer></script>
+</body>
+</html>

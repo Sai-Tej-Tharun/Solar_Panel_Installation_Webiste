@@ -1,0 +1,1454 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<!--
+  ================================================================
+  Solar-Echos | Blogs Page
+  Author  : SolarEchos
+  Version : 1.0.0
+  Purpose : Editorial-style blog listing — featured hero article,
+            filterable grid, sidebar, pagination. All posts link
+            to one of 6 blog-details pages.
+  Aesthetic: Clean editorial magazine — warm cream tones, bold
+             typography, generous whitespace, ink-on-paper feel.
+  Fonts   : Playfair Display (headings) + DM Sans (body)
+  ================================================================
+-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Solar Echos Blog | Solar Tips, ROI Guides & Clean Energy News</title>
+  <meta name="description"
+    content="Explore expert solar energy articles — government subsidies, ROI guides, EV integration, maintenance tips, and the latest clean energy news for Indian homes and businesses." />
+  <meta name="keywords"
+    content="solar blog India, solar tips, solar ROI guide, clean energy news, solar panel maintenance, EV solar integration" />
+  <meta name="author" content="TechEchos Innovation" />
+
+  <!-- OpenGraph -->
+  <meta property="og:title"       content="Solar Echos Blog – Clean Energy Insights" />
+  <meta property="og:description" content="Expert solar energy guides, subsidy updates, and ROI calculators for Indian homeowners and businesses." />
+  <meta property="og:type"        content="website" />
+  <meta property="og:image"       content="../global-images/og-image.jpg" />
+  <meta property="og:url"         content="https://solarechos.in/blogs/" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="../global-images/logo.png" />
+
+  <!-- Fonts: Playfair Display (editorial serif) + DM Sans (clean body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap"
+        rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+  <!-- Global CSS -->
+    <link rel="stylesheet" href="../global-css/navbar.css">
+  <link rel="stylesheet" href="../global-css/footer.css">
+  <link rel="stylesheet" href="../global-css/global.css" />
+
+  <!-- Page CSS -->
+  <link rel="stylesheet" href="blogs.css" />
+</head>
+
+<body data-components-path="../components" class="bl-body">
+
+  <!-- Navbar mount -->
+  <div id="navbar-placeholder" role="banner"></div>
+
+  <main id="main-content">
+
+    <!-- ============================================================
+         SECTION 1 · PAGE HERO / MASTHEAD
+         ============================================================ -->
+    <section class="bl-masthead" aria-label="Blog page header">
+      <div class="bl-masthead__bg" aria-hidden="true">
+        <div class="bl-masthead__grain" aria-hidden="true"></div>
+      </div>
+      <div class="container bl-masthead__inner">
+        <div class="bl-masthead__copy" data-animate>
+          <span class="bl-eyebrow">
+            <i data-lucide="book-open" width="14" height="14" aria-hidden="true"></i>
+            Knowledge Hub
+          </span>
+          <h1 class="bl-masthead__title">Solar <em>Insights</em></h1>
+          <p class="bl-masthead__sub">
+            Expert guides, subsidy alerts, tech deep-dives and real stories
+            from India's most trusted solar community.
+          </p>
+
+          <!-- Masthead stats -->
+          <div class="bl-masthead__stats" aria-label="Blog statistics">
+            <div class="bl-mstat">
+              <strong>48</strong>
+              <span>Articles</span>
+            </div>
+            <div class="bl-mstat-sep" aria-hidden="true"></div>
+            <div class="bl-mstat">
+              <strong>6</strong>
+              <span>Categories</span>
+            </div>
+            <div class="bl-mstat-sep" aria-hidden="true"></div>
+            <div class="bl-mstat">
+              <strong>12K+</strong>
+              <span>Monthly Readers</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Inline search (masthead) -->
+        <form class="bl-masthead__search" role="search" aria-label="Search articles" onsubmit="handleMastheadSearch(event)" novalidate>
+          <div class="bl-search-wrap">
+            <i data-lucide="search" width="18" height="18" aria-hidden="true"></i>
+            <input
+              type="search"
+              class="bl-search-input"
+              id="masthead-search"
+              placeholder="Search articles… e.g. "subsidy 2025""
+              aria-label="Search solar articles"
+              autocomplete="off"
+            />
+            <button type="submit" class="btn btn-primary bl-search-btn" aria-label="Submit search">
+              Search
+            </button>
+          </div>
+        </form>
+
+      </div><!-- /masthead__inner -->
+    </section><!-- /bl-masthead -->
+
+
+    <!-- ============================================================
+         SECTION 2 · CATEGORY FILTER TABS
+         ============================================================ -->
+    <div class="bl-filter-bar" role="navigation" aria-label="Filter articles by category">
+      <div class="container bl-filter-bar__inner">
+        <div class="bl-filter-tabs" role="tablist" aria-label="Category filters" id="category-tabs">
+          <button class="bl-filter-tab bl-filter-tab--active" role="tab" aria-selected="true"
+                  data-category="all">
+            All Articles
+            <span class="bl-filter-count">48</span>
+          </button>
+          <button class="bl-filter-tab" role="tab" aria-selected="false"
+                  data-category="subsidies">
+            <i data-lucide="indian-rupee" width="13" height="13" aria-hidden="true"></i>
+            Subsidies &amp; ROI
+            <span class="bl-filter-count">12</span>
+          </button>
+          <button class="bl-filter-tab" role="tab" aria-selected="false"
+                  data-category="tech">
+            <i data-lucide="cpu" width="13" height="13" aria-hidden="true"></i>
+            Solar Tech
+            <span class="bl-filter-count">9</span>
+          </button>
+          <button class="bl-filter-tab" role="tab" aria-selected="false"
+                  data-category="ev">
+            <i data-lucide="zap" width="13" height="13" aria-hidden="true"></i>
+            EV + Solar
+            <span class="bl-filter-count">7</span>
+          </button>
+          <button class="bl-filter-tab" role="tab" aria-selected="false"
+                  data-category="maintenance">
+            <i data-lucide="wrench" width="13" height="13" aria-hidden="true"></i>
+            Maintenance
+            <span class="bl-filter-count">8</span>
+          </button>
+          <button class="bl-filter-tab" role="tab" aria-selected="false"
+                  data-category="policy">
+            <i data-lucide="landmark" width="13" height="13" aria-hidden="true"></i>
+            Policy &amp; News
+            <span class="bl-filter-count">12</span>
+          </button>
+        </div>
+      </div>
+    </div><!-- /bl-filter-bar -->
+
+
+    <!-- ============================================================
+         SECTION 3 · FEATURED ARTICLE (Hero card)
+         ============================================================ -->
+    <section class="bl-featured section--sm" id="featured-article" aria-labelledby="featured-title">
+      <div class="container">
+
+        <div class="bl-section-label" data-animate>
+          <span class="bl-section-label__line" aria-hidden="true"></span>
+          <span>Featured Article</span>
+          <span class="bl-section-label__line" aria-hidden="true"></span>
+        </div>
+
+        <!-- FEATURED — links to blog-details/1 -->
+        <article class="bl-featured-card" data-animate data-animate-delay="1"
+                 aria-label="Featured article: PM Surya Ghar scheme guide">
+          <a href="../blog-details/blog-details-1.html" class="bl-featured-card__img-link"
+             aria-label="Read featured article about PM Surya Ghar scheme" tabindex="-1">
+            <div class="bl-featured-card__img">
+              <img
+                src="b1.webp"
+                alt="Large rooftop solar installation on modern Indian residential building at golden hour"
+                loading="eager"
+                width="1400" height="700"
+              />
+              <div class="bl-featured-card__img-overlay" aria-hidden="true"></div>
+            </div>
+          </a>
+
+          <div class="bl-featured-card__body">
+            <div class="bl-featured-card__meta">
+              <span class="bl-tag bl-tag--gold">
+                <i data-lucide="star" width="11" height="11" aria-hidden="true"></i>
+                Editor's Pick
+              </span>
+              <span class="bl-tag bl-tag--green">Subsidies &amp; ROI</span>
+              <time class="bl-meta-date" datetime="2025-07-14">
+                <i data-lucide="calendar" width="12" height="12" aria-hidden="true"></i>
+                July 14, 2025
+              </time>
+              <span class="bl-meta-read">
+                <i data-lucide="clock" width="12" height="12" aria-hidden="true"></i>
+                8 min read
+              </span>
+            </div>
+
+            <h2 id="featured-title" class="bl-featured-card__title">
+              <a href="../blog-details/blog-details-1.html">
+                PM Surya Ghar Scheme 2025: The Complete Guide to
+                Getting ₹78,000 in Free Solar Subsidies
+              </a>
+            </h2>
+
+            <p class="bl-featured-card__excerpt">
+              The PM Surya Ghar Muft Bijli Yojana is India's most ambitious rooftop solar
+              push yet — promising 1 crore homes free electricity and direct subsidies
+              of up to ₹78,000. But navigating the application process can be tricky.
+              We break down every step: eligibility criteria, how to apply online, DISCOM
+              tie-ups, and what to expect after installation. Plus: the states offering the
+              highest additional incentives on top of the central subsidy.
+            </p>
+
+            <div class="bl-featured-card__footer">
+              <div class="bl-author-mini" aria-label="Written by Arjun Mehta">
+                <div class="bl-author-mini__avatar" aria-hidden="true"
+                     style="background:linear-gradient(135deg,#045097,#0a6ac4)">AM</div>
+                <div>
+                  <strong>Arjun Mehta</strong>
+                  <span>Solar Policy Analyst</span>
+                </div>
+              </div>
+              <a href="../blog-details/blog-details-1.html"
+                 class="btn btn-primary bl-read-btn"
+                 aria-label="Read full article about PM Surya Ghar scheme">
+                Read Full Article
+                <i data-lucide="arrow-right" width="15" height="15" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section><!-- /bl-featured -->
+
+
+    <!-- ============================================================
+         SECTION 4 · TRENDING STRIP (horizontal scroll)
+         ============================================================ -->
+    <div class="bl-trending" aria-label="Trending articles">
+      <div class="container bl-trending__inner">
+        <span class="bl-trending__label">
+          <i data-lucide="trending-up" width="14" height="14" aria-hidden="true"></i>
+          Trending
+        </span>
+        <div class="bl-trending__list" role="list">
+          <a href="../blog-details/blog-details-2.html" class="bl-trending__item" role="listitem">
+            <span class="bl-trending__num">01</span>
+            Solar ROI: The 25-Year Financial Model
+          </a>
+          <span class="bl-trending__sep" aria-hidden="true">·</span>
+          <a href="../blog-details/blog-details-3.html" class="bl-trending__item" role="listitem">
+            <span class="bl-trending__num">02</span>
+            EV + Solar: Drive for Free?
+          </a>
+          <span class="bl-trending__sep" aria-hidden="true">·</span>
+          <a href="../blog-details/blog-details-4.html" class="bl-trending__item" role="listitem">
+            <span class="bl-trending__num">03</span>
+            Best Solar Panels in India 2025
+          </a>
+          <span class="bl-trending__sep" aria-hidden="true">·</span>
+          <a href="../blog-details/blog-details-5.html" class="bl-trending__item" role="listitem">
+            <span class="bl-trending__num">04</span>
+            How to Clean Solar Panels
+          </a>
+          <span class="bl-trending__sep" aria-hidden="true">·</span>
+          <a href="../blog-details/blog-details-6.html" class="bl-trending__item" role="listitem">
+            <span class="bl-trending__num">05</span>
+            Net Metering Explained
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ============================================================
+         SECTION 5 · MAIN CONTENT — BLOG GRID + SIDEBAR
+         ============================================================ -->
+    <section class="bl-main section" id="blog-grid" aria-label="Blog articles and sidebar">
+      <div class="container bl-main__inner">
+
+        <!-- ══════════ LEFT: BLOG GRID ══════════ -->
+        <div class="bl-grid-area" id="articles-area">
+
+          <!-- ── TOP ROW: 2 large cards ── -->
+          <div class="bl-grid-row bl-grid-row--top" role="list">
+
+            <!-- Card 1 → blog-details-2 -->
+            <article class="bl-card bl-card--large" role="listitem"
+                     data-category="subsidies"
+                     data-animate data-animate-delay="1"
+                     aria-label="Article: Solar ROI — the 25-year financial model">
+              <a href="../blog-details/blog-details-2.html" class="bl-card__img-link" tabindex="-1"
+                 aria-label="Read article about solar ROI financial model">
+                <div class="bl-card__img">
+                  <img
+                    src="b2.avif"
+                    alt="Solar energy production analytics graph on a futuristic dark dashboard screen"
+                    loading="lazy" width="800" height="480"
+                  />
+                  <div class="bl-card__img-hover" aria-hidden="true"></div>
+                </div>
+              </a>
+              <div class="bl-card__body">
+                <div class="bl-card__meta">
+                  <span class="bl-tag bl-tag--green">Subsidies &amp; ROI</span>
+                  <time datetime="2025-07-10">
+                    <i data-lucide="calendar" width="11" height="11" aria-hidden="true"></i>
+                    Jul 10, 2025
+                  </time>
+                  <span class="bl-read-time">
+                    <i data-lucide="clock" width="11" height="11" aria-hidden="true"></i>
+                    12 min
+                  </span>
+                </div>
+                <h3 class="bl-card__title">
+                  <a href="../blog-details/blog-details-2.html">
+                    How to Calculate the Real ROI of Your Solar System — The 25-Year Financial Model
+                  </a>
+                </h3>
+                <p class="bl-card__excerpt">
+                  Beyond the simple payback period — a complete framework for calculating net present value,
+                  annual yield rate, and inflation-adjusted returns over your panel's full lifespan.
+                  Includes a downloadable spreadsheet.
+                </p>
+                <div class="bl-card__footer">
+                  <div class="bl-author-chip">
+                    <div class="bl-author-chip__avatar" style="background:linear-gradient(135deg,#4DBD33,#389924)" aria-hidden="true">PR</div>
+                    <span>Pooja Rao</span>
+                  </div>
+                  <a href="../blog-details/blog-details-2.html" class="bl-read-more"
+                     aria-label="Read full article about solar ROI">
+                    Read More <i data-lucide="arrow-right" width="13" height="13" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 2 → blog-details-3 -->
+            <article class="bl-card bl-card--large" role="listitem"
+                     data-category="ev"
+                     data-animate data-animate-delay="2"
+                     aria-label="Article: EV and Solar — the ultimate green combo">
+              <a href="../blog-details/blog-details-3.html" class="bl-card__img-link" tabindex="-1"
+                 aria-label="Read article about EV and solar integration">
+                <div class="bl-card__img">
+                  <img
+                    src="https://images.unsplash.com/photo-1593941707874-ef25b8b4a92b?w=800&q=80"
+                    alt="Electric car charging at home with solar panels on rooftop during bright daytime"
+                    loading="lazy" width="800" height="480"
+                  />
+                  <div class="bl-card__img-hover" aria-hidden="true"></div>
+                </div>
+              </a>
+              <div class="bl-card__body">
+                <div class="bl-card__meta">
+                  <span class="bl-tag bl-tag--orange">EV + Solar</span>
+                  <time datetime="2025-07-05">
+                    <i data-lucide="calendar" width="11" height="11" aria-hidden="true"></i>
+                    Jul 5, 2025
+                  </time>
+                  <span class="bl-read-time">
+                    <i data-lucide="clock" width="11" height="11" aria-hidden="true"></i>
+                    9 min
+                  </span>
+                </div>
+                <h3 class="bl-card__title">
+                  <a href="../blog-details/blog-details-3.html">
+                    EV + Solar: India's Ultimate Green Energy Combo — Drive for Almost Free
+                  </a>
+                </h3>
+                <p class="bl-card__excerpt">
+                  Pair a home solar system with your electric vehicle charger and your running cost
+                  per kilometre drops to nearly zero. We model the numbers for popular Indian EVs
+                  — from Tata Nexon to Ather scooters.
+                </p>
+                <div class="bl-card__footer">
+                  <div class="bl-author-chip">
+                    <div class="bl-author-chip__avatar" style="background:linear-gradient(135deg,#e15c23,#ff9845)" aria-hidden="true">SK</div>
+                    <span>Sanjay Kumar</span>
+                  </div>
+                  <a href="../blog-details/blog-details-3.html" class="bl-read-more"
+                     aria-label="Read full article about EV and solar">
+                    Read More <i data-lucide="arrow-right" width="13" height="13" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+          </div><!-- /bl-grid-row--top -->
+
+
+          <!-- ── DIVIDER LABEL ── -->
+          <div class="bl-section-label bl-section-label--sm" data-animate>
+            <span class="bl-section-label__line" aria-hidden="true"></span>
+            <span>Latest Articles</span>
+            <span class="bl-section-label__line" aria-hidden="true"></span>
+          </div>
+
+
+          <!-- ── MAIN GRID: 3 columns ── -->
+          <div class="bl-grid" id="main-grid" role="list">
+
+            <!-- Card 3 → blog-details-4 -->
+            <article class="bl-card" role="listitem"
+                     data-category="tech"
+                     data-animate data-animate-delay="1"
+                     aria-label="Article: Best solar panels in India 2025">
+              <a href="../blog-details/blog-details-4.html" class="bl-card__img-link" tabindex="-1"
+                 aria-label="Read article about best solar panels">
+                <div class="bl-card__img">
+                  <img
+                    src="ba1.avif"
+                    alt="Close-up of advanced photovoltaic solar panel cells with blue shimmer and precision engineering"
+                    loading="lazy" width="600" height="380"
+                  />
+                  <div class="bl-card__img-hover" aria-hidden="true"></div>
+                </div>
+              </a>
+              <div class="bl-card__body">
+                <div class="bl-card__meta">
+                  <span class="bl-tag bl-tag--blue">Solar Tech</span>
+                  <time datetime="2025-06-28">Jun 28, 2025</time>
+                  <span class="bl-read-time">7 min</span>
+                </div>
+                <h3 class="bl-card__title">
+                  <a href="../blog-details/blog-details-4.html">
+                    Best Solar Panels Available in India in 2025 — Tier 1 Brands Compared
+                  </a>
+                </h3>
+                <p class="bl-card__excerpt">
+                  Monocrystalline vs bifacial vs TOPCon — we test efficiency, degradation rates,
+                  and price-per-watt for the top 8 panels available in the Indian market.
+                </p>
+                <div class="bl-card__footer">
+                  <div class="bl-author-chip">
+                    <div class="bl-author-chip__avatar" style="background:linear-gradient(135deg,#045097,#0a6ac4)" aria-hidden="true">RN</div>
+                    <span>Rahul Nair</span>
+                  </div>
+                  <a href="../blog-details/blog-details-4.html" class="bl-read-more" aria-label="Read solar panels comparison">
+                    Read More <i data-lucide="arrow-right" width="13" height="13" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 4 → blog-details-5 -->
+            <article class="bl-card" role="listitem"
+                     data-category="maintenance"
+                     data-animate data-animate-delay="2"
+                     aria-label="Article: How to clean and maintain solar panels">
+              <a href="../blog-details/blog-details-5.html" class="bl-card__img-link" tabindex="-1"
+                 aria-label="Read article about solar panel cleaning">
+                <div class="bl-card__img">
+                  <img
+                    src="ba2.jpg"
+                    alt="Solar technician cleaning and maintaining rooftop solar panels on a bright sunny day"
+                    loading="lazy" width="600" height="380"
+                  />
+                  <div class="bl-card__img-hover" aria-hidden="true"></div>
+                </div>
+              </a>
+              <div class="bl-card__body">
+                <div class="bl-card__meta">
+                  <span class="bl-tag bl-tag--amber">Maintenance</span>
+                  <time datetime="2025-06-20">Jun 20, 2025</time>
+                  <span class="bl-read-time">5 min</span>
+                </div>
+                <h3 class="bl-card__title">
+                  <a href="../blog-details/blog-details-5.html">
+                    The Complete Solar Panel Cleaning &amp; Maintenance Guide for Indian Conditions
+                  </a>
+                </h3>
+                <p class="bl-card__excerpt">
+                  Dust, bird droppings, and monsoon grime can slash your output by up to 30%.
+                  Here's exactly how to clean safely, how often, and what to never use on your panels.
+                </p>
+                <div class="bl-card__footer">
+                  <div class="bl-author-chip">
+                    <div class="bl-author-chip__avatar" style="background:linear-gradient(135deg,#f59e0b,#fbbf24)" aria-hidden="true">VP</div>
+                    <span>Vijay Patil</span>
+                  </div>
+                  <a href="../blog-details/blog-details-5.html" class="bl-read-more" aria-label="Read solar maintenance guide">
+                    Read More <i data-lucide="arrow-right" width="13" height="13" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 5 → blog-details-6 -->
+            <article class="bl-card" role="listitem"
+                     data-category="policy"
+                     data-animate data-animate-delay="3"
+                     aria-label="Article: Net metering explained">
+              <a href="../blog-details/blog-details-6.html" class="bl-card__img-link" tabindex="-1"
+                 aria-label="Read article about net metering">
+                <div class="bl-card__img">
+                  <img
+                    src="ba3.webp"
+                    alt="Modern eco-friendly home powered by solar with green lawn and clear blue sky"
+                    loading="lazy" width="600" height="380"
+                  />
+                  <div class="bl-card__img-hover" aria-hidden="true"></div>
+                </div>
+              </a>
+              <div class="bl-card__body">
+                <div class="bl-card__meta">
+                  <span class="bl-tag bl-tag--purple">Policy &amp; News</span>
+                  <time datetime="2025-06-12">Jun 12, 2025</time>
+                  <span class="bl-read-time">6 min</span>
+                </div>
+                <h3 class="bl-card__title">
+                  <a href="../blog-details/blog-details-6.html">
+                    Net Metering in India Explained: Earn Money by Selling Solar Power Back to the Grid
+                  </a>
+                </h3>
+                <p class="bl-card__excerpt">
+                  Net metering lets you export surplus solar energy and get it credited to your bill.
+                  We explain how DISCOM approval works, which states offer the best rates, and how to apply.
+                </p>
+                <div class="bl-card__footer">
+                  <div class="bl-author-chip">
+                    <div class="bl-author-chip__avatar" style="background:linear-gradient(135deg,#8b5cf6,#7c3aed)" aria-hidden="true">AN</div>
+                    <span>Anita Nayak</span>
+                  </div>
+                  <a href="../blog-details/blog-details-6.html" class="bl-read-more" aria-label="Read net metering article">
+                    Read More <i data-lucide="arrow-right" width="13" height="13" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 6 → blog-details-1 -->
+            <article class="bl-card" role="listitem"
+                     data-category="subsidies"
+                     data-animate data-animate-delay="1"
+                     aria-label="Article: State-wise solar subsidies 2025">
+              <a href="../blog-details/blog-details-1.html" class="bl-card__img-link" tabindex="-1"
+                 aria-label="Read article about state solar subsidies">
+                <div class="bl-card__img">
+                  <img
+                    src="ba4.jpg"
+                    alt="Rooftop solar installation on a modern Indian home representing government subsidy opportunities"
+                    loading="lazy" width="600" height="380"
+                  />
+                  <div class="bl-card__img-hover" aria-hidden="true"></div>
+                </div>
+              </a>
+              <div class="bl-card__body">
+                <div class="bl-card__meta">
+                  <span class="bl-tag bl-tag--green">Subsidies &amp; ROI</span>
+                  <time datetime="2025-06-05">Jun 5, 2025</time>
+                  <span class="bl-read-time">10 min</span>
+                </div>
+                <h3 class="bl-card__title">
+                  <a href="../blog-details/blog-details-1.html">
+                    State-by-State Solar Subsidy Guide 2025 — Who Gets the Most?
+                  </a>
+                </h3>
+                <p class="bl-card__excerpt">
+                  From Maharashtra's ₹9,000/kW incentive to Rajasthan's free land allotment for
+                  solar farms — a comprehensive state comparison of what you can claim beyond the
+                  central government scheme.
+                </p>
+                <div class="bl-card__footer">
+                  <div class="bl-author-chip">
+                    <div class="bl-author-chip__avatar" style="background:linear-gradient(135deg,#045097,#0a6ac4)" aria-hidden="true">AM</div>
+                    <span>Arjun Mehta</span>
+                  </div>
+                  <a href="../blog-details/blog-details-1.html" class="bl-read-more" aria-label="Read state subsidies article">
+                    Read More <i data-lucide="arrow-right" width="13" height="13" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 7 → blog-details-2 -->
+            <article class="bl-card" role="listitem"
+                     data-category="tech"
+                     data-animate data-animate-delay="2"
+                     aria-label="Article: Bifacial solar panels explained">
+              <a href="../blog-details/blog-details-2.html" class="bl-card__img-link" tabindex="-1"
+                 aria-label="Read article about bifacial panels">
+                <div class="bl-card__img">
+                  <img
+                    src="ba5.webp"
+                    alt="Advanced solar panel technology close-up showing photovoltaic cells with glowing energy lines"
+                    loading="lazy" width="600" height="380"
+                  />
+                  <div class="bl-card__img-hover" aria-hidden="true"></div>
+                </div>
+              </a>
+              <div class="bl-card__body">
+                <div class="bl-card__meta">
+                  <span class="bl-tag bl-tag--blue">Solar Tech</span>
+                  <time datetime="2025-05-30">May 30, 2025</time>
+                  <span class="bl-read-time">8 min</span>
+                </div>
+                <h3 class="bl-card__title">
+                  <a href="../blog-details/blog-details-2.html">
+                    Bifacial Solar Panels: Are They Worth the Extra Cost for Indian Homes?
+                  </a>
+                </h3>
+                <p class="bl-card__excerpt">
+                  Bifacial panels generate electricity from both sides, boosting yield by 10–20%.
+                  But do the economics stack up for rooftop installations where rear-side albedo is limited?
+                </p>
+                <div class="bl-card__footer">
+                  <div class="bl-author-chip">
+                    <div class="bl-author-chip__avatar" style="background:linear-gradient(135deg,#4DBD33,#389924)" aria-hidden="true">RN</div>
+                    <span>Rahul Nair</span>
+                  </div>
+                  <a href="../blog-details/blog-details-2.html" class="bl-read-more" aria-label="Read bifacial panels article">
+                    Read More <i data-lucide="arrow-right" width="13" height="13" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 8 → blog-details-3 -->
+            <article class="bl-card" role="listitem"
+                     data-category="ev"
+                     data-animate data-animate-delay="3"
+                     aria-label="Article: Solar EV charger sizing guide">
+              <a href="../blog-details/blog-details-3.html" class="bl-card__img-link" tabindex="-1"
+                 aria-label="Read article about EV charger sizing">
+                <div class="bl-card__img">
+                  <img
+                    src="ba6.jpg"
+                    alt="Electric vehicle charging station at a modern home powered by rooftop solar panels"
+                    loading="lazy" width="600" height="380"
+                  />
+                  <div class="bl-card__img-hover" aria-hidden="true"></div>
+                </div>
+              </a>
+              <div class="bl-card__body">
+                <div class="bl-card__meta">
+                  <span class="bl-tag bl-tag--orange">EV + Solar</span>
+                  <time datetime="2025-05-22">May 22, 2025</time>
+                  <span class="bl-read-time">6 min</span>
+                </div>
+                <h3 class="bl-card__title">
+                  <a href="../blog-details/blog-details-3.html">
+                    How to Size Your Solar System for an EV Charger — A Step-by-Step Guide
+                  </a>
+                </h3>
+                <p class="bl-card__excerpt">
+                  Adding a home EV charger changes your solar sizing equation significantly.
+                  Learn how to calculate the extra kW needed for overnight charging without
+                  touching the grid.
+                </p>
+                <div class="bl-card__footer">
+                  <div class="bl-author-chip">
+                    <div class="bl-author-chip__avatar" style="background:linear-gradient(135deg,#e15c23,#ff9845)" aria-hidden="true">SK</div>
+                    <span>Sanjay Kumar</span>
+                  </div>
+                  <a href="../blog-details/blog-details-3.html" class="bl-read-more" aria-label="Read EV charger sizing guide">
+                    Read More <i data-lucide="arrow-right" width="13" height="13" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+          </div><!-- /bl-grid (3-col) -->
+
+
+          <!-- ── WIDE PROMO CARD (newsletter or guide) ── -->
+          <div class="bl-promo-card" data-animate aria-label="Newsletter signup promotion">
+            <div class="bl-promo-card__left">
+              <div class="bl-promo-card__icon" aria-hidden="true">
+                <i data-lucide="sun" width="28" height="28"></i>
+              </div>
+              <div>
+                <h3>Never Miss a Solar Subsidy Alert</h3>
+                <p>Join 12,000+ readers who get our weekly solar tips, policy updates, and exclusive ROI guides — free.</p>
+              </div>
+            </div>
+            <form class="bl-promo-card__form" onsubmit="handlePromoSubscribe(event)" novalidate aria-label="Newsletter signup">
+              <input type="email" class="form-control bl-promo-input"
+                     placeholder="Your email address"
+                     aria-label="Email for newsletter"
+                     required />
+              <button type="submit" class="btn btn-primary" aria-label="Subscribe to newsletter">
+                Subscribe Free
+                <i data-lucide="arrow-right" width="14" height="14" aria-hidden="true"></i>
+              </button>
+            </form>
+          </div>
+
+
+          <!-- ── SECOND GRID ROW: 3 more cards ── -->
+          <div class="bl-grid" id="second-grid" role="list">
+
+            <!-- Card 9 → blog-details-4 -->
+            <article class="bl-card" role="listitem"
+                     data-category="maintenance"
+                     data-animate data-animate-delay="1"
+                     aria-label="Article: Solar inverter troubleshooting">
+              <a href="../blog-details/blog-details-4.html" class="bl-card__img-link" tabindex="-1"
+                 aria-label="Read article about solar inverter issues">
+                <div class="bl-card__img">
+                  <img
+                    src="bb1.png"
+                    alt="Aerial view of large commercial solar farm with precise symmetric rows of panels at sunset"
+                    loading="lazy" width="600" height="380"
+                  />
+                  <div class="bl-card__img-hover" aria-hidden="true"></div>
+                </div>
+              </a>
+              <div class="bl-card__body">
+                <div class="bl-card__meta">
+                  <span class="bl-tag bl-tag--amber">Maintenance</span>
+                  <time datetime="2025-05-15">May 15, 2025</time>
+                  <span class="bl-read-time">7 min</span>
+                </div>
+                <h3 class="bl-card__title">
+                  <a href="../blog-details/blog-details-4.html">
+                    Solar Inverter Troubleshooting: 10 Error Codes and What They Mean
+                  </a>
+                </h3>
+                <p class="bl-card__excerpt">
+                  Your inverter is the brain of your solar system. When it throws an error code,
+                  most issues are simple to diagnose. We decode the 10 most common faults with fix guides.
+                </p>
+                <div class="bl-card__footer">
+                  <div class="bl-author-chip">
+                    <div class="bl-author-chip__avatar" style="background:linear-gradient(135deg,#f59e0b,#fbbf24)" aria-hidden="true">VP</div>
+                    <span>Vijay Patil</span>
+                  </div>
+                  <a href="../blog-details/blog-details-4.html" class="bl-read-more" aria-label="Read inverter troubleshooting">
+                    Read More <i data-lucide="arrow-right" width="13" height="13" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 10 → blog-details-5 -->
+            <article class="bl-card" role="listitem"
+                     data-category="policy"
+                     data-animate data-animate-delay="2"
+                     aria-label="Article: India solar target 2030">
+              <a href="../blog-details/blog-details-5.html" class="bl-card__img-link" tabindex="-1"
+                 aria-label="Read article about India 2030 solar targets">
+                <div class="bl-card__img">
+                  <img
+                    src="bb2.avif"
+                    alt="Futuristic sustainability concept showing solar panels integrated with lush green landscape"
+                    loading="lazy" width="600" height="380"
+                  />
+                  <div class="bl-card__img-hover" aria-hidden="true"></div>
+                </div>
+              </a>
+              <div class="bl-card__body">
+                <div class="bl-card__meta">
+                  <span class="bl-tag bl-tag--purple">Policy &amp; News</span>
+                  <time datetime="2025-05-08">May 8, 2025</time>
+                  <span class="bl-read-time">5 min</span>
+                </div>
+                <h3 class="bl-card__title">
+                  <a href="../blog-details/blog-details-5.html">
+                    India's 500 GW Solar Target for 2030: Where Do We Stand?
+                  </a>
+                </h3>
+                <p class="bl-card__excerpt">
+                  India is racing toward 500 GW of renewable energy by 2030. With 85 GW already
+                  installed as of mid-2025, we analyse the progress, bottlenecks, and what it means
+                  for homeowners and investors.
+                </p>
+                <div class="bl-card__footer">
+                  <div class="bl-author-chip">
+                    <div class="bl-author-chip__avatar" style="background:linear-gradient(135deg,#8b5cf6,#7c3aed)" aria-hidden="true">AN</div>
+                    <span>Anita Nayak</span>
+                  </div>
+                  <a href="../blog-details/blog-details-5.html" class="bl-read-more" aria-label="Read India solar 2030 article">
+                    Read More <i data-lucide="arrow-right" width="13" height="13" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 11 → blog-details-6 -->
+            <article class="bl-card" role="listitem"
+                     data-category="tech"
+                     data-animate data-animate-delay="3"
+                     aria-label="Article: Solar battery storage guide">
+              <a href="../blog-details/blog-details-6.html" class="bl-card__img-link" tabindex="-1"
+                 aria-label="Read article about home battery storage">
+                <div class="bl-card__img">
+                  <img
+                    src="bb3.webp"
+                    alt="Home battery storage system mounted on wall with solar energy flow visualization"
+                    loading="lazy" width="600" height="380"
+                  />
+                  <div class="bl-card__img-hover" aria-hidden="true"></div>
+                </div>
+              </a>
+              <div class="bl-card__body">
+                <div class="bl-card__meta">
+                  <span class="bl-tag bl-tag--blue">Solar Tech</span>
+                  <time datetime="2025-04-28">Apr 28, 2025</time>
+                  <span class="bl-read-time">9 min</span>
+                </div>
+                <h3 class="bl-card__title">
+                  <a href="../blog-details/blog-details-6.html">
+                    Home Solar Battery Storage in 2025: LiFePO4 vs NMC — Which to Choose?
+                  </a>
+                </h3>
+                <p class="bl-card__excerpt">
+                  Battery chemistry matters more than capacity. We break down the safety, cycle life,
+                  temperature performance, and cost per kWh of the two dominant home storage chemistries
+                  available in India.
+                </p>
+                <div class="bl-card__footer">
+                  <div class="bl-author-chip">
+                    <div class="bl-author-chip__avatar" style="background:linear-gradient(135deg,#4DBD33,#389924)" aria-hidden="true">RN</div>
+                    <span>Rahul Nair</span>
+                  </div>
+                  <a href="../blog-details/blog-details-6.html" class="bl-read-more" aria-label="Read battery storage guide">
+                    Read More <i data-lucide="arrow-right" width="13" height="13" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 12 → blog-details-1 -->
+            <article class="bl-card" role="listitem"
+                     data-category="subsidies"
+                     data-animate data-animate-delay="1"
+                     aria-label="Article: Solar loan and financing options">
+              <a href="../blog-details/blog-details-1.html" class="bl-card__img-link" tabindex="-1"
+                 aria-label="Read article about solar financing">
+                <div class="bl-card__img">
+                  <img
+                    src="bb4.png"
+                    alt="Solar panels with financial growth concept — energy investment and savings visualization"
+                    loading="lazy" width="600" height="380"
+                  />
+                  <div class="bl-card__img-hover" aria-hidden="true"></div>
+                </div>
+              </a>
+              <div class="bl-card__body">
+                <div class="bl-card__meta">
+                  <span class="bl-tag bl-tag--green">Subsidies &amp; ROI</span>
+                  <time datetime="2025-04-18">Apr 18, 2025</time>
+                  <span class="bl-read-time">6 min</span>
+                </div>
+                <h3 class="bl-card__title">
+                  <a href="../blog-details/blog-details-1.html">
+                    Solar Loan vs EMI vs Subsidy: Which Financing Option is Best for You?
+                  </a>
+                </h3>
+                <p class="bl-card__excerpt">
+                  Should you use a green energy loan, pay outright and claim the full subsidy,
+                  or take the zero-cost EMI that installers offer? We model all three scenarios
+                  over 10 years.
+                </p>
+                <div class="bl-card__footer">
+                  <div class="bl-author-chip">
+                    <div class="bl-author-chip__avatar" style="background:linear-gradient(135deg,#045097,#0a6ac4)" aria-hidden="true">PR</div>
+                    <span>Pooja Rao</span>
+                  </div>
+                  <a href="../blog-details/blog-details-1.html" class="bl-read-more" aria-label="Read solar financing article">
+                    Read More <i data-lucide="arrow-right" width="13" height="13" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 13 → blog-details-2 -->
+            <article class="bl-card" role="listitem"
+                     data-category="maintenance"
+                     data-animate data-animate-delay="2"
+                     aria-label="Article: Monsoon solar panel care">
+              <a href="../blog-details/blog-details-2.html" class="bl-card__img-link" tabindex="-1"
+                 aria-label="Read article about monsoon solar care">
+                <div class="bl-card__img">
+                  <img
+                    src="bb5.webp"
+                    alt="Solar panels on a green eco-friendly home during rainy season showing resilient design"
+                    loading="lazy" width="600" height="380"
+                  />
+                  <div class="bl-card__img-hover" aria-hidden="true"></div>
+                </div>
+              </a>
+              <div class="bl-card__body">
+                <div class="bl-card__meta">
+                  <span class="bl-tag bl-tag--amber">Maintenance</span>
+                  <time datetime="2025-04-10">Apr 10, 2025</time>
+                  <span class="bl-read-time">4 min</span>
+                </div>
+                <h3 class="bl-card__title">
+                  <a href="../blog-details/blog-details-2.html">
+                    Monsoon Solar Care: How to Protect Your System During Heavy Rains
+                  </a>
+                </h3>
+                <p class="bl-card__excerpt">
+                  India's monsoon season brings its own set of solar challenges — waterproofing,
+                  grounding checks, and preventing moisture ingress in junction boxes.
+                  A pre-monsoon checklist every owner needs.
+                </p>
+                <div class="bl-card__footer">
+                  <div class="bl-author-chip">
+                    <div class="bl-author-chip__avatar" style="background:linear-gradient(135deg,#f59e0b,#fbbf24)" aria-hidden="true">VP</div>
+                    <span>Vijay Patil</span>
+                  </div>
+                  <a href="../blog-details/blog-details-2.html" class="bl-read-more" aria-label="Read monsoon solar care article">
+                    Read More <i data-lucide="arrow-right" width="13" height="13" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 14 → blog-details-3 -->
+            <article class="bl-card" role="listitem"
+                     data-category="ev"
+                     data-animate data-animate-delay="3"
+                     aria-label="Article: Vehicle to Grid technology">
+              <a href="../blog-details/blog-details-3.html" class="bl-card__img-link" tabindex="-1"
+                 aria-label="Read article about V2G technology">
+                <div class="bl-card__img">
+                  <img
+                    src="bb6.webp"
+                    alt="Modern electric car charging at home integrating smart energy management system"
+                    loading="lazy" width="600" height="380"
+                  />
+                  <div class="bl-card__img-hover" aria-hidden="true"></div>
+                </div>
+              </a>
+              <div class="bl-card__body">
+                <div class="bl-card__meta">
+                  <span class="bl-tag bl-tag--orange">EV + Solar</span>
+                  <time datetime="2025-04-02">Apr 2, 2025</time>
+                  <span class="bl-read-time">7 min</span>
+                </div>
+                <h3 class="bl-card__title">
+                  <a href="../blog-details/blog-details-3.html">
+                    Vehicle-to-Grid (V2G) Technology: Your EV as a Home Battery
+                  </a>
+                </h3>
+                <p class="bl-card__excerpt">
+                  V2G lets your electric car power your home during outages or peak tariff hours.
+                  We explain how it works, which Indian EVs support it, and when it makes economic sense.
+                </p>
+                <div class="bl-card__footer">
+                  <div class="bl-author-chip">
+                    <div class="bl-author-chip__avatar" style="background:linear-gradient(135deg,#e15c23,#ff9845)" aria-hidden="true">SK</div>
+                    <span>Sanjay Kumar</span>
+                  </div>
+                  <a href="../blog-details/blog-details-3.html" class="bl-read-more" aria-label="Read V2G technology article">
+                    Read More <i data-lucide="arrow-right" width="13" height="13" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+          </div><!-- /second-grid -->
+
+
+          <!-- ══════════════════════════════════
+               PAGINATION
+               ══════════════════════════════════ -->
+          <nav class="bl-pagination" aria-label="Blog pagination" id="pagination">
+            <button class="bl-page-btn bl-page-btn--prev" id="prev-page"
+                    aria-label="Previous page" disabled>
+              <i data-lucide="arrow-left" width="16" height="16" aria-hidden="true"></i>
+              Previous
+            </button>
+
+            <div class="bl-page-nums" role="list" aria-label="Page numbers">
+              <button class="bl-page-num bl-page-num--active" role="listitem"
+                      aria-label="Page 1, current" aria-current="page">1</button>
+              <button class="bl-page-num" role="listitem" aria-label="Page 2">2</button>
+              <button class="bl-page-num" role="listitem" aria-label="Page 3">3</button>
+              <span class="bl-page-ellipsis" aria-hidden="true">…</span>
+              <button class="bl-page-num" role="listitem" aria-label="Page 8">8</button>
+            </div>
+
+            <button class="bl-page-btn bl-page-btn--next" id="next-page"
+                    aria-label="Next page">
+              Next
+              <i data-lucide="arrow-right" width="16" height="16" aria-hidden="true"></i>
+            </button>
+          </nav>
+
+        </div><!-- /bl-grid-area -->
+
+
+        <!-- ══════════ RIGHT: SIDEBAR ══════════ -->
+        <aside class="bl-sidebar" aria-label="Blog sidebar">
+
+          <!-- Search widget -->
+          <div class="bl-widget" id="sidebar-search" data-animate>
+            <h3 class="bl-widget__title">
+              <i data-lucide="search" width="15" height="15" aria-hidden="true"></i>
+              Search Articles
+            </h3>
+            <form class="bl-widget__search-form" role="search"
+                  onsubmit="handleSidebarSearch(event)" novalidate
+                  aria-label="Sidebar article search">
+              <div class="bl-sidebar-search-wrap">
+                <input
+                  type="search"
+                  class="form-control bl-sidebar-search-input"
+                  id="sidebar-search-input"
+                  placeholder="Type to search…"
+                  aria-label="Search articles"
+                  autocomplete="off"
+                />
+                <button type="submit" class="bl-sidebar-search-btn" aria-label="Submit search">
+                  <i data-lucide="arrow-right" width="14" height="14" aria-hidden="true"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Categories widget -->
+          <div class="bl-widget" id="sidebar-categories" data-animate data-animate-delay="1">
+            <h3 class="bl-widget__title">
+              <i data-lucide="folder-open" width="15" height="15" aria-hidden="true"></i>
+              Categories
+            </h3>
+            <ul class="bl-category-list">
+              <li>
+                <a href="#" class="bl-category-item bl-category-item--active"
+                   data-filter="all" aria-label="View all articles, 48 total">
+                  <span>
+                    <i data-lucide="layout-grid" width="13" height="13" aria-hidden="true"></i>
+                    All Articles
+                  </span>
+                  <span class="bl-cat-count">48</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="bl-category-item"
+                   data-filter="subsidies" aria-label="View subsidies and ROI articles, 12 total">
+                  <span>
+                    <i data-lucide="indian-rupee" width="13" height="13" aria-hidden="true"></i>
+                    Subsidies &amp; ROI
+                  </span>
+                  <span class="bl-cat-count">12</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="bl-category-item"
+                   data-filter="tech" aria-label="View solar tech articles, 9 total">
+                  <span>
+                    <i data-lucide="cpu" width="13" height="13" aria-hidden="true"></i>
+                    Solar Technology
+                  </span>
+                  <span class="bl-cat-count">9</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="bl-category-item"
+                   data-filter="ev" aria-label="View EV and solar articles, 7 total">
+                  <span>
+                    <i data-lucide="zap" width="13" height="13" aria-hidden="true"></i>
+                    EV + Solar
+                  </span>
+                  <span class="bl-cat-count">7</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="bl-category-item"
+                   data-filter="maintenance" aria-label="View maintenance articles, 8 total">
+                  <span>
+                    <i data-lucide="wrench" width="13" height="13" aria-hidden="true"></i>
+                    Maintenance
+                  </span>
+                  <span class="bl-cat-count">8</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="bl-category-item"
+                   data-filter="policy" aria-label="View policy and news articles, 12 total">
+                  <span>
+                    <i data-lucide="landmark" width="13" height="13" aria-hidden="true"></i>
+                    Policy &amp; News
+                  </span>
+                  <span class="bl-cat-count">12</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Recent Posts widget -->
+          <div class="bl-widget" id="sidebar-recent" data-animate data-animate-delay="2">
+            <h3 class="bl-widget__title">
+              <i data-lucide="clock" width="15" height="15" aria-hidden="true"></i>
+              Recent Posts
+            </h3>
+            <ul class="bl-recent-list">
+
+              <li class="bl-recent-item">
+                <a href="../blog-details/blog-details-1.html" class="bl-recent-item__link"
+                   aria-label="Read PM Surya Ghar scheme guide">
+                  <div class="bl-recent-item__img">
+                    <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=120&q=70"
+                         alt="Rooftop solar panels representing PM Surya Ghar subsidy scheme"
+                         loading="lazy" width="120" height="80" />
+                  </div>
+                  <div class="bl-recent-item__body">
+                    <span class="bl-tag bl-tag--green bl-tag--xs">Subsidies</span>
+                    <p>PM Surya Ghar: ₹78,000 Solar Subsidy Guide</p>
+                    <time datetime="2025-07-14">Jul 14, 2025</time>
+                  </div>
+                </a>
+              </li>
+
+              <li class="bl-recent-item">
+                <a href="../blog-details/blog-details-2.html" class="bl-recent-item__link"
+                   aria-label="Read 25-year solar ROI model article">
+                  <div class="bl-recent-item__img">
+                    <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=120&q=70"
+                         alt="Solar energy data analytics dashboard showing production graphs"
+                         loading="lazy" width="120" height="80" />
+                  </div>
+                  <div class="bl-recent-item__body">
+                    <span class="bl-tag bl-tag--green bl-tag--xs">ROI</span>
+                    <p>The 25-Year Solar ROI Financial Model</p>
+                    <time datetime="2025-07-10">Jul 10, 2025</time>
+                  </div>
+                </a>
+              </li>
+
+              <li class="bl-recent-item">
+                <a href="../blog-details/blog-details-3.html" class="bl-recent-item__link"
+                   aria-label="Read EV and solar combo article">
+                  <div class="bl-recent-item__img">
+                    <img src="https://images.unsplash.com/photo-1593941707874-ef25b8b4a92b?w=120&q=70"
+                         alt="Electric car charging with solar energy at a modern home"
+                         loading="lazy" width="120" height="80" />
+                  </div>
+                  <div class="bl-recent-item__body">
+                    <span class="bl-tag bl-tag--orange bl-tag--xs">EV + Solar</span>
+                    <p>EV + Solar: Drive for Almost Free</p>
+                    <time datetime="2025-07-05">Jul 5, 2025</time>
+                  </div>
+                </a>
+              </li>
+
+              <li class="bl-recent-item">
+                <a href="../blog-details/blog-details-4.html" class="bl-recent-item__link"
+                   aria-label="Read best solar panels comparison">
+                  <div class="bl-recent-item__img">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=120&q=70"
+                         alt="Close-up of high-efficiency solar photovoltaic panel cells"
+                         loading="lazy" width="120" height="80" />
+                  </div>
+                  <div class="bl-recent-item__body">
+                    <span class="bl-tag bl-tag--blue bl-tag--xs">Solar Tech</span>
+                    <p>Best Solar Panels in India 2025</p>
+                    <time datetime="2025-06-28">Jun 28, 2025</time>
+                  </div>
+                </a>
+              </li>
+
+              <li class="bl-recent-item">
+                <a href="../blog-details/blog-details-5.html" class="bl-recent-item__link"
+                   aria-label="Read solar panel maintenance guide">
+                  <div class="bl-recent-item__img">
+                    <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=120&q=70"
+                         alt="Solar technician performing maintenance on rooftop panels"
+                         loading="lazy" width="120" height="80" />
+                  </div>
+                  <div class="bl-recent-item__body">
+                    <span class="bl-tag bl-tag--amber bl-tag--xs">Maintenance</span>
+                    <p>Complete Solar Panel Maintenance Guide</p>
+                    <time datetime="2025-06-20">Jun 20, 2025</time>
+                  </div>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+
+          <!-- Popular Tags widget -->
+          <div class="bl-widget" id="sidebar-tags" data-animate data-animate-delay="3">
+            <h3 class="bl-widget__title">
+              <i data-lucide="tag" width="15" height="15" aria-hidden="true"></i>
+              Popular Tags
+            </h3>
+            <div class="bl-tags-cloud" aria-label="Popular article tags">
+              <a href="#" class="bl-tag-pill">PM Surya Ghar</a>
+              <a href="#" class="bl-tag-pill">ROI Calculator</a>
+              <a href="#" class="bl-tag-pill">Net Metering</a>
+              <a href="#" class="bl-tag-pill">Subsidy 2025</a>
+              <a href="#" class="bl-tag-pill">LiFePO4</a>
+              <a href="#" class="bl-tag-pill">Bifacial Panels</a>
+              <a href="#" class="bl-tag-pill">EV Charger</a>
+              <a href="#" class="bl-tag-pill">DISCOM</a>
+              <a href="#" class="bl-tag-pill">Solar Loan</a>
+              <a href="#" class="bl-tag-pill">Monsoon Care</a>
+              <a href="#" class="bl-tag-pill">V2G</a>
+              <a href="#" class="bl-tag-pill">Grid Export</a>
+            </div>
+          </div>
+
+          <!-- CTA widget -->
+          <div class="bl-widget bl-widget--cta" data-animate data-animate-delay="4">
+            <div class="bl-widget-cta__icon" aria-hidden="true">
+              <i data-lucide="sun" width="26" height="26"></i>
+            </div>
+            <h3>Ready to Go Solar?</h3>
+            <p>Get a free personalised quote and ROI estimate for your home or business.</p>
+            <a href="../contact/contact.html" class="btn btn-primary bl-widget-cta__btn"
+               aria-label="Get a free solar quote">
+              Get Free Quote
+              <i data-lucide="arrow-right" width="14" height="14" aria-hidden="true"></i>
+            </a>
+            <div class="bl-widget-cta__features" aria-label="Key benefits">
+              <span>
+                <i data-lucide="check-circle" width="12" height="12" aria-hidden="true"></i>
+                Free survey
+              </span>
+              <span>
+                <i data-lucide="check-circle" width="12" height="12" aria-hidden="true"></i>
+                0% EMI
+              </span>
+              <span>
+                <i data-lucide="check-circle" width="12" height="12" aria-hidden="true"></i>
+                25yr warranty
+              </span>
+            </div>
+          </div>
+
+          <!-- Authors widget -->
+          <div class="bl-widget" id="sidebar-authors" data-animate data-animate-delay="5">
+            <h3 class="bl-widget__title">
+              <i data-lucide="users" width="15" height="15" aria-hidden="true"></i>
+              Our Authors
+            </h3>
+            <ul class="bl-authors-list">
+              <li class="bl-author-item">
+                <div class="bl-author-item__avatar"
+                     style="background:linear-gradient(135deg,#045097,#0a6ac4)"
+                     aria-hidden="true">AM</div>
+                <div>
+                  <strong>Arjun Mehta</strong>
+                  <span>Solar Policy Analyst · 14 articles</span>
+                </div>
+              </li>
+              <li class="bl-author-item">
+                <div class="bl-author-item__avatar"
+                     style="background:linear-gradient(135deg,#4DBD33,#389924)"
+                     aria-hidden="true">PR</div>
+                <div>
+                  <strong>Pooja Rao</strong>
+                  <span>Financial Analyst · 11 articles</span>
+                </div>
+              </li>
+              <li class="bl-author-item">
+                <div class="bl-author-item__avatar"
+                     style="background:linear-gradient(135deg,#e15c23,#ff9845)"
+                     aria-hidden="true">SK</div>
+                <div>
+                  <strong>Sanjay Kumar</strong>
+                  <span>EV &amp; Tech Writer · 9 articles</span>
+                </div>
+              </li>
+              <li class="bl-author-item">
+                <div class="bl-author-item__avatar"
+                     style="background:linear-gradient(135deg,#f59e0b,#fbbf24)"
+                     aria-hidden="true">VP</div>
+                <div>
+                  <strong>Vijay Patil</strong>
+                  <span>Solar Engineer · 8 articles</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </aside><!-- /bl-sidebar -->
+
+      </div><!-- /bl-main__inner -->
+    </section><!-- /bl-main -->
+
+  </main><!-- /main -->
+
+  <!-- Footer mount -->
+    <footer class="site-footer" role="contentinfo" aria-label="Site footer">
+  <div class="container">
+
+    <div class="footer__main">
+
+      <!-- Brand column -->
+      <div class="footer__brand">
+        <a href="../home-1/home.html" class="navbar__logo" aria-label="Solar Echos home">
+          <div class="navbar__logo-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+            </svg>
+          </div>
+          <span class="navbar__logo-text">Solar<span style="color:var(--color-accent-orange)">Echos</span></span>
+        </a>
+
+        <p>India's most trusted solar energy partner. We design, install, and maintain premium solar systems for homes and businesses across 18 states.</p>
+
+        <div class="footer__certbadges" aria-label="Certifications">
+          <span class="footer__certbadge">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            MNRE Certified
+          </span>
+          <span class="footer__certbadge">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+            ISO 9001
+          </span>
+        </div>
+
+        <div class="footer__social" style="margin-top:var(--space-2);" aria-label="Social media links">
+          <a href="#" class="footer__social-link" aria-label="Follow on Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Follow on Twitter / X">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Follow on LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Subscribe on YouTube">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Follow on Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
+        </div>
+      </div><!-- /brand -->
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="footer__col-title">Quick Links</h3>
+        <ul class="footer__links">
+          <li><a href="../home-1/home.html">Home</a></li>
+          <li><a href="../about/about.html">About Us</a></li>
+          <li><a href="../services/services.html">Services</a></li>
+          <li><a href="../pricing/pricing.html">Pricing</a></li>
+          <li><a href="../blogs/blogs.html">Blog</a></li>
+          <li><a href="../contact/contact.html">Contact</a></li>
+          <li><a href="../admin-dashboard/dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <h3 class="footer__col-title">Our Services</h3>
+        <ul class="footer__links">
+          <li><a href="../service-details/service-details-1.html">Residential Solar</a></li>
+          <li><a href="../service-details/service-details-2.html">Commercial Solar</a></li>
+          <li><a href="../service-details/service-details-3.html">Battery Storage</a></li>
+          <li><a href="../service-details/service-details-4.html">EV Charging Setup</a></li>
+          <li><a href="../service-details/service-details-5.html">Solar Maintenance</a></li>
+          <li><a href="../service-details/service-details-6.html">Free Consultation</a></li>
+                 <a href="../404-page/404.html">FAQ</a>
+        <a href="../coming-soon/coming-soon.html">New Features</a>
+        </ul>
+      </div>
+
+      <!-- Newsletter + Contact -->
+      <div class="footer__newsletter">
+        <h3 class="footer__col-title">Stay Updated</h3>
+        <p>Get solar tips, subsidy alerts, and exclusive offers delivered to your inbox.</p>
+
+        <form class="footer__newsletter-form" onsubmit="handleNewsletterSubmit(event)" novalidate aria-label="Newsletter signup">
+          <input
+            type="email"
+            class="footer__newsletter-input"
+            placeholder="Your email address"
+            aria-label="Email address for newsletter"
+            required />
+          <button type="submit" class="btn btn-primary btn-sm" aria-label="Subscribe to newsletter">
+            Subscribe
+          </button>
+        </form>
+
+        <div style="margin-top:var(--space-3);">
+          <h4 style="font-size:var(--text-sm);color:white;margin-bottom:12px;font-family:var(--font-heading);">Contact Us</h4>
+          <ul class="footer__links">
+            <li>
+              <a href="tel:+91 (987) 654-3210" aria-label="Call us">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.39 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l1.97-1.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                +91 (987) 654-3210 (Toll Free)
+              </a>
+            </li>
+            <li>
+              <a href="mailto:hello@solarechos.in" aria-label="Email us">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                hello@solarechos.in
+              </a>
+            </li>
+            <li>
+              <a href="../contact/contact.html" aria-label="Office location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                Solar Echos HQ, Mumbai, MH
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div><!-- /footer__main -->
+
+    <!-- Bottom bar -->
+    <div class="footer__bottom">
+      <span>© <span id="footer-year"></span> Solar Echos.  All rights reserved.</span>
+      <div class="footer__bottom-links">
+        <a href="../404-page/404.html">Privacy Policy</a>
+        <a href="../coming-soon/coming-soon.html">Terms of Service</a>
+        <a href="../404-page/404.html">Sitemap</a>
+      </div>
+    </div>
+
+  </div><!-- /container -->
+</footer>
+
+  <!-- Back-to-top -->
+  <button id="back-to-top" aria-label="Scroll back to top">
+    <i data-lucide="arrow-up" width="20" height="20" aria-hidden="true"></i>
+  </button>
+
+  <!-- Toast container -->
+  <div id="toast-container" role="region" aria-live="polite" aria-label="Notifications"></div>
+
+  <!-- Scripts -->
+      <script src="../global-js/navbar.js"></script>
+<script src="../global-js/footer.js"></script>
+  <script src="../global-js/global.js"></script>
+  <script src="blogs.js"></script>
+
+  <!-- Lucide init -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) lucide.createIcons();
+    });
+  </script>
+</body>
+</html>

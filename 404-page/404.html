@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 – Page Not Found | Solar Echos</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" href="../global-images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       RESET & TOKENS
+       ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    :root {
+      --orange:       #e15c23;
+      --yellow:       #FFD700;
+      --blue:         #045097;
+      --blue-light:   #0a6ac4;
+      --green:        #4DBD33;
+      --surface:      #ffffff;
+      --body-bg:      #f8fafc;
+      --text:         #0f172a;
+      --muted:        #64748b;
+      --border:       #e2e8f0;
+      --chip-bg:      #f1f5f9;
+      --font-h:       'Poppins', sans-serif;
+      --font-b:       'Inter', sans-serif;
+      --radius:       14px;
+      --radius-lg:    24px;
+      --radius-full:  9999px;
+      --shadow-card:  0 8px 40px rgba(4,80,151,0.12), 0 2px 12px rgba(0,0,0,0.06);
+      --trans:        250ms cubic-bezier(0.4,0,0.2,1);
+    }
+
+    [data-theme="dark"] {
+      --surface:   #0f2044;
+      --body-bg:   #0a1628;
+      --text:      #f1f5f9;
+      --muted:     #94a3b8;
+      --border:    rgba(255,255,255,0.08);
+      --chip-bg:   rgba(255,255,255,0.06);
+      --shadow-card: 0 8px 40px rgba(0,0,0,0.45);
+    }
+
+    /* ============================================================
+       BASE
+       ============================================================ */
+    body {
+      font-family: var(--font-b);
+      background: var(--body-bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: background var(--trans), color var(--trans);
+      position: relative;
+      overflow: hidden;
+      padding: 24px;
+    }
+
+    /* ============================================================
+       AMBIENT BLOBS (background glow)
+       ============================================================ */
+    .blob {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(90px);
+      pointer-events: none;
+      z-index: 0;
+      animation: blobDrift 14s ease-in-out infinite alternate;
+    }
+
+    .blob-1 {
+      width: 520px; height: 520px;
+      background: radial-gradient(circle, var(--orange), transparent 70%);
+      top: -200px; right: -140px;
+      opacity: 0.10;
+    }
+
+    .blob-2 {
+      width: 420px; height: 420px;
+      background: radial-gradient(circle, var(--blue), transparent 70%);
+      bottom: -120px; left: -100px;
+      opacity: 0.09;
+      animation-delay: -5s;
+    }
+
+    .blob-3 {
+      width: 260px; height: 260px;
+      background: radial-gradient(circle, var(--yellow), transparent 70%);
+      top: 40%; left: 60%;
+      opacity: 0.07;
+      animation-delay: -9s;
+      animation-duration: 10s;
+    }
+
+    @keyframes blobDrift {
+      from { transform: translate(0, 0) scale(1); }
+      to   { transform: translate(24px, 16px) scale(1.06); }
+    }
+
+    /* ============================================================
+       PARTICLE CANVAS
+       ============================================================ */
+    #particles {
+      position: fixed;
+      inset: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ============================================================
+       THEME TOGGLE
+       ============================================================ */
+    .theme-btn {
+      position: fixed;
+      top: 22px; right: 22px;
+      width: 42px; height: 42px;
+      border-radius: var(--radius-full);
+      border: 1.5px solid var(--border);
+      background: var(--surface);
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      transition: all var(--trans);
+      z-index: 200;
+    }
+
+    .theme-btn:hover {
+      border-color: var(--yellow);
+      color: var(--yellow);
+      box-shadow: 0 0 18px rgba(255,215,0,0.28);
+      transform: rotate(15deg);
+    }
+
+    /* ============================================================
+       MAIN CARD
+       ============================================================ */
+    .card {
+      position: relative;
+      z-index: 10;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-card);
+      padding: 52px 48px 44px;
+      max-width: 560px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      animation: cardRise 0.75s cubic-bezier(0.34,1.56,0.64,1) both;
+    }
+
+    @keyframes cardRise {
+      from { opacity: 0; transform: translateY(50px) scale(0.93); }
+      to   { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    /* ── Logo ── */
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 28px;
+      text-decoration: none;
+    }
+
+    .logo__icon {
+      width: 34px; height: 34px;
+      border-radius: 9px;
+      background: linear-gradient(135deg, var(--orange), var(--yellow));
+      display: flex; align-items: center; justify-content: center;
+      color: white;
+      box-shadow: 0 4px 12px rgba(225,92,35,0.35);
+      flex-shrink: 0;
+    }
+
+    .logo__text {
+      font-family: var(--font-h);
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .logo__text em { color: var(--orange); font-style: normal; }
+
+    /* ── Giant "404" with animated sun in the zero ── */
+    .error-code {
+      font-family: var(--font-h);
+      font-size: clamp(5rem, 20vw, 8.5rem);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.05em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.04em;
+      margin-bottom: 4px;
+      user-select: none;
+    }
+
+    .error-code .digit {
+      background: linear-gradient(135deg, var(--orange) 0%, var(--yellow) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Wrapper to keep the SVG aligned like a character */
+    .sun-char {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1em; height: 1em;
+    }
+
+    /* ── Sub-illustration ── */
+    .illustration {
+      margin: 16px 0 28px;
+      width: 160px;
+      filter: drop-shadow(0 4px 12px rgba(225,92,35,0.15));
+      animation: panelFloat 4s ease-in-out infinite;
+    }
+
+    @keyframes panelFloat {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-8px); }
+    }
+
+    /* ── Copy ── */
+    .err-title {
+      font-family: var(--font-h);
+      font-size: clamp(1.2rem, 4vw, 1.6rem);
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+
+    .err-body {
+      font-size: 0.96rem;
+      color: var(--muted);
+      line-height: 1.75;
+      max-width: 400px;
+      margin-bottom: 32px;
+    }
+
+    /* ── Buttons ── */
+    .btns {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 11px 26px;
+      font-family: var(--font-b);
+      font-size: 0.875rem;
+      font-weight: 600;
+      border-radius: var(--radius-full);
+      text-decoration: none;
+      transition: all var(--trans);
+      border: 2px solid transparent;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* shimmer sweep */
+    .btn::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.2) 50%, transparent 70%);
+      transform: translateX(-100%);
+      transition: transform 0.5s ease;
+    }
+    .btn:hover::after { transform: translateX(100%); }
+    .btn:active { transform: scale(0.96); }
+    .btn:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; border-radius: var(--radius-full); }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--orange), #ff7a1a);
+      color: #fff;
+      box-shadow: 0 4px 18px rgba(225,92,35,0.38);
+    }
+    .btn-primary:hover {
+      box-shadow: 0 6px 28px rgba(225,92,35,0.5);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--blue);
+      border-color: var(--blue);
+    }
+    .btn-outline:hover {
+      background: var(--blue);
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(4,80,151,0.28);
+    }
+
+    [data-theme="dark"] .btn-outline {
+      color: var(--yellow);
+      border-color: var(--yellow);
+    }
+    [data-theme="dark"] .btn-outline:hover {
+      background: var(--yellow);
+      color: #0f172a;
+    }
+
+    /* ── Quick links ── */
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: var(--border);
+      margin-bottom: 20px;
+    }
+
+    .quick-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+    }
+
+    .qlink {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 6px 13px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      background: var(--chip-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-full);
+      transition: all var(--trans);
+    }
+
+    .qlink:hover {
+      color: var(--orange);
+      border-color: var(--orange);
+      background: rgba(225,92,35,0.07);
+      transform: translateY(-2px);
+    }
+
+    .qlink:focus-visible { outline: 2px solid var(--yellow); outline-offset: 2px; }
+
+    /* ============================================================
+       KEYFRAMES for SVG inline animations
+       ============================================================ */
+    @keyframes spinSlow  { to { transform: rotate(360deg); } }
+    @keyframes pulseSun  { 0%,100%{ transform:scale(1); } 50%{ transform:scale(1.07); } }
+    @keyframes flashCrack{ 0%,100%{ opacity:.9; } 50%{ opacity:.25; } }
+    @keyframes popSpark  { 0%,100%{ transform:scale(1); opacity:.8; } 50%{ transform:scale(2.2); opacity:0; } }
+
+    /* ============================================================
+       RESPONSIVE
+       ============================================================ */
+    @media (max-width: 520px) {
+      .card { padding: 40px 24px 36px; }
+      .btns { flex-direction: column; align-items: stretch; }
+      .btn  { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background blobs -->
+  <div class="blob blob-1" aria-hidden="true"></div>
+  <div class="blob blob-2" aria-hidden="true"></div>
+  <div class="blob blob-3" aria-hidden="true"></div>
+
+  <!-- Particle canvas -->
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <!-- Theme toggle -->
+  <button class="theme-btn" id="theme-btn" aria-label="Switch to dark mode" aria-pressed="false">
+    <svg id="theme-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      aria-hidden="true">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+    </svg>
+  </button>
+
+  <!-- ═══════════ MAIN CARD ═══════════ -->
+  <main class="card" role="main" aria-labelledby="err-heading">
+
+    <!-- Logo -->
+    <a href="../home-1/home.html" class="logo" aria-label="Solar Echos home">
+      <div class="logo__icon" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+        </svg>
+      </div>
+      <span class="logo__text">Solar<em>Echos</em></span>
+    </a>
+
+    <!-- 404 heading with animated sun replacing the zero -->
+    <div class="error-code" role="img" aria-label="Error 404">
+      <span class="digit">4</span>
+
+      <!-- Sun replacing "0" -->
+      <span class="sun-char" aria-hidden="true">
+        <svg viewBox="0 0 100 100" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" overflow="visible">
+          <defs>
+            <radialGradient id="sGrad" cx="38%" cy="32%">
+              <stop offset="0%"   stop-color="#fffde7"/>
+              <stop offset="50%"  stop-color="#FFD700"/>
+              <stop offset="100%" stop-color="#e15c23"/>
+            </radialGradient>
+            <linearGradient id="rayGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%"   stop-color="#FFD700"/>
+              <stop offset="100%" stop-color="#e15c23"/>
+            </linearGradient>
+          </defs>
+
+          <!-- Outer spinning ring -->
+          <circle cx="50" cy="50" r="47" fill="none" stroke="url(#rayGrad)" stroke-width="1.5"
+            opacity="0.3" style="transform-origin:50px 50px;animation:spinSlow 16s linear infinite;"/>
+
+          <!-- Rotating rays group -->
+          <g style="transform-origin:50px 50px;animation:spinSlow 20s linear infinite;">
+            <line x1="50" y1="2"  x2="50" y2="16" stroke="url(#rayGrad)" stroke-width="3.5" stroke-linecap="round"/>
+            <line x1="50" y1="84" x2="50" y2="98" stroke="url(#rayGrad)" stroke-width="3.5" stroke-linecap="round"/>
+            <line x1="2"  y1="50" x2="16" y2="50" stroke="url(#rayGrad)" stroke-width="3.5" stroke-linecap="round"/>
+            <line x1="84" y1="50" x2="98" y2="50" stroke="url(#rayGrad)" stroke-width="3.5" stroke-linecap="round"/>
+            <line x1="16" y1="16" x2="26" y2="26" stroke="url(#rayGrad)" stroke-width="3" stroke-linecap="round"/>
+            <line x1="74" y1="74" x2="84" y2="84" stroke="url(#rayGrad)" stroke-width="3" stroke-linecap="round"/>
+            <line x1="74" y1="26" x2="84" y2="16" stroke="url(#rayGrad)" stroke-width="3" stroke-linecap="round"/>
+            <line x1="16" y1="84" x2="26" y2="74" stroke="url(#rayGrad)" stroke-width="3" stroke-linecap="round"/>
+          </g>
+
+          <!-- Sun body -->
+          <circle cx="50" cy="50" r="30" fill="url(#sGrad)"
+            style="transform-origin:50px 50px;animation:pulseSun 2.8s ease-in-out infinite;"/>
+
+          <!-- Inner highlight -->
+          <circle cx="40" cy="40" r="9" fill="rgba(255,255,255,0.2)"/>
+
+          <!-- Lightning bolt crack across the sun (broken panel concept) -->
+          <path d="M46 34 L52 49 L45 49 L53 66"
+            stroke="rgba(255,255,255,0.75)" stroke-width="2.5"
+            fill="none" stroke-linecap="round" stroke-linejoin="round"
+            style="animation:flashCrack 3s ease-in-out infinite;"/>
+
+          <!-- Spark dots -->
+          <circle cx="45" cy="49" r="3.5" fill="#fff"
+            style="animation:popSpark 3s ease-in-out infinite;"/>
+          <circle cx="53" cy="49" r="2.5" fill="#FFD700"
+            style="animation:popSpark 3s ease-in-out infinite 0.3s;"/>
+        </svg>
+      </span>
+
+      <span class="digit">4</span>
+    </div>
+
+    <!-- Floating broken solar panel SVG -->
+    <svg class="illustration" viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg"
+      role="img" aria-label="Broken solar panel illustration">
+      <!-- Shadow -->
+      <ellipse cx="100" cy="133" rx="72" ry="7" fill="rgba(4,80,151,0.12)"/>
+      <!-- Mount poles -->
+      <rect x="60" y="108" width="7" height="28" rx="3" fill="#64748b"/>
+      <rect x="133" y="108" width="7" height="28" rx="3" fill="#64748b"/>
+      <!-- Base bar -->
+      <rect x="45" y="128" width="110" height="6" rx="3" fill="#475569"/>
+      <!-- Panel frame -->
+      <rect x="28" y="28" width="144" height="84" rx="7" fill="#1565C0" stroke="#1976D2" stroke-width="1.5"/>
+      <!-- Cells 2×3 grid -->
+      <rect x="36" y="36" width="40" height="32" rx="3" fill="#1976D2"/>
+      <rect x="82" y="36" width="40" height="32" rx="3" fill="#1976D2"/>
+      <rect x="128" y="36" width="36" height="32" rx="3" fill="#1976D2"/>
+      <rect x="36" y="74" width="40" height="30" rx="3" fill="#1976D2"/>
+      <rect x="82" y="74" width="40" height="30" rx="3" fill="#1976D2"/>
+      <rect x="128" y="74" width="36" height="30" rx="3" fill="#1976D2"/>
+      <!-- Cell grid lines -->
+      <g stroke="rgba(255,255,255,0.13)" stroke-width="0.9">
+        <line x1="56" y1="36" x2="56" y2="68"/><line x1="102" y1="36" x2="102" y2="68"/>
+        <line x1="146" y1="36" x2="146" y2="68"/>
+        <line x1="56" y1="74" x2="56" y2="104"/><line x1="102" y1="74" x2="102" y2="104"/>
+        <line x1="146" y1="74" x2="146" y2="104"/>
+        <line x1="36" y1="52" x2="76" y2="52"/><line x1="82" y1="52" x2="122" y2="52"/>
+        <line x1="128" y1="52" x2="164" y2="52"/>
+        <line x1="36" y1="89" x2="76" y2="89"/><line x1="82" y1="89" x2="122" y2="89"/>
+        <line x1="128" y1="89" x2="164" y2="89"/>
+      </g>
+      <!-- Crack lines -->
+      <path d="M88 28 L96 60 L86 60 L98 112"
+        stroke="#FFD700" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"
+        style="animation:flashCrack 3.5s ease-in-out infinite;"/>
+      <path d="M112 28 L106 56 L117 56 L108 112"
+        stroke="#FFD700" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"
+        opacity="0.65" style="animation:flashCrack 3.5s ease-in-out infinite 0.5s;"/>
+      <!-- Sparks -->
+      <circle cx="91" cy="60" r="4.5" fill="#FFD700"
+        style="animation:popSpark 3.5s ease-in-out infinite;"/>
+      <circle cx="113" cy="56" r="3.2" fill="#e15c23"
+        style="animation:popSpark 3.5s ease-in-out infinite 0.5s;"/>
+    </svg>
+
+    <h1 class="err-title" id="err-heading">Solar Signal Lost</h1>
+    <p class="err-body">
+      Oops — this page went completely off-grid!&nbsp; The URL you're looking for doesn't
+      exist or may have been moved. Let's reconnect you to the power source.
+    </p>
+
+    <div class="btns">
+      <a href="../home-1/home.html" class="btn btn-primary" aria-label="Go to Solar Echos homepage">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        Back to Home
+      </a>
+      <button class="btn btn-outline" id="back-btn" aria-label="Go back to previous page">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m15 18-6-6 6-6"/>
+        </svg>
+        Go Back
+      </button>
+    </div>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <nav class="quick-nav" aria-label="Quick page navigation">
+      <a href="../services/services.html" class="qlink">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/>
+        </svg>
+        Services
+      </a>
+      <a href="../about/about.html" class="qlink">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+          <circle cx="12" cy="7" r="4"/><path d="M5.5 20a8.38 8.38 0 0 1 13 0"/>
+        </svg>
+        About Us
+      </a>
+      <a href="../pricing/pricing.html" class="qlink">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+          <line x1="12" x2="12" y1="1" y2="23"/>
+          <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+        </svg>
+        Pricing
+      </a>
+      <a href="../blogs/blogs.html" class="qlink">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+        </svg>
+        Blog
+      </a>
+      <a href="../contact/contact.html" class="qlink">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.39 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l1.97-1.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        Contact
+      </a>
+    </nav>
+
+  </main>
+
+  <script>
+    /* ============================================================
+       THEME TOGGLE
+       ============================================================ */
+    const THEME_KEY = 'solar-echos-theme';
+    const root      = document.documentElement;
+    const themeBtn  = document.getElementById('theme-btn');
+    const themeIcon = document.getElementById('theme-icon');
+
+    const MOON = `<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>`;
+    const SUN  = `<circle cx="12" cy="12" r="4"/>
+      <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41
+               M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>`;
+
+    function applyTheme(t) {
+      root.setAttribute('data-theme', t);
+      localStorage.setItem(THEME_KEY, t);
+      const dark = (t === 'dark');
+      themeIcon.innerHTML = dark ? SUN : MOON;
+      themeBtn.setAttribute('aria-pressed', String(dark));
+      themeBtn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+    }
+
+    const saved = localStorage.getItem(THEME_KEY)
+      || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    applyTheme(saved);
+
+    themeBtn.addEventListener('click', () => {
+      applyTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+
+    /* ============================================================
+       GO BACK
+       ============================================================ */
+    document.getElementById('back-btn').addEventListener('click', () => {
+      window.history.length > 1 ? window.history.back() : (location.href = '../home-1/home.html');
+    });
+
+    /* ============================================================
+       FLOATING PARTICLE CANVAS
+       Tiny energy dots drifting upward with connecting mesh
+       ============================================================ */
+    (function () {
+      const cv  = document.getElementById('particles');
+      const ctx = cv.getContext('2d');
+      let W, H;
+      const PALETTE = ['#e15c23', '#FFD700', '#4DBD33', '#045097', '#ff9a44'];
+      const pts = [];
+      const N   = 55;
+
+      function isDark() {
+        return root.getAttribute('data-theme') === 'dark';
+      }
+
+      function resize() {
+        W = cv.width  = window.innerWidth;
+        H = cv.height = window.innerHeight;
+      }
+
+      class Pt {
+        constructor(rand) {
+          this.x = Math.random() * (W || 800);
+          this.y = rand ? Math.random() * (H || 600) : (H || 600) + 6;
+          this.r  = 1.2 + Math.random() * 2.5;
+          this.vx = (Math.random() - 0.5) * 0.4;
+          this.vy = -(0.3 + Math.random() * 0.55);
+          this.a  = 0;
+          this.ta = 0.1 + Math.random() * 0.2;
+          this.c  = PALETTE[Math.floor(Math.random() * PALETTE.length)];
+          this.life = 0;
+          this.max  = 220 + Math.random() * 320;
+        }
+        tick() {
+          this.life++;
+          this.x += this.vx;
+          this.y += this.vy;
+          this.a = Math.min(this.a + 0.008, this.ta);
+          if (this.life > this.max * 0.78) this.a = Math.max(0, this.a - 0.007);
+          if (this.life > this.max || this.y < -8) Object.assign(this, new Pt(false));
+        }
+        draw() {
+          ctx.save();
+          ctx.globalAlpha = this.a;
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+          ctx.fillStyle = this.c;
+          ctx.fill();
+          ctx.restore();
+        }
+      }
+
+      resize();
+      for (let i = 0; i < N; i++) pts.push(new Pt(true));
+
+      function frame() {
+        ctx.clearRect(0, 0, W, H);
+
+        /* Connection lines */
+        const MAX_D = 85;
+        ctx.lineWidth = 0.5;
+        for (let i = 0; i < pts.length; i++) {
+          for (let j = i + 1; j < pts.length; j++) {
+            const dx = pts[i].x - pts[j].x;
+            const dy = pts[i].y - pts[j].y;
+            const d  = Math.sqrt(dx * dx + dy * dy);
+            if (d > MAX_D) continue;
+            ctx.save();
+            ctx.globalAlpha = (1 - d / MAX_D) * (isDark() ? 0.06 : 0.05);
+            ctx.strokeStyle = isDark() ? '#4DBD33' : '#e15c23';
+            ctx.beginPath();
+            ctx.moveTo(pts[i].x, pts[i].y);
+            ctx.lineTo(pts[j].x, pts[j].y);
+            ctx.stroke();
+            ctx.restore();
+          }
+        }
+
+        pts.forEach(p => { p.tick(); p.draw(); });
+        requestAnimationFrame(frame);
+      }
+
+      frame();
+      window.addEventListener('resize', () => { resize(); });
+    })();
+  </script>
+</body>
+</html>
