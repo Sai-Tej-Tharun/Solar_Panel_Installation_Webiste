@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <!-- ============================================================
+       Solar-Echos | Home Page 1 – General Landing
+       Author: TechEchos Innovation  |  Version: 1.0.0
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Solar Echos | Switch to Solar & Save Up to 80% on Energy Bills</title>
+  <meta name="description"
+    content="India's most trusted solar panel installation company. Save up to 80% on electricity bills, reduce your carbon footprint, and get a free ROI estimate today." />
+  <meta name="keywords"
+    content="solar panel installation, solar energy India, rooftop solar, solar ROI calculator, green energy" />
+  <meta name="author" content="TechEchos Innovation" />
+
+  <!-- OpenGraph -->
+  <meta property="og:title"       content="Solar Echos – Switch to Solar & Save Up to 80%" />
+  <meta property="og:description" content="Professional solar panel installation for homes and businesses. Free consultation available." />
+  <meta property="og:type"        content="website" />
+  <meta property="og:image"       content="../global-images/og-image.jpg" />
+  <meta property="og:url"         content="https://solarechos.in/home-1/" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="../global-images/logo.png" />
+
+  <!-- Fonts: Poppins + Inter (max 2) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+  <!-- Global CSS -->
+    <link rel="stylesheet" href="../global-css/navbar.css">
+  <link rel="stylesheet" href="../global-css/footer.css">
+  <link rel="stylesheet" href="../global-css/global.css" />
+
+  <!-- Page CSS -->
+  <link rel="stylesheet" href="home.css" />
+</head>
+
+<body data-components-path="../components">
+
+  <!-- ── NAVBAR MOUNT POINT ── -->
+  <div id="navbar-placeholder" role="banner"></div>
+
+  <!-- ══════════════════════════════════════════════════════════
+       MAIN CONTENT
+       ══════════════════════════════════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 1 — HERO
+         ══════════════════════════════════════════════════════ -->
+    <section class="hero" id="hero" aria-label="Hero – Switch to Solar">
+
+      <!-- Radial glow background blobs -->
+      <div class="hero__bg-blobs" aria-hidden="true">
+        <div class="blob blob--orange"></div>
+        <div class="blob blob--blue"></div>
+        <div class="blob blob--green"></div>
+      </div>
+
+      <div class="container hero__inner">
+
+        <!-- LEFT — Text Content -->
+        <div class="hero__text" data-animate data-animate-delay="1">
+          <span class="badge badge-orange hero__badge">
+            <i data-lucide="zap" width="12" height="12"></i>
+            #1 Solar Installer in India
+          </span>
+
+          <h1 class="hero__headline">
+            Switch to Solar &amp;<br />
+            <span class="gradient-text">Save Up to 80%</span><br />
+            on Energy Bills
+          </h1>
+
+          <p class="hero__sub">
+            Harness the power of the sun with our premium solar panel installations.
+            Trusted by <strong>12,000+</strong> homeowners and businesses across India.
+          </p>
+
+          <!-- Trust micro-stats -->
+          <div class="hero__stats">
+            <div class="hero__stat">
+              <strong>12K+</strong>
+              <span>Installations</span>
+            </div>
+            <div class="hero__stat-divider" aria-hidden="true"></div>
+            <div class="hero__stat">
+              <strong>₹2.4Cr+</strong>
+              <span>Saved Monthly</span>
+            </div>
+            <div class="hero__stat-divider" aria-hidden="true"></div>
+            <div class="hero__stat">
+              <strong>4.9★</strong>
+              <span>Client Rating</span>
+            </div>
+          </div>
+
+          <div class="hero__ctas">
+            <a href="../contact/contact.html" class="btn btn-primary btn-lg" aria-label="Get a free solar quote">
+              <i data-lucide="sun" width="18" height="18"></i>
+              Get Free Quote
+            </a>
+            <a href="#how-it-works" class="btn btn-outline btn-lg" aria-label="See how solar installation works">
+              <i data-lucide="play-circle" width="18" height="18"></i>
+              How It Works
+            </a>
+          </div>
+
+          <!-- Certifications strip -->
+          <div class="hero__certs" aria-label="Certifications">
+            <span class="hero__cert">
+              <i data-lucide="shield-check" width="14" height="14"></i> MNRE Certified
+            </span>
+            <span class="hero__cert">
+              <i data-lucide="award" width="14" height="14"></i> ISO 9001:2015
+            </span>
+            <span class="hero__cert">
+              <i data-lucide="check-circle" width="14" height="14"></i> 25-yr Warranty
+            </span>
+          </div>
+        </div>
+
+        <!-- RIGHT — Animated Solar Scene -->
+        <div class="hero__visual" aria-label="Animated solar energy system" role="img">
+          <canvas id="solar-canvas" aria-hidden="true"></canvas>
+
+          <!-- Floating info cards (CSS animated) -->
+          <div class="float-card float-card--savings" aria-label="₹18,200 saved this month">
+            <div class="float-card__icon">
+              <i data-lucide="trending-up" width="18" height="18"></i>
+            </div>
+            <div>
+              <strong>₹18,200</strong>
+              <span>Saved this month</span>
+            </div>
+          </div>
+
+          <div class="float-card float-card--power" aria-label="4.2 kW live solar output">
+            <div class="float-card__icon float-card__icon--yellow">
+              <i data-lucide="zap" width="18" height="18"></i>
+            </div>
+            <div>
+              <strong>4.2 kW</strong>
+              <span>Live Output</span>
+            </div>
+          </div>
+
+          <div class="float-card float-card--co2" aria-label="2.1 tonnes CO2 offset">
+            <div class="float-card__icon float-card__icon--green">
+              <i data-lucide="leaf" width="18" height="18"></i>
+            </div>
+            <div>
+              <strong>2.1 T</strong>
+              <span>CO₂ Offset</span>
+            </div>
+          </div>
+        </div><!-- /hero__visual -->
+
+      </div><!-- /hero__inner -->
+
+      <!-- Scroll indicator -->
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <span>Scroll to explore</span>
+        <div class="scroll-dot"></div>
+      </div>
+
+    </section><!-- /hero -->
+
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 2 — TRUST INDICATORS
+         ══════════════════════════════════════════════════════ -->
+    <section class="trust section--sm" id="trust" aria-label="Trust indicators">
+      <div class="container">
+        <div class="trust__grid" role="list">
+
+          <div class="trust__item" role="listitem" data-animate data-animate-delay="1">
+            <div class="trust__icon">
+              <i data-lucide="sun" width="28" height="28"></i>
+            </div>
+            <div>
+              <strong>15+ Years</strong>
+              <span>Solar Experience</span>
+            </div>
+          </div>
+
+          <div class="trust__item" role="listitem" data-animate data-animate-delay="2">
+            <div class="trust__icon">
+              <i data-lucide="home" width="28" height="28"></i>
+            </div>
+            <div>
+              <strong>12,000+</strong>
+              <span>Happy Homes</span>
+            </div>
+          </div>
+
+          <div class="trust__item" role="listitem" data-animate data-animate-delay="3">
+            <div class="trust__icon">
+              <i data-lucide="shield-check" width="28" height="28"></i>
+            </div>
+            <div>
+              <strong>MNRE Approved</strong>
+              <span>Govt. Certified</span>
+            </div>
+          </div>
+
+          <div class="trust__item" role="listitem" data-animate data-animate-delay="4">
+            <div class="trust__icon">
+              <i data-lucide="clock" width="28" height="28"></i>
+            </div>
+            <div>
+              <strong>48-hr</strong>
+              <span>Installation Time</span>
+            </div>
+          </div>
+
+          <div class="trust__item" role="listitem" data-animate data-animate-delay="5">
+            <div class="trust__icon">
+              <i data-lucide="percent" width="28" height="28"></i>
+            </div>
+            <div>
+              <strong>0% EMI</strong>
+              <span>Financing Available</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 3 — SERVICES OVERVIEW
+         ══════════════════════════════════════════════════════ -->
+    <section class="services-overview section" id="services" aria-labelledby="services-title">
+      <div class="container">
+
+        <div class="section-title" data-animate>
+          <span class="eyebrow">What We Do</span>
+          <h2 id="services-title">Comprehensive <span>Solar Solutions</span></h2>
+          <p>From rooftop residential setups to large-scale commercial farms — we design, install, and maintain every system.</p>
+        </div>
+
+        <div class="services-grid" role="list">
+
+          <!-- Card 1 -->
+          <article class="service-card card" role="listitem" data-animate data-animate-delay="1">
+            <div class="service-card__icon-wrap service-card__icon-wrap--blue">
+              <i data-lucide="home" width="28" height="28"></i>
+            </div>
+            <h3>Residential Solar</h3>
+            <p>Rooftop panels tailored for every home size. Slash your electricity bill by up to 80%.</p>
+            <ul class="service-card__list" aria-label="Features">
+              <li><i data-lucide="check" width="14" height="14"></i> 1–10 kW systems</li>
+              <li><i data-lucide="check" width="14" height="14"></i> Net metering ready</li>
+              <li><i data-lucide="check" width="14" height="14"></i> Smart monitoring app</li>
+            </ul>
+            <a href="../service-details/service-details-1.html" class="btn btn-outline btn-sm service-card__cta" aria-label="View residential solar details">
+              View Details <i data-lucide="arrow-right" width="14" height="14"></i>
+            </a>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="service-card card" role="listitem" data-animate data-animate-delay="2">
+            <div class="service-card__icon-wrap service-card__icon-wrap--orange">
+              <i data-lucide="building-2" width="28" height="28"></i>
+            </div>
+            <h3>Commercial Solar</h3>
+            <p>High-output systems for factories, offices, and warehouses. Reduce OpEx significantly.</p>
+            <ul class="service-card__list" aria-label="Features">
+              <li><i data-lucide="check" width="14" height="14"></i> 10 kW–5 MW range</li>
+              <li><i data-lucide="check" width="14" height="14"></i> Rooftop &amp; ground mount</li>
+              <li><i data-lucide="check" width="14" height="14"></i> ROI under 4 years</li>
+            </ul>
+            <a href="../service-details/service-details-2.html" class="btn btn-outline btn-sm service-card__cta" aria-label="View commercial solar details">
+              View Details <i data-lucide="arrow-right" width="14" height="14"></i>
+            </a>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="service-card card" role="listitem" data-animate data-animate-delay="3">
+            <div class="service-card__icon-wrap service-card__icon-wrap--green">
+              <i data-lucide="battery-charging" width="28" height="28"></i>
+            </div>
+            <h3>Battery Storage</h3>
+            <p>Store excess solar energy and stay powered during grid outages — day or night.</p>
+            <ul class="service-card__list" aria-label="Features">
+              <li><i data-lucide="check" width="14" height="14"></i> LiFePO4 technology</li>
+              <li><i data-lucide="check" width="14" height="14"></i> 10+ year lifespan</li>
+              <li><i data-lucide="check" width="14" height="14"></i> Smart BMS control</li>
+            </ul>
+            <a href="../service-details/service-details-3.html" class="btn btn-outline btn-sm service-card__cta" aria-label="View battery storage details">
+              View Details <i data-lucide="arrow-right" width="14" height="14"></i>
+            </a>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="service-card card" role="listitem" data-animate data-animate-delay="4">
+            <div class="service-card__icon-wrap service-card__icon-wrap--yellow">
+              <i data-lucide="wrench" width="28" height="28"></i>
+            </div>
+            <h3>Maintenance &amp; AMC</h3>
+            <p>Preventive care and real-time diagnostics to keep your solar system at peak performance.</p>
+            <ul class="service-card__list" aria-label="Features">
+              <li><i data-lucide="check" width="14" height="14"></i> Quarterly inspections</li>
+              <li><i data-lucide="check" width="14" height="14"></i> Remote monitoring</li>
+              <li><i data-lucide="check" width="14" height="14"></i> 24/7 support</li>
+            </ul>
+            <a href="../service-details/service-details-5.html" class="btn btn-outline btn-sm service-card__cta" aria-label="View maintenance details">
+              View Details <i data-lucide="arrow-right" width="14" height="14"></i>
+            </a>
+          </article>
+
+        </div><!-- /services-grid -->
+
+        <div class="text-center mt-4" data-animate>
+          <a href="../services/services.html" class="btn btn-primary btn-lg">
+            Explore All Services <i data-lucide="arrow-right" width="16" height="16"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 4 — ROI CALCULATOR
+         ══════════════════════════════════════════════════════ -->
+    <section class="roi-section section" id="roi-calculator" aria-labelledby="roi-title">
+      <div class="container">
+        <div class="roi__wrapper">
+
+          <!-- Left: Calculator UI -->
+          <div class="roi__calc-panel" data-animate>
+            <div class="section-title text-left" style="margin-inline:0; text-align:left;">
+              <span class="eyebrow">Your Savings Estimate</span>
+              <h2 id="roi-title">Solar <span>ROI Calculator</span></h2>
+              <p>Enter your monthly bill to instantly see how much you can save by switching to solar.</p>
+            </div>
+
+            <div class="roi__form" role="form" aria-label="ROI savings calculator">
+
+              <div class="form-group">
+                <label class="form-label" for="monthly-bill">
+                  Monthly Electricity Bill (₹)
+                </label>
+                <input class="form-control" type="number" id="monthly-bill"
+                  placeholder="e.g. 5000" min="500" max="1000000"
+                  aria-describedby="monthly-bill-hint" />
+                <span id="monthly-bill-hint" class="form-error" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="roof-area">
+                  Available Roof Area (sq ft)
+                </label>
+                <input class="form-control" type="number" id="roof-area"
+                  placeholder="e.g. 600" min="50" max="50000" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="state-select">State / Region</label>
+                <select class="form-control" id="state-select" aria-label="Select your state">
+                  <option value="5.5">Rajasthan / Gujarat (High Sun)</option>
+                  <option value="5.2" selected>Maharashtra / Karnataka</option>
+                  <option value="4.8">Tamil Nadu / AP</option>
+                  <option value="4.5">Delhi / UP</option>
+                  <option value="4.2">West Bengal / Assam</option>
+                </select>
+              </div>
+
+              <button class="btn btn-primary btn-lg roi__calculate-btn" id="calculate-roi"
+                type="button" aria-label="Calculate solar savings">
+                <i data-lucide="calculator" width="18" height="18"></i>
+                Calculate My Savings
+              </button>
+
+            </div><!-- /roi__form -->
+          </div>
+
+          <!-- Right: Results Panel -->
+          <div class="roi__results-panel" id="roi-results" aria-live="polite" aria-label="ROI calculation results">
+            <div class="roi__results-inner">
+
+              <div class="roi__result-heading">Your Solar Potential</div>
+
+              <div class="roi__result-grid">
+                <div class="roi__result-card roi__result-card--savings">
+                  <i data-lucide="indian-rupee" width="22" height="22"></i>
+                  <strong id="result-annual-savings">₹0</strong>
+                  <span>Annual Savings</span>
+                </div>
+                <div class="roi__result-card roi__result-card--system">
+                  <i data-lucide="zap" width="22" height="22"></i>
+                  <strong id="result-system-size">0 kW</strong>
+                  <span>Recommended System</span>
+                </div>
+                <div class="roi__result-card roi__result-card--payback">
+                  <i data-lucide="clock" width="22" height="22"></i>
+                  <strong id="result-payback">0 yrs</strong>
+                  <span>Payback Period</span>
+                </div>
+                <div class="roi__result-card roi__result-card--co2">
+                  <i data-lucide="leaf" width="22" height="22"></i>
+                  <strong id="result-co2">0 T</strong>
+                  <span>CO₂ Saved / Year</span>
+                </div>
+              </div>
+
+              <!-- Progress bar — percentage offset -->
+              <div class="roi__offset-label">
+                Grid Dependency Offset
+                <strong id="result-offset-pct">0%</strong>
+              </div>
+              <div class="roi__progress-track" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="offset-bar-container">
+                <div class="roi__progress-fill" id="roi-progress-bar" style="width:0%"></div>
+              </div>
+
+              <p class="roi__disclaimer">
+                * Estimates based on average solar irradiance data. Actual savings may vary.
+              </p>
+
+              <a href="../contact/contact.html" class="btn btn-cta btn-lg roi__quote-btn">
+                <i data-lucide="file-text" width="16" height="16"></i>
+                Get Exact Quote Now
+              </a>
+
+            </div>
+          </div>
+
+        </div><!-- /roi__wrapper -->
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 5 — HOW IT WORKS
+         ══════════════════════════════════════════════════════ -->
+    <section class="how-it-works section" id="how-it-works" aria-labelledby="hiw-title">
+      <div class="container">
+
+        <div class="section-title" data-animate>
+          <span class="eyebrow">Simple Process</span>
+          <h2 id="hiw-title">Go Solar in <span>4 Easy Steps</span></h2>
+          <p>Our streamlined process takes you from initial inquiry to a fully operational solar system in as little as 5 days.</p>
+        </div>
+
+        <div class="hiw__steps" role="list">
+
+          <div class="hiw__step" role="listitem" data-animate data-animate-delay="1">
+            <div class="hiw__step-number" aria-hidden="true">01</div>
+            <div class="hiw__step-icon">
+              <i data-lucide="phone-call" width="28" height="28"></i>
+            </div>
+            <h3>Free Consultation</h3>
+            <p>Schedule a free site visit. Our engineers assess your roof, shade conditions, and energy needs.</p>
+          </div>
+
+          <div class="hiw__connector" aria-hidden="true">
+            <svg viewBox="0 0 80 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M0 10 Q40 0 80 10" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="6 4"/>
+              <polygon points="74,6 80,10 74,14" fill="currentColor"/>
+            </svg>
+          </div>
+
+          <div class="hiw__step" role="listitem" data-animate data-animate-delay="2">
+            <div class="hiw__step-number" aria-hidden="true">02</div>
+            <div class="hiw__step-icon">
+              <i data-lucide="drafting-compass" width="28" height="28"></i>
+            </div>
+            <h3>Custom Design</h3>
+            <p>We create a personalised system design optimised for maximum yield and ROI for your property.</p>
+          </div>
+
+          <div class="hiw__connector" aria-hidden="true">
+            <svg viewBox="0 0 80 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M0 10 Q40 0 80 10" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="6 4"/>
+              <polygon points="74,6 80,10 74,14" fill="currentColor"/>
+            </svg>
+          </div>
+
+          <div class="hiw__step" role="listitem" data-animate data-animate-delay="3">
+            <div class="hiw__step-number" aria-hidden="true">03</div>
+            <div class="hiw__step-icon">
+              <i data-lucide="hard-hat" width="28" height="28"></i>
+            </div>
+            <h3>Installation</h3>
+            <p>Certified technicians install your system in 1–2 days with zero disruption to your daily life.</p>
+          </div>
+
+          <div class="hiw__connector" aria-hidden="true">
+            <svg viewBox="0 0 80 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M0 10 Q40 0 80 10" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="6 4"/>
+              <polygon points="74,6 80,10 74,14" fill="currentColor"/>
+            </svg>
+          </div>
+
+          <div class="hiw__step" role="listitem" data-animate data-animate-delay="4">
+            <div class="hiw__step-number" aria-hidden="true">04</div>
+            <div class="hiw__step-icon">
+              <i data-lucide="monitor-smartphone" width="28" height="28"></i>
+            </div>
+            <h3>Monitor &amp; Save</h3>
+            <p>Track real-time energy production, savings, and system health from our mobile dashboard app.</p>
+          </div>
+
+        </div><!-- /hiw__steps -->
+
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 6 — PROJECT GALLERY
+         ══════════════════════════════════════════════════════ -->
+    <section class="gallery section" id="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+
+        <div class="section-title" data-animate>
+          <span class="eyebrow">Our Work</span>
+          <h2 id="gallery-title">Real <span>Solar Installations</span></h2>
+          <p>Browse our portfolio of completed residential and commercial solar projects across India.</p>
+        </div>
+
+        <div class="gallery__grid" role="list">
+
+          <article class="gallery__item img-zoom" role="listitem" data-animate data-animate-delay="1">
+            <img src="h1.png"
+              alt="Residential rooftop solar installation on a modern home with bright sunlight"
+              loading="lazy" width="800" height="600" />
+            <div class="gallery__overlay">
+              <span class="badge badge-green">Residential</span>
+              <strong>6 kW — Pune, MH</strong>
+              <span>Savings: ₹4,200/month</span>
+            </div>
+          </article>
+
+          <article class="gallery__item img-zoom gallery__item" role="listitem" data-animate data-animate-delay="2">
+            <img src="h2.webp"
+              alt="Large commercial solar farm with rows of solar panels under sunset sky"
+              loading="lazy" width="800" height="1200" />
+            <div class="gallery__overlay">
+              <span class="badge badge-orange">Commercial</span>
+              <strong>500 kW — Ahmedabad, GJ</strong>
+              <span>Savings: ₹2.1L/month</span>
+            </div>
+          </article>
+
+          <article class="gallery__item img-zoom" role="listitem" data-animate data-animate-delay="3">
+            <img src="h3.webp"
+              alt="Professional solar panel technicians installing panels on a rooftop in safety gear"
+              loading="lazy" width="800" height="600" />
+            <div class="gallery__overlay">
+              <span class="badge badge-primary">Industrial</span>
+              <strong>1.2 MW — Chennai, TN</strong>
+              <span>Savings: ₹8.4L/month</span>
+            </div>
+          </article>
+
+          <article class="gallery__item img-zoom" role="listitem" data-animate data-animate-delay="4">
+            <img src="h4.jpeg"
+              alt="Eco-friendly solar powered home with green lawn and photovoltaic rooftop panels"
+              loading="lazy" width="800" height="600" />
+            <div class="gallery__overlay">
+              <span class="badge badge-green">Residential</span>
+              <strong>3 kW — Bengaluru, KA</strong>
+              <span>Savings: ₹2,800/month</span>
+            </div>
+          </article>
+
+          <article class="gallery__item img-zoom gallery__item" role="listitem" data-animate data-animate-delay="5">
+            <img src="h5.jpg"
+              alt="Aerial view of large scale solar farm with symmetric rows of solar panels"
+              loading="lazy" width="1200" height="600" />
+            <div class="gallery__overlay">
+              <span class="badge badge-yellow">Solar Farm</span>
+              <strong>5 MW — Rajasthan</strong>
+              <span>Powers 3,200 homes</span>
+            </div>
+          </article>
+                    <article class="gallery__item img-zoom gallery__item" role="listitem" data-animate data-animate-delay="5">
+            <img src="h6.jpg"
+              alt="Aerial view of large scale solar farm with symmetric rows of solar panels"
+              loading="lazy" width="1200" height="600" />
+            <div class="gallery__overlay">
+              <span class="badge badge-yellow">Solar Farm</span>
+              <strong>5 MW — Chennai</strong>
+              <span>Powers 3,200 homes</span>
+            </div>
+          </article>
+
+        </div><!-- /gallery__grid -->
+
+        <div class="text-center mt-4" data-animate>
+          <a href="../services/services.html" class="btn btn-outline btn-lg">
+            View Full Portfolio <i data-lucide="external-link" width="16" height="16"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 7 — TESTIMONIALS
+         ══════════════════════════════════════════════════════ -->
+    <section class="testimonials section" id="testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+
+        <div class="section-title" data-animate>
+          <span class="eyebrow">Client Stories</span>
+          <h2 id="testimonials-title">What Our <span>Customers Say</span></h2>
+          <p>Real experiences from homeowners and businesses who've made the switch to solar with us.</p>
+        </div>
+
+        <div class="testimonials__slider" role="region" aria-label="Customer testimonials carousel">
+
+          <!-- Slider track -->
+          <div class="testimonials__track" id="testimonials-track">
+
+            <article class="testimonial-card card" aria-label="Testimonial from Priya Sharma">
+              <div class="testimonial-card__stars" aria-label="5 star rating">
+                <i data-lucide="star" width="16" height="16"></i>
+                <i data-lucide="star" width="16" height="16"></i>
+                <i data-lucide="star" width="16" height="16"></i>
+                <i data-lucide="star" width="16" height="16"></i>
+                <i data-lucide="star" width="16" height="16"></i>
+              </div>
+              <blockquote>
+                <p>"My electricity bill dropped from ₹6,200 to just ₹800 in the first month! The installation was done in a single day — clean, professional, and zero mess. Best investment I've made."</p>
+              </blockquote>
+              <footer class="testimonial-card__author">
+                <div class="testimonial-card__avatar" aria-hidden="true">PS</div>
+                <div>
+                  <strong>Priya Sharma</strong>
+                  <span>Homeowner, Pune</span>
+                </div>
+                <span class="badge badge-green testimonial-card__savings">Saves ₹5,400/mo</span>
+              </footer>
+            </article>
+
+            <article class="testimonial-card card" aria-label="Testimonial from Ramesh Industries">
+              <div class="testimonial-card__stars" aria-label="5 star rating">
+                <i data-lucide="star" width="16" height="16"></i>
+                <i data-lucide="star" width="16" height="16"></i>
+                <i data-lucide="star" width="16" height="16"></i>
+                <i data-lucide="star" width="16" height="16"></i>
+                <i data-lucide="star" width="16" height="16"></i>
+              </div>
+              <blockquote>
+                <p>"We installed a 200 kW system on our factory roof. Solar Echos handled everything — permits, DISCOM approval, installation. We hit payback in just 3.5 years. Highly recommend."</p>
+              </blockquote>
+              <footer class="testimonial-card__author">
+                <div class="testimonial-card__avatar" aria-hidden="true">RI</div>
+                <div>
+                  <strong>Ramesh Gupta</strong>
+                  <span>MD, Ramesh Industries, Surat</span>
+                </div>
+                <span class="badge badge-orange testimonial-card__savings">Saves ₹1.8L/mo</span>
+              </footer>
+            </article>
+
+            <article class="testimonial-card card" aria-label="Testimonial from Anika Nair">
+              <div class="testimonial-card__stars" aria-label="5 star rating">
+                <i data-lucide="star" width="16" height="16"></i>
+                <i data-lucide="star" width="16" height="16"></i>
+                <i data-lucide="star" width="16" height="16"></i>
+                <i data-lucide="star" width="16" height="16"></i>
+                <i data-lucide="star" width="16" height="16"></i>
+              </div>
+              <blockquote>
+                <p>"The monitoring dashboard is absolutely brilliant. I can check my solar production from my phone at any time. Customer support responds within the hour. Truly outstanding service."</p>
+              </blockquote>
+              <footer class="testimonial-card__author">
+                <div class="testimonial-card__avatar" aria-hidden="true">AN</div>
+                <div>
+                  <strong>Anika Nair</strong>
+                  <span>Architect, Bengaluru</span>
+                </div>
+                <span class="badge badge-primary testimonial-card__savings">Saves ₹3,100/mo</span>
+              </footer>
+            </article>
+
+            <article class="testimonial-card card" aria-label="Testimonial from Dr. Vikram Patel">
+              <div class="testimonial-card__stars" aria-label="4 star rating">
+                <i data-lucide="star" width="16" height="16"></i>
+                <i data-lucide="star" width="16" height="16"></i>
+                <i data-lucide="star" width="16" height="16"></i>
+                <i data-lucide="star" width="16" height="16"></i>
+                <i data-lucide="star" width="16" height="16"></i>
+              </div>
+              <blockquote>
+                <p>"Got the 5 kW system installed for my clinic in Jaipur. Not only do we save electricity costs but patients love the eco-friendly initiative. The whole team was very professional."</p>
+              </blockquote>
+              <footer class="testimonial-card__author">
+                <div class="testimonial-card__avatar" aria-hidden="true">VP</div>
+                <div>
+                  <strong>Dr. Vikram Patel</strong>
+                  <span>Physician, Jaipur</span>
+                </div>
+                <span class="badge badge-green testimonial-card__savings">Saves ₹4,600/mo</span>
+              </footer>
+            </article>
+
+          </div><!-- /testimonials__track -->
+
+          <!-- Controls -->
+          <div class="testimonials__controls" aria-label="Carousel controls">
+            <button class="testimonials__btn" id="prev-testimonial"
+              aria-label="Previous testimonial">
+              <i data-lucide="arrow-left" width="20" height="20"></i>
+            </button>
+
+            <div class="testimonials__dots" id="testimonials-dots" role="tablist" aria-label="Testimonial indicators">
+              <!-- Dots injected by JS -->
+            </div>
+
+            <button class="testimonials__btn" id="next-testimonial"
+              aria-label="Next testimonial">
+              <i data-lucide="arrow-right" width="20" height="20"></i>
+            </button>
+          </div>
+
+        </div><!-- /testimonials__slider -->
+
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 8 — ENERGY STATS / IMPACT
+         ══════════════════════════════════════════════════════ -->
+    <section class="impact section" id="impact" aria-labelledby="impact-title">
+      <div class="container">
+
+        <div class="section-title" data-animate>
+          <span class="eyebrow">Our Impact</span>
+          <h2 id="impact-title">Powering a <span>Greener India</span></h2>
+          <p>Every installation we complete is a step toward India's clean energy future.</p>
+        </div>
+
+        <div class="impact__grid" role="list">
+
+          <div class="impact__stat" role="listitem" data-animate data-animate-delay="1">
+            <div class="impact__stat-icon">
+              <i data-lucide="zap" width="32" height="32"></i>
+            </div>
+            <strong class="impact__number" data-count-to="420" data-suffix="M">8.2L</strong>
+            <span class="impact__label">kWh Generated</span>
+            <span class="impact__sub">Since 2009</span>
+          </div>
+
+          <div class="impact__stat" role="listitem" data-animate data-animate-delay="2">
+            <div class="impact__stat-icon impact__stat-icon--green">
+              <i data-lucide="leaf" width="32" height="32"></i>
+            </div>
+            <strong class="impact__number" data-count-to="180" data-suffix="K T">98</strong>
+            <span class="impact__label">CO₂ Offset</span>
+            <span class="impact__sub">Tonnes of carbon saved</span>
+          </div>
+
+          <div class="impact__stat" role="listitem" data-animate data-animate-delay="3">
+            <div class="impact__stat-icon impact__stat-icon--orange">
+              <i data-lucide="indian-rupee" width="32" height="32"></i>
+            </div>
+            <strong class="impact__number" data-count-to="2400" data-suffix="Cr">18.5Cr</strong>
+            <span class="impact__label">Client Savings</span>
+            <span class="impact__sub">Cumulative ₹ saved</span>
+          </div>
+
+          <div class="impact__stat" role="listitem" data-animate data-animate-delay="4">
+            <div class="impact__stat-icon impact__stat-icon--yellow">
+              <i data-lucide="home" width="32" height="32"></i>
+            </div>
+            <strong class="impact__number" data-count-to="12" data-suffix="K+">360</strong>
+            <span class="impact__label">Installations</span>
+            <span class="impact__sub">Across 18 states</span>
+          </div>
+
+        </div><!-- /impact__grid -->
+
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 9 — CTA BANNER
+         ══════════════════════════════════════════════════════ -->
+    <section class="cta-banner" id="cta-banner" aria-label="Call to action – start your solar journey">
+      <div class="cta-banner__bg" aria-hidden="true"></div>
+      <div class="container cta-banner__inner">
+        <div class="cta-banner__text" data-animate>
+          <span class="badge badge-yellow">Limited Time Offer</span>
+          <h2>Start Your Solar Journey <span>Today</span></h2>
+          <p>Get a free site survey &amp; personalised quote. ₹0 upfront with our easy EMI options. Installation in 48 hours.</p>
+          <div class="cta-banner__perks" aria-label="Key benefits">
+            <span><i data-lucide="check-circle" width="16" height="16"></i> Free Survey</span>
+            <span><i data-lucide="check-circle" width="16" height="16"></i> 0% EMI Available</span>
+            <span><i data-lucide="check-circle" width="16" height="16"></i> 25-yr Warranty</span>
+          </div>
+          <div class="cta-banner__ctas">
+            <a href="../contact/contact.html#quote-form" class="btn btn-cta btn-lg" id="get-quote-cta" aria-label="Get a free solar quote">
+              <i data-lucide="send" width="18" height="18"></i>
+              Get Free Quote Now
+            </a>
+            <a href="tel:+91 (987) 654-3210" class="btn btn-outline btn-lg cta-banner__call" aria-label="Call us now">
+              <i data-lucide="phone" width="18" height="18"></i>
+              Call Now: +91 (987) 654-3210
+            </a>
+          </div>
+        </div>
+
+        <div class="cta-banner__visual" aria-hidden="true" data-animate data-animate-delay="2">
+          <img src="https://images.unsplash.com/photo-1521618755572-156ae0cdd74d?w=600&q=80"
+            alt="Electric car charging using solar energy at a modern smart home"
+            loading="lazy" width="600" height="450" />
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 10 — BLOG PREVIEW
+         ══════════════════════════════════════════════════════ -->
+    <section class="blog-preview section" id="blog-preview" aria-labelledby="blog-title">
+      <div class="container">
+
+        <div class="section-title" data-animate>
+          <span class="eyebrow">Knowledge Hub</span>
+          <h2 id="blog-title">Latest Solar <span>Insights</span></h2>
+          <p>Stay updated with solar tips, technology news, and government subsidies.</p>
+        </div>
+
+        <div class="blog-grid" role="list">
+
+          <article class="blog-card card" role="listitem" data-animate data-animate-delay="1">
+            <a href="../blog-details/blog-details.html" class="blog-card__img-link" aria-label="Read article: Top 5 solar subsidies in India 2025">
+              <div class="blog-card__img img-zoom">
+                <img src="h1a1.jfif"
+                  alt="Solar panels on rooftop representing government subsidy opportunities in India"
+                  loading="lazy" width="600" height="360" />
+              </div>
+            </a>
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <span class="badge badge-green">ROI Tips</span>
+                <time datetime="2025-07-10">July 10, 2025</time>
+              </div>
+              <h3>
+                <a href="../blog-details/blog-details.html">Top 5 Solar Subsidies &amp; Incentives in India for 2025</a>
+              </h3>
+              <p>The Indian government offers significant financial support for solar adoption. Discover the PM Surya Ghar scheme and state-level benefits.</p>
+              <a href="../blog-details/blog-details.html" class="blog-card__read-more" aria-label="Read full article about solar subsidies">
+                Read More <i data-lucide="arrow-right" width="14" height="14"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="blog-card card" role="listitem" data-animate data-animate-delay="2">
+            <a href="../blog-details/blog-details.html" class="blog-card__img-link" aria-label="Read article: How to calculate solar panel ROI">
+              <div class="blog-card__img img-zoom">
+                <img src="h1a2.jpg"
+                  alt="Solar energy production graph on a futuristic digital dashboard"
+                  loading="lazy" width="600" height="360" />
+              </div>
+            </a>
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <span class="badge badge-yellow">Solar Tech</span>
+                <time datetime="2025-06-22">June 22, 2025</time>
+              </div>
+              <h3>
+                <a href="../blog-details/blog-details.html">How to Calculate the Real ROI of Your Solar Panel System</a>
+              </h3>
+              <p>Beyond the simple payback period — a comprehensive guide to calculating the true 25-year financial value of going solar.</p>
+              <a href="../blog-details/blog-details.html" class="blog-card__read-more" aria-label="Read full article about solar ROI">
+                Read More <i data-lucide="arrow-right" width="14" height="14"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="blog-card card" role="listitem" data-animate data-animate-delay="3">
+            <a href="../blog-details/blog-details.html" class="blog-card__img-link" aria-label="Read article: EV and solar integration guide">
+              <div class="blog-card__img img-zoom">
+                <img src="https://images.unsplash.com/photo-1593941707874-ef25b8b4a92b?w=600&q=80"
+                  alt="Electric car charging at home with solar panels on rooftop during daytime"
+                  loading="lazy" width="600" height="360" />
+              </div>
+            </a>
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <span class="badge badge-primary">EV + Solar</span>
+                <time datetime="2025-06-05">June 5, 2025</time>
+              </div>
+              <h3>
+                <a href="../blog-details/blog-details.html">EV + Solar: The Ultimate Green Energy Combo for Indian Homes</a>
+              </h3>
+              <p>Pair your electric vehicle charger with rooftop solar and drive your car for almost free. Here's everything you need to know.</p>
+              <a href="../blog-details/blog-details.html" class="blog-card__read-more" aria-label="Read full article about EV and solar">
+                Read More <i data-lucide="arrow-right" width="14" height="14"></i>
+              </a>
+            </div>
+          </article>
+
+        </div><!-- /blog-grid -->
+
+        <div class="text-center mt-4" data-animate>
+          <a href="../blogs/blogs.html" class="btn btn-outline btn-lg">
+            View All Articles <i data-lucide="arrow-right" width="16" height="16"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main><!-- /main -->
+
+
+  <!-- ── FOOTER MOUNT POINT ── -->
+ 
+  <footer class="site-footer" role="contentinfo" aria-label="Site footer">
+  <div class="container">
+
+    <div class="footer__main">
+
+      <!-- Brand column -->
+      <div class="footer__brand">
+        <a href="../home-1/home.html" class="navbar__logo" aria-label="Solar Echos home">
+          <div class="navbar__logo-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+            </svg>
+          </div>
+          <span class="navbar__logo-text">Solar<span style="color:var(--color-accent-orange)">Echos</span></span>
+        </a>
+
+        <p>India's most trusted solar energy partner. We design, install, and maintain premium solar systems for homes and businesses across 18 states.</p>
+
+        <div class="footer__certbadges" aria-label="Certifications">
+          <span class="footer__certbadge">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            MNRE Certified
+          </span>
+          <span class="footer__certbadge">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+            ISO 9001
+          </span>
+        </div>
+
+        <div class="footer__social" style="margin-top:var(--space-2);" aria-label="Social media links">
+          <a href="#" class="footer__social-link" aria-label="Follow on Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Follow on Twitter / X">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Follow on LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Subscribe on YouTube">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Follow on Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
+        </div>
+      </div><!-- /brand -->
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="footer__col-title">Quick Links</h3>
+        <ul class="footer__links">
+          <li><a href="../home-1/home.html">Home</a></li>
+          <li><a href="../about/about.html">About Us</a></li>
+          <li><a href="../services/services.html">Services</a></li>
+          <li><a href="../pricing/pricing.html">Pricing</a></li>
+          <li><a href="../blogs/blogs.html">Blog</a></li>
+          <li><a href="../contact/contact.html">Contact</a></li>
+          <li><a href="../admin-dashboard/dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <h3 class="footer__col-title">Our Services</h3>
+        <ul class="footer__links">
+          <li><a href="../service-details/service-details-1.html">Residential Solar</a></li>
+          <li><a href="../service-details/service-details-2.html">Commercial Solar</a></li>
+          <li><a href="../service-details/service-details-3.html">Battery Storage</a></li>
+          <li><a href="../service-details/service-details-4.html">EV Charging Setup</a></li>
+          <li><a href="../service-details/service-details-5.html">Solar Maintenance</a></li>
+          <li><a href="../service-details/service-details-6.html">Free Consultation</a></li>
+                 <a href="../404-page/404.html">FAQ</a>
+        <a href="../coming-soon/coming-soon.html">New Features</a>
+        </ul>
+      </div>
+
+      <!-- Newsletter + Contact -->
+      <div class="footer__newsletter">
+        <h3 class="footer__col-title">Stay Updated</h3>
+        <p>Get solar tips, subsidy alerts, and exclusive offers delivered to your inbox.</p>
+
+        <form class="footer__newsletter-form" onsubmit="handleNewsletterSubmit(event)" novalidate aria-label="Newsletter signup">
+          <input
+            type="email"
+            class="footer__newsletter-input"
+            placeholder="Your email address"
+            aria-label="Email address for newsletter"
+            required />
+          <button type="submit" class="btn btn-primary btn-sm" aria-label="Subscribe to newsletter">
+            Subscribe
+          </button>
+        </form>
+
+        <div style="margin-top:var(--space-3);">
+          <h4 style="font-size:var(--text-sm);color:white;margin-bottom:12px;font-family:var(--font-heading);">Contact Us</h4>
+          <ul class="footer__links">
+            <li>
+              <a href="tel:+91 (987) 654-3210" aria-label="Call us">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.39 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l1.97-1.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                +91 (987) 654-3210 (Toll Free)
+              </a>
+            </li>
+            <li>
+              <a href="mailto:hello@solarechos.in" aria-label="Email us">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                hello@solarechos.in
+              </a>
+            </li>
+            <li>
+              <a href="../contact/contact.html" aria-label="Office location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                Solar Echos HQ, Mumbai, MH
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div><!-- /footer__main -->
+
+    <!-- Bottom bar -->
+    <div class="footer__bottom">
+      <span>© <span id="footer-year"></span> Solar Echos.  All rights reserved.</span>
+      <div class="footer__bottom-links">
+        <a href="../404-page/404.html">Privacy Policy</a>
+        <a href="../coming-soon/coming-soon.html">Terms of Service</a>
+        <a href="../404-page/404.html">Sitemap</a>
+      </div>
+    </div>
+
+  </div><!-- /container -->
+</footer>
+
+  <!-- Back-to-top button -->
+  <button id="back-to-top" aria-label="Scroll back to top">
+    <i data-lucide="arrow-up" width="20" height="20"></i>
+  </button>
+
+  <!-- Toast container -->
+  <div id="toast-container" role="region" aria-live="polite" aria-label="Notifications"></div>
+
+  <!-- Global JS -->
+  <script src="../global-js/navbar.js"></script>
+<script src="../global-js/footer.js"></script>
+  <script src="../global-js/global.js"></script>
+
+  <!-- Page-specific JS -->
+  <script src="home.js"></script>
+
+  <!-- Lucide icons init (runs after DOM + deferred scripts) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) lucide.createIcons();
+    });
+    // Also re-run after component injection
+    document.addEventListener('lucide-refresh', () => {
+      if (window.lucide) lucide.createIcons();
+    });
+  </script>
+</body>
+</html>

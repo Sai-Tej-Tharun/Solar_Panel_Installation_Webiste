@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <!-- ============================================================
+       Solar-Echos | Pricing Page
+       Author: TechEchos Innovation
+       Version: 1.0.0
+       Description: Pricing plans, ROI comparison, savings
+                    calculator, financing options, FAQ.
+  ============================================================ -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Solar Pricing Plans & Packages | Solar-Echos – TechEchos Innovation</title>
+  <meta name="description" content="Transparent solar installation pricing for Indian homes and businesses. Compare Basic, Standard and Premium plans. View EMI options, ROI calculator, and government subsidy details." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://solar-echos.com/pricing/" />
+
+  <!-- OpenGraph -->
+  <meta property="og:title"       content="Solar Pricing Plans | Solar-Echos" />
+  <meta property="og:description" content="Honest, transparent solar pricing for every budget. From starter residential kits to full commercial systems." />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://solar-echos.com/pricing/" />
+  <meta property="og:image"       content="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1200" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Solar Pricing Plans | Solar-Echos" />
+  <meta name="twitter:description" content="Compare solar plans, calculate ROI, and explore EMI options for Indian homes and businesses." />
+
+  <!-- Favicon -->
+  <link rel="icon" href="../global-images/logo.png" type="image/x-icon" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Global CSS -->
+    <link rel="stylesheet" href="../global-css/navbar.css">
+  <link rel="stylesheet" href="../global-css/footer.css">
+  <link rel="stylesheet" href="../global-css/global.css" />
+
+  <!-- Page CSS -->
+  <link rel="stylesheet" href="pricing.css" />
+</head>
+
+<body data-components-path="../components">
+
+  <!-- ░░ NAVBAR MOUNT ░░ -->
+  <div id="navbar-placeholder" role="banner"></div>
+
+  <main id="main-content">
+
+    <!-- ============================================================
+         1. PAGE HERO
+    ============================================================ -->
+    <section class="pricing-hero" aria-labelledby="pricing-hero-heading">
+      <div class="pricing-hero__bg" aria-hidden="true">
+        <div class="ph-blob ph-blob--1"></div>
+        <div class="ph-blob ph-blob--2"></div>
+        <div class="ph-blob ph-blob--3"></div>
+        <div class="ph-grid"></div>
+      </div>
+
+      <div class="container">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="../home-1/home.html">Home</a></li>
+            <li aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </li>
+            <li><span aria-current="page">Pricing</span></li>
+          </ol>
+        </nav>
+
+        <div class="pricing-hero__content" data-animate>
+          <span class="eyebrow-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            Transparent Pricing
+          </span>
+          <h1 id="pricing-hero-heading">
+            Simple Plans. <span class="gradient-text">Real Savings.</span><br />No Hidden Charges.
+          </h1>
+          <p>Every rupee you invest in solar is a rupee that works for you — every single day for 25 years. Find the plan that fits your roof, budget, and energy goals.</p>
+
+          <!-- Trust row -->
+          <div class="hero-trust-row" aria-label="Key trust indicators">
+            <div class="trust-chip">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4DBD33" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              No installation surprises
+            </div>
+            <div class="trust-chip">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4DBD33" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              Subsidy assistance included
+            </div>
+            <div class="trust-chip">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4DBD33" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              EMI from ₹2,199/month
+            </div>
+            <div class="trust-chip">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4DBD33" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              25-year performance warranty
+            </div>
+          </div>
+        </div>
+
+        <!-- Billing toggle -->
+        <div class="billing-toggle-wrap" data-animate data-animate-delay="2">
+          <span class="billing-label billing-label--residential" id="toggle-label-left">Residential</span>
+          <button
+            class="billing-toggle"
+            id="billing-toggle"
+            role="switch"
+            aria-checked="false"
+            aria-label="Toggle between residential and commercial pricing"
+          >
+            <span class="billing-toggle__thumb" aria-hidden="true"></span>
+          </button>
+          <span class="billing-label billing-label--commercial" id="toggle-label-right">Commercial</span>
+          <span class="billing-save-badge" id="billing-save-badge" aria-live="polite">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            Best Value for Homes
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         2. PRICING PLANS
+    ============================================================ -->
+    <section class="plans-section section" aria-labelledby="plans-heading">
+      <div class="container">
+        <h2 id="plans-heading" class="sr-only">Solar installation plans</h2>
+
+        <!-- Residential Plans -->
+        <div class="plans-grid" id="residential-plans" aria-label="Residential solar plans">
+
+          <!-- ── BASIC ── -->
+          <article class="plan-card" aria-labelledby="plan-basic-title">
+            <div class="plan-card__header">
+              <div class="plan-card__icon plan-card__icon--basic" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+              <span class="plan-card__tier">Basic</span>
+              <h3 id="plan-basic-title" class="plan-card__name">Starter Home</h3>
+              <p class="plan-card__tagline">Perfect for 1–2 BHK apartments with moderate energy use</p>
+            </div>
+
+            <div class="plan-card__price-block">
+              <div class="plan-card__price">
+                <span class="price-currency">₹</span>
+                <span class="price-amount" data-res="1,49,000" data-com="8,50,000">1,49,000</span>
+              </div>
+              <span class="price-note">for a <strong data-res="2 kW" data-com="25 kW">2 kW</strong> system · incl. installation</span>
+              <div class="price-emi">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-secondary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                EMI from <strong data-res="₹2,199/mo" data-com="₹12,500/mo">₹2,199/mo</strong>
+              </div>
+            </div>
+
+            <ul class="plan-card__features" aria-label="Basic plan features">
+              <li class="feature-item feature-item--yes">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4DBD33" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <span data-res="2 kW Monocrystalline Panels (6 panels)" data-com="25 kW Commercial Array">2 kW Monocrystalline Panels (6 panels)</span>
+              </li>
+              <li class="feature-item feature-item--yes">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4DBD33" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <span>String Inverter (MNRE approved)</span>
+              </li>
+              <li class="feature-item feature-item--yes">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4DBD33" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <span>Mounting Structure &amp; AC/DC Cables</span>
+              </li>
+              <li class="feature-item feature-item--yes">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4DBD33" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <span>Net-Metering Application Support</span>
+              </li>
+              <li class="feature-item feature-item--yes">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4DBD33" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <span>5-Year System Warranty</span>
+              </li>
+              <li class="feature-item feature-item--yes">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4DBD33" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <span>PM Surya Ghar Subsidy Assistance</span>
+              </li>
+              <li class="feature-item feature-item--no">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                <span>Battery Storage</span>
+              </li>
+              <li class="feature-item feature-item--no">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                <span>Live Monitoring Dashboard</span>
+              </li>
+              <li class="feature-item feature-item--no">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                <span>Annual Free Maintenance Visit</span>
+              </li>
+            </ul>
+
+            <div class="plan-card__footer">
+              <a href="../contact/contact.html" class="btn btn-outline" style="width:100%">Get Basic Quote</a>
+              <p class="plan-card__roi-hint">Est. payback: <strong>4–5 years</strong></p>
+            </div>
+          </article>
+
+          <!-- ── STANDARD (MOST POPULAR) ── -->
+          <article class="plan-card plan-card--popular" aria-labelledby="plan-standard-title">
+            <div class="plan-card__popular-badge" aria-label="Most popular plan">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              Most Popular
+            </div>
+
+            <div class="plan-card__header">
+              <div class="plan-card__icon plan-card__icon--standard" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+              </div>
+              <span class="plan-card__tier">Standard</span>
+              <h3 id="plan-standard-title" class="plan-card__name">Power Home</h3>
+              <p class="plan-card__tagline">The sweet spot for 3 BHK homes and small businesses</p>
+            </div>
+
+            <div class="plan-card__price-block">
+              <div class="plan-card__price">
+                <span class="price-currency">₹</span>
+                <span class="price-amount" data-res="2,99,000" data-com="18,50,000">2,99,000</span>
+              </div>
+              <span class="price-note">for a <strong data-res="5 kW" data-com="50 kW">5 kW</strong> system · incl. installation</span>
+              <div class="price-emi">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-secondary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                EMI from <strong data-res="₹4,399/mo" data-com="₹27,200/mo">₹4,399/mo</strong>
+              </div>
+            </div>
+
+            <ul class="plan-card__features" aria-label="Standard plan features">
+              <li class="feature-item feature-item--yes">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4DBD33" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <span data-res="5 kW Bifacial Panels (14 panels)" data-com="50 kW Bifacial Array (High Efficiency)">5 kW Bifacial Panels (14 panels)</span>
+              </li>
+              <li class="feature-item feature-item--yes">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4DBD33" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <span>Hybrid Inverter with Battery Ready</span>
+              </li>
+              <li class="feature-item feature-item--yes">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4DBD33" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <span>Premium Mounting &amp; All Wiring</span>
+              </li>
+              <li class="feature-item feature-item--yes">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4DBD33" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <span>Net-Metering Application Support</span>
+              </li>
+              <li class="feature-item feature-item--yes">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4DBD33" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <span>10-Year System Warranty</span>
+              </li>
+              <li class="feature-item feature-item--yes">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4DBD33" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <span>PM Surya Ghar Subsidy Assistance</span>
+              </li>
+              <li class="feature-item feature-item--yes">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4DBD33" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <span><strong>Live Monitoring Dashboard</strong></span>
+              </li>
+              <li class="feature-item feature-item--yes">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4DBD33" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <span>1 Free Annual Maintenance Visit</span>
+              </li>
+              <li class="feature-item feature-item--no">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                <span>Battery Storage (Add-on available)</span>
+              </li>
+            </ul>
+
+            <div class="plan-card__footer">
+              <a href="../contact/contact.html" class="btn btn-cta" style="width:100%">
+                Get Standard Quote
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <p class="plan-card__roi-hint">Est. payback: <strong>3–4 years</strong></p>
+            </div>
+          </article>
+
+          <!-- ── PREMIUM ── -->
+          <article class="plan-card" aria-labelledby="plan-premium-title">
+            <div class="plan-card__header">
+              <div class="plan-card__icon plan-card__icon--premium" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <span class="plan-card__tier">Premium</span>
+              <h3 id="plan-premium-title" class="plan-card__name">Elite Solar Home</h3>
+              <p class="plan-card__tagline">Complete energy independence for large homes &amp; villas</p>
+            </div>
+
+            <div class="plan-card__price-block">
+              <div class="plan-card__price">
+                <span class="price-currency">₹</span>
+                <span class="price-amount" data-res="5,49,000" data-com="38,00,000">5,49,000</span>
+              </div>
+              <span class="price-note">for a <strong data-res="10 kW" data-com="100 kW">10 kW</strong> system · incl. installation</span>
+              <div class="price-emi">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-secondary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                EMI from <strong data-res="₹8,099/mo" data-com="₹56,000/mo">₹8,099/mo</strong>
+              </div>
+            </div>
+
+            <ul class="plan-card__features" aria-label="Premium plan features">
+              <li class="feature-item feature-item--yes">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4DBD33" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <span data-res="10 kW TOPCon Premium Panels (26 panels)" data-com="100 kW Tier-1 Commercial Array">10 kW TOPCon Premium Panels (26 panels)</span>
+              </li>
+              <li class="feature-item feature-item--yes">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4DBD33" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <span>Hybrid Inverter + 10 kWh LFP Battery</span>
+              </li>
+              <li class="feature-item feature-item--yes">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4DBD33" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <span>Titanium Mounting + Full Cabling</span>
+              </li>
+              <li class="feature-item feature-item--yes">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4DBD33" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <span>Net-Metering + Grid Export Setup</span>
+              </li>
+              <li class="feature-item feature-item--yes">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4DBD33" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <span><strong>25-Year Performance Warranty</strong></span>
+              </li>
+              <li class="feature-item feature-item--yes">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4DBD33" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <span>AI-Powered Live Monitoring Dashboard</span>
+              </li>
+              <li class="feature-item feature-item--yes">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4DBD33" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <span>2 Free Annual Maintenance Visits</span>
+              </li>
+              <li class="feature-item feature-item--yes">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4DBD33" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <span>EV Charger Ready Wiring</span>
+              </li>
+              <li class="feature-item feature-item--yes">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4DBD33" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <span>Dedicated Account Manager</span>
+              </li>
+            </ul>
+
+            <div class="plan-card__footer">
+              <a href="../contact/contact.html" class="btn btn-primary" style="width:100%">Get Premium Quote</a>
+              <p class="plan-card__roi-hint">Est. payback: <strong>3–3.5 years</strong></p>
+            </div>
+          </article>
+
+        </div><!-- /#residential-plans -->
+
+        <!-- Custom enterprise nudge -->
+        <div class="enterprise-nudge" data-animate>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-yellow)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="12" y2="14"/></svg>
+          Need more than 100 kW, a solar farm, or a custom multi-site project?
+          <a href="../contact/contact.html" class="enterprise-nudge__link">Talk to our enterprise team →</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         3. SAVINGS CALCULATOR
+    ============================================================ -->
+    <section class="calculator-section section" aria-labelledby="calc-heading">
+      <div class="container">
+        <div class="section-title" data-animate>
+          <span class="eyebrow">Interactive ROI Tool</span>
+          <h2 id="calc-heading">Calculate Your <span>Solar Savings</span></h2>
+          <p>Enter your current electricity bill and location to see exactly how much solar will save you — month by month, year by year.</p>
+        </div>
+
+        <div class="calculator-card card" data-animate>
+          <div class="calculator-inputs">
+
+            <div class="calc-field">
+              <label for="calc-bill" class="form-label">
+                Monthly Electricity Bill (₹)
+                <span class="calc-field__hint">Check your latest DISCOM bill</span>
+              </label>
+              <div class="calc-input-wrap">
+                <span class="calc-input-prefix" aria-hidden="true">₹</span>
+                <input type="number" id="calc-bill" class="form-control calc-input" min="500" max="100000" value="5000" aria-label="Monthly electricity bill in rupees" />
+              </div>
+              <input type="range" id="calc-bill-slider" class="calc-slider" min="500" max="50000" step="500" value="5000" aria-label="Adjust monthly electricity bill" />
+              <div class="calc-slider-labels" aria-hidden="true"><span>₹500</span><span>₹50,000</span></div>
+            </div>
+
+            <div class="calc-field">
+              <label for="calc-state" class="form-label">
+                Your State
+                <span class="calc-field__hint">Affects solar hours &amp; tariff</span>
+              </label>
+              <select id="calc-state" class="form-control" aria-label="Select your state">
+                <option value="rajasthan">Rajasthan (Peak Solar)</option>
+                <option value="gujarat">Gujarat</option>
+                <option value="maharashtra" selected>Maharashtra</option>
+                <option value="karnataka">Karnataka</option>
+                <option value="tamilnadu">Tamil Nadu</option>
+                <option value="andhra">Andhra Pradesh</option>
+                <option value="telangana">Telangana</option>
+                <option value="mp">Madhya Pradesh</option>
+                <option value="up">Uttar Pradesh</option>
+                <option value="delhi">Delhi</option>
+                <option value="kerala">Kerala</option>
+                <option value="punjab">Punjab</option>
+                <option value="haryana">Haryana</option>
+                <option value="wb">West Bengal</option>
+                <option value="other">Other State</option>
+              </select>
+            </div>
+
+            <div class="calc-field">
+              <label for="calc-type" class="form-label">
+                Property Type
+                <span class="calc-field__hint">Affects eligible system size</span>
+              </label>
+              <div class="calc-type-pills" role="group" aria-label="Property type selection" id="calc-type">
+                <button class="calc-type-pill active" data-type="residential" aria-pressed="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                  Residential
+                </button>
+                <button class="calc-type-pill" data-type="commercial" aria-pressed="false">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/></svg>
+                  Commercial
+                </button>
+                <button class="calc-type-pill" data-type="industrial" aria-pressed="false">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                  Industrial
+                </button>
+              </div>
+            </div>
+
+          </div><!-- /.calculator-inputs -->
+
+          <!-- Results panel -->
+          <div class="calculator-results" id="calc-results" aria-live="polite" aria-label="Calculated savings results">
+
+            <div class="calc-result-primary">
+              <span class="calc-result-primary__label">Recommended System Size</span>
+              <span class="calc-result-primary__value" id="res-system-size">5 kW</span>
+            </div>
+
+            <div class="calc-results-grid">
+
+              <div class="calc-result-card">
+                <div class="calc-result-card__icon" aria-hidden="true" style="background: rgba(77,189,51,0.1);">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4DBD33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                </div>
+                <span class="calc-result-card__value" id="res-monthly-saving">₹3,750</span>
+                <span class="calc-result-card__label">Monthly Savings</span>
+              </div>
+
+              <div class="calc-result-card">
+                <div class="calc-result-card__icon" aria-hidden="true" style="background: rgba(4,80,151,0.1);">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#045097" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                </div>
+                <span class="calc-result-card__value" id="res-annual-saving">₹45,000</span>
+                <span class="calc-result-card__label">Annual Savings</span>
+              </div>
+
+              <div class="calc-result-card">
+                <div class="calc-result-card__icon" aria-hidden="true" style="background: rgba(225,92,35,0.1);">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e15c23" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <span class="calc-result-card__value" id="res-payback">3.5 yrs</span>
+                <span class="calc-result-card__label">Payback Period</span>
+              </div>
+
+              <div class="calc-result-card">
+                <div class="calc-result-card__icon" aria-hidden="true" style="background: rgba(255,215,0,0.12);">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#b38600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <span class="calc-result-card__value" id="res-25yr-saving">₹11.25L</span>
+                <span class="calc-result-card__label">25-Year Savings</span>
+              </div>
+
+              <div class="calc-result-card">
+                <div class="calc-result-card__icon" aria-hidden="true" style="background: rgba(77,189,51,0.1);">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4DBD33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+                </div>
+                <span class="calc-result-card__value" id="res-co2">2.4 T</span>
+                <span class="calc-result-card__label">CO₂ Saved/Year</span>
+              </div>
+
+              <div class="calc-result-card">
+                <div class="calc-result-card__icon" aria-hidden="true" style="background: rgba(4,80,151,0.1);">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#045097" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                </div>
+                <span class="calc-result-card__value" id="res-subsidy">₹78,000</span>
+                <span class="calc-result-card__label">Govt. Subsidy</span>
+              </div>
+
+            </div><!-- /.calc-results-grid -->
+
+            <!-- Progress bar: bill vs savings -->
+            <div class="calc-savings-bar" aria-label="Savings breakdown visualization">
+              <div class="savings-bar-labels">
+                <span>Current Bill</span>
+                <span>Solar Savings</span>
+                <span>Remaining Bill</span>
+              </div>
+              <div class="savings-bar-track" aria-hidden="true">
+                <div class="savings-bar-fill savings-bar-fill--savings" id="bar-savings" style="width: 75%"></div>
+                <div class="savings-bar-fill savings-bar-fill--remaining" id="bar-remaining" style="width: 25%"></div>
+              </div>
+              <div class="savings-bar-values">
+                <span id="bar-label-savings">₹3,750 saved</span>
+                <span id="bar-label-remaining">₹1,250 remaining</span>
+              </div>
+            </div>
+
+            <a href="../contact/contact.html" class="btn btn-primary" style="margin-top:var(--space-2); width:100%">
+              Get Your Custom Quote Based on These Numbers
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+
+          </div><!-- /.calculator-results -->
+        </div><!-- /.calculator-card -->
+      </div>
+    </section>
+
+    <!-- ============================================================
+         4. ROI COMPARISON TABLE
+    ============================================================ -->
+    <section class="roi-section section--sm" aria-labelledby="roi-heading">
+      <div class="container">
+        <div class="section-title" data-animate>
+          <span class="eyebrow">Plan Comparison</span>
+          <h2 id="roi-heading">Compare Plans <span>Side by Side</span></h2>
+          <p>Every feature, every warranty term, every number — laid out clearly so you can make the right choice.</p>
+        </div>
+
+        <div class="table-wrapper" data-animate>
+          <table class="table comparison-table" aria-label="Solar plan comparison table">
+            <thead>
+              <tr>
+                <th scope="col">Feature</th>
+                <th scope="col">
+                  <span class="th-plan">Basic</span>
+                  <span class="th-size">2 kW</span>
+                </th>
+                <th scope="col" class="th-popular">
+                  <span class="th-popular__badge">★ Popular</span>
+                  <span class="th-plan">Standard</span>
+                  <span class="th-size">5 kW</span>
+                </th>
+                <th scope="col">
+                  <span class="th-plan">Premium</span>
+                  <span class="th-size">10 kW</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Starting Price</strong></td>
+                <td>₹1,49,000</td>
+                <td class="td-popular">₹2,99,000</td>
+                <td>₹5,49,000</td>
+              </tr>
+              <tr>
+                <td>Monthly Generation</td>
+                <td>220–260 kWh</td>
+                <td class="td-popular">550–650 kWh</td>
+                <td>1,100–1,300 kWh</td>
+              </tr>
+              <tr>
+                <td>Monthly Bill Savings</td>
+                <td>₹1,500–₹2,200</td>
+                <td class="td-popular">₹3,500–₹5,000</td>
+                <td>₹7,000–₹10,000</td>
+              </tr>
+              <tr>
+                <td>Estimated Payback</td>
+                <td>4–5 years</td>
+                <td class="td-popular"><strong>3–4 years</strong></td>
+                <td>3–3.5 years</td>
+              </tr>
+              <tr>
+                <td>Panel Technology</td>
+                <td>Monocrystalline</td>
+                <td class="td-popular">Bifacial</td>
+                <td>TOPCon Premium</td>
+              </tr>
+              <tr>
+                <td>Inverter Type</td>
+                <td>String Inverter</td>
+                <td class="td-popular">Hybrid (Battery Ready)</td>
+                <td>Hybrid + 10 kWh Battery</td>
+              </tr>
+              <tr>
+                <td>Battery Storage</td>
+                <td class="feature-no">—</td>
+                <td class="td-popular feature-addon">Add-on</td>
+                <td class="feature-yes">✓ Included</td>
+              </tr>
+              <tr>
+                <td>Live Monitoring Dashboard</td>
+                <td class="feature-no">—</td>
+                <td class="td-popular feature-yes">✓ Included</td>
+                <td class="feature-yes">✓ AI-Powered</td>
+              </tr>
+              <tr>
+                <td>Annual Maintenance Visits</td>
+                <td class="feature-no">—</td>
+                <td class="td-popular feature-yes">1 Free/year</td>
+                <td class="feature-yes">2 Free/year</td>
+              </tr>
+              <tr>
+                <td>System Warranty</td>
+                <td>5 Years</td>
+                <td class="td-popular">10 Years</td>
+                <td>25 Years</td>
+              </tr>
+              <tr>
+                <td>Subsidy Assistance</td>
+                <td class="feature-yes">✓</td>
+                <td class="td-popular feature-yes">✓</td>
+                <td class="feature-yes">✓</td>
+              </tr>
+              <tr>
+                <td>Dedicated Account Manager</td>
+                <td class="feature-no">—</td>
+                <td class="td-popular feature-no">—</td>
+                <td class="feature-yes">✓</td>
+              </tr>
+              <tr>
+                <td>EV Charger Ready Wiring</td>
+                <td class="feature-no">—</td>
+                <td class="td-popular feature-no">—</td>
+                <td class="feature-yes">✓</td>
+              </tr>
+              <tr class="tr-cta">
+                <td></td>
+                <td><a href="../contact/contact.html" class="btn btn-outline btn-sm">Get Quote</a></td>
+                <td class="td-popular"><a href="../contact/contact.html" class="btn btn-cta btn-sm">Get Quote</a></td>
+                <td><a href="../contact/contact.html" class="btn btn-primary btn-sm">Get Quote</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         5. FINANCING OPTIONS
+    ============================================================ -->
+    <section class="financing-section section" aria-labelledby="financing-heading">
+      <div class="container">
+        <div class="section-title" data-animate>
+          <span class="eyebrow">Flexible Payments</span>
+          <h2 id="financing-heading">Financing That <span>Works For You</span></h2>
+          <p>Go solar today with zero upfront stress. Choose the payment path that matches your cash flow.</p>
+        </div>
+
+        <div class="financing-grid">
+
+          <div class="financing-card card" data-animate>
+            <div class="financing-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#045097" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+            </div>
+            <h3>Easy EMI</h3>
+            <p class="financing-card__desc">Spread the cost over 12 to 84 months with our bank-partnered zero-processing-fee EMI. Starting from ₹2,199/month.</p>
+            <ul class="financing-list">
+              <li>0% cost EMI with select banks (HDFC, SBI, Axis)</li>
+              <li>Tenure: 12, 24, 36, 60, 84 months</li>
+              <li>Instant approval for CIBIL score &gt; 700</li>
+              <li>No hidden foreclosure charges</li>
+            </ul>
+            <a href="../contact/contact.html" class="btn btn-outline btn-sm">Check EMI Eligibility</a>
+          </div>
+
+          <div class="financing-card financing-card--featured card" data-animate data-animate-delay="1">
+            <span class="financing-card__badge">Most Chosen</span>
+            <div class="financing-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#e15c23" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3>Govt. Subsidy + Own Funds</h3>
+            <p class="financing-card__desc">Combine the PM Surya Ghar subsidy (up to ₹78,000) with your own funds for the lowest total cost of ownership.</p>
+            <ul class="financing-list">
+              <li>Residential subsidy: up to ₹78,000 (up to 3 kW)</li>
+              <li>Processing handled entirely by Solar-Echos</li>
+              <li>Subsidy credited to your bank within 30–60 days</li>
+              <li>No repayment obligation — it's a grant</li>
+            </ul>
+            <a href="../contact/contact.html" class="btn btn-primary btn-sm">Apply with Subsidy</a>
+          </div>
+
+          <div class="financing-card card" data-animate data-animate-delay="2">
+            <div class="financing-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4DBD33" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h3>Solar Loan</h3>
+            <p class="financing-card__desc">Dedicated solar loans with preferential interest rates from our banking partners. Often cheaper than regular home improvement loans.</p>
+            <ul class="financing-list">
+              <li>Rate: from 8.5% p.a. (reducing balance)</li>
+              <li>Loan amount: ₹50,000 to ₹50 lakh</li>
+              <li>Tenure up to 7 years</li>
+              <li>Collateral-free for loans up to ₹10 lakh</li>
+            </ul>
+            <a href="../contact/contact.html" class="btn btn-outline btn-sm">Explore Solar Loans</a>
+          </div>
+
+          <div class="financing-card card" data-animate data-animate-delay="3">
+            <div class="financing-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+            </div>
+            <h3>Outright Purchase</h3>
+            <p class="financing-card__desc">Pay upfront and maximise your long-term ROI. No interest, no dependency — just pure savings from day one.</p>
+            <ul class="financing-list">
+              <li>Best total lifetime savings (no interest paid)</li>
+              <li>Immediate ownership, full warranty coverage</li>
+              <li>Earliest payback period</li>
+              <li>Additional 2% cash discount on total invoice</li>
+            </ul>
+            <a href="../contact/contact.html" class="btn btn-outline btn-sm">Get Outright Quote</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         6. FAQ ACCORDION
+    ============================================================ -->
+    <section class="faq-section section" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="faq-layout">
+
+          <div class="faq-left" data-animate>
+            <span class="eyebrow-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+              FAQ
+            </span>
+            <h2 id="faq-heading">Pricing Questions,<br /><span class="gradient-text">Answered Honestly</span></h2>
+            <p>We believe in full transparency. If you have a question our FAQ doesn't cover, our team responds within 2 hours on working days.</p>
+            <a href="../contact/contact.html" class="btn btn-outline" style="margin-top: var(--space-3);">
+              Ask a Question
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+          <div class="faq-right">
+            <div class="accordion" id="pricing-faq" data-animate data-animate-delay="2">
+
+              <div class="accordion-item" id="faq-1">
+                <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-1-body" id="faq-1-btn">
+                  <span>Are the prices shown inclusive of GST and installation?</span>
+                  <span class="accordion-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                  </span>
+                </button>
+                <div class="accordion-body" id="faq-1-body" role="region" aria-labelledby="faq-1-btn" hidden>
+                  <p>Yes — every price shown on this page is fully inclusive of 12% GST, all equipment, professional installation by our certified technicians, and necessary commissioning. There are no add-on surprise charges. The only thing not included is optional battery storage on Basic and Standard plans, which is shown separately as an add-on.</p>
+                </div>
+              </div>
+
+              <div class="accordion-item" id="faq-2">
+                <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-2-body" id="faq-2-btn">
+                  <span>How does the government subsidy work? Do I need to apply myself?</span>
+                  <span class="accordion-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                  </span>
+                </button>
+                <div class="accordion-body" id="faq-2-body" role="region" aria-labelledby="faq-2-btn" hidden>
+                  <p>Solar-Echos manages the entire PM Surya Ghar subsidy application on your behalf — from document collection to portal submission. The subsidy (up to ₹78,000 for 3 kW residential systems) is a direct bank transfer from the government to your account, typically within 30–60 days of installation completion. You do not pay the full amount upfront; we structure the payment schedule to account for the incoming subsidy.</p>
+                </div>
+              </div>
+
+              <div class="accordion-item" id="faq-3">
+                <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-3-body" id="faq-3-btn">
+                  <span>What if my bill is different after installation — any guarantee?</span>
+                  <span class="accordion-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                  </span>
+                </button>
+                <div class="accordion-body" id="faq-3-body" role="region" aria-labelledby="faq-3-btn" hidden>
+                  <p>We provide a written Generation Guarantee on all Standard and Premium plans. If your system generates less than the projected output (verified monthly via our monitoring platform), Solar-Echos will service your system at no charge and compensate for any shortfall in generation greater than 10%. Our average system performs within 5% of projections across all Indian climates.</p>
+                </div>
+              </div>
+
+              <div class="accordion-item" id="faq-4">
+                <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-4-body" id="faq-4-btn">
+                  <span>Can I upgrade from Basic to Standard later?</span>
+                  <span class="accordion-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                  </span>
+                </button>
+                <div class="accordion-body" id="faq-4-body" role="region" aria-labelledby="faq-4-btn" hidden>
+                  <p>Yes — all our plans are designed with future expansion in mind. You can add panels (up to your sanctioned load), upgrade to a hybrid inverter, or add battery storage at any point. Upgrade pricing is applied on the delta cost only, not the full system. Upgrades are available at a 10% loyalty discount for existing Solar-Echos customers.</p>
+                </div>
+              </div>
+
+              <div class="accordion-item" id="faq-5">
+                <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-5-body" id="faq-5-btn">
+                  <span>How long does installation take from booking?</span>
+                  <span class="accordion-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                  </span>
+                </button>
+                <div class="accordion-body" id="faq-5-body" role="region" aria-labelledby="faq-5-btn" hidden>
+                  <p>Our typical timeline from confirmed booking to live generation is 7–14 working days for residential systems. This includes site survey (Day 1–2), permit application and approval (Day 3–7), and physical installation (1–2 days). Commercial systems above 50 kW typically require 3–6 weeks due to structural and electrical approval processes. We provide a live project tracker via the homeowner dashboard throughout.</p>
+                </div>
+              </div>
+
+              <div class="accordion-item" id="faq-6">
+                <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-6-body" id="faq-6-btn">
+                  <span>What happens to my system after the warranty period ends?</span>
+                  <span class="accordion-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                  </span>
+                </button>
+                <div class="accordion-body" id="faq-6-body" role="region" aria-labelledby="faq-6-btn" hidden>
+                  <p>Solar panels are rated to produce power for 25–30 years, degrading at roughly 0.5% per year. After warranty expiry, Solar-Echos offers affordable Annual Maintenance Contracts (AMC) starting at ₹3,999/year for continued monitoring, cleaning, and preventive maintenance. Our field service network covers 18 states, so you are never without support.</p>
+                </div>
+              </div>
+
+            </div><!-- /.accordion -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         7. CTA BANNER
+    ============================================================ -->
+    <section class="pricing-cta section--sm" aria-labelledby="pricing-cta-heading">
+      <div class="container">
+        <div class="pricing-cta__inner" data-animate>
+          <div class="pricing-cta__glow" aria-hidden="true"></div>
+
+          <div class="pricing-cta__content">
+            <span class="badge badge-yellow" style="margin-bottom: var(--space-2);">Free, No-Obligation Survey</span>
+            <h2 id="pricing-cta-heading">Not Sure Which Plan?<br />Let Our Engineers Decide for You.</h2>
+            <p>Book a free rooftop assessment. Our engineer will visit, analyse your roof, consumption data, and local tariffs — then recommend the exact system and plan that maximises your savings.</p>
+            <div class="pricing-cta__actions">
+              <a href="../contact/contact.html" class="btn btn-cta btn-lg">
+                Book Free Site Assessment
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <a href="tel:+91 (987) 654-3210" class="btn btn-ghost btn-lg" style="color:rgba(255,255,255,0.85); border-color:rgba(255,255,255,0.25);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.6 19.79 19.79 0 0 1 1.61 5 2 2 0 0 1 3.6 2.8h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 10.4a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                +91 (987) 654-3210 Toll Free
+              </a>
+            </div>
+          </div>
+
+          <div class="pricing-cta__stats" aria-label="Quick stats">
+            <div class="cta-stat">
+              <span class="cta-stat__num">24h</span>
+              <span class="cta-stat__label">Survey turnaround</span>
+            </div>
+            <div class="cta-stat">
+              <span class="cta-stat__num">₹0</span>
+              <span class="cta-stat__label">Assessment cost</span>
+            </div>
+            <div class="cta-stat">
+              <span class="cta-stat__num">100%</span>
+              <span class="cta-stat__label">No obligation</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ░░ FOOTER MOUNT ░░ -->
+    <footer class="site-footer" role="contentinfo" aria-label="Site footer">
+  <div class="container">
+
+    <div class="footer__main">
+
+      <!-- Brand column -->
+      <div class="footer__brand">
+        <a href="../home-1/home.html" class="navbar__logo" aria-label="Solar Echos home">
+          <div class="navbar__logo-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+            </svg>
+          </div>
+          <span class="navbar__logo-text">Solar<span style="color:var(--color-accent-orange)">Echos</span></span>
+        </a>
+
+        <p>India's most trusted solar energy partner. We design, install, and maintain premium solar systems for homes and businesses across 18 states.</p>
+
+        <div class="footer__certbadges" aria-label="Certifications">
+          <span class="footer__certbadge">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            MNRE Certified
+          </span>
+          <span class="footer__certbadge">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+            ISO 9001
+          </span>
+        </div>
+
+        <div class="footer__social" style="margin-top:var(--space-2);" aria-label="Social media links">
+          <a href="#" class="footer__social-link" aria-label="Follow on Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Follow on Twitter / X">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Follow on LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Subscribe on YouTube">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Follow on Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
+        </div>
+      </div><!-- /brand -->
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="footer__col-title">Quick Links</h3>
+        <ul class="footer__links">
+          <li><a href="../home-1/home.html">Home</a></li>
+          <li><a href="../about/about.html">About Us</a></li>
+          <li><a href="../services/services.html">Services</a></li>
+          <li><a href="../pricing/pricing.html">Pricing</a></li>
+          <li><a href="../blogs/blogs.html">Blog</a></li>
+          <li><a href="../contact/contact.html">Contact</a></li>
+          <li><a href="../admin-dashboard/dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <h3 class="footer__col-title">Our Services</h3>
+        <ul class="footer__links">
+          <li><a href="../service-details/service-details-1.html">Residential Solar</a></li>
+          <li><a href="../service-details/service-details-2.html">Commercial Solar</a></li>
+          <li><a href="../service-details/service-details-3.html">Battery Storage</a></li>
+          <li><a href="../service-details/service-details-4.html">EV Charging Setup</a></li>
+          <li><a href="../service-details/service-details-5.html">Solar Maintenance</a></li>
+          <li><a href="../service-details/service-details-6.html">Free Consultation</a></li>
+                 <a href="../404-page/404.html">FAQ</a>
+        <a href="../coming-soon/coming-soon.html">New Features</a>
+        </ul>
+      </div>
+
+      <!-- Newsletter + Contact -->
+      <div class="footer__newsletter">
+        <h3 class="footer__col-title">Stay Updated</h3>
+        <p>Get solar tips, subsidy alerts, and exclusive offers delivered to your inbox.</p>
+
+        <form class="footer__newsletter-form" onsubmit="handleNewsletterSubmit(event)" novalidate aria-label="Newsletter signup">
+          <input
+            type="email"
+            class="footer__newsletter-input"
+            placeholder="Your email address"
+            aria-label="Email address for newsletter"
+            required />
+          <button type="submit" class="btn btn-primary btn-sm" aria-label="Subscribe to newsletter">
+            Subscribe
+          </button>
+        </form>
+
+        <div style="margin-top:var(--space-3);">
+          <h4 style="font-size:var(--text-sm);color:white;margin-bottom:12px;font-family:var(--font-heading);">Contact Us</h4>
+          <ul class="footer__links">
+            <li>
+              <a href="tel:+91 (987) 654-3210" aria-label="Call us">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.39 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l1.97-1.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                +91 (987) 654-3210 (Toll Free)
+              </a>
+            </li>
+            <li>
+              <a href="mailto:hello@solarechos.in" aria-label="Email us">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                hello@solarechos.in
+              </a>
+            </li>
+            <li>
+              <a href="../contact/contact.html" aria-label="Office location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                Solar Echos HQ, Mumbai, MH
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div><!-- /footer__main -->
+
+    <!-- Bottom bar -->
+    <div class="footer__bottom">
+      <span>© <span id="footer-year"></span> Solar Echos.  All rights reserved.</span>
+      <div class="footer__bottom-links">
+        <a href="../404-page/404.html">Privacy Policy</a>
+        <a href="../coming-soon/coming-soon.html">Terms of Service</a>
+        <a href="../404-page/404.html">Sitemap</a>
+      </div>
+    </div>
+
+  </div><!-- /container -->
+</footer>
+
+  <!-- Back to top -->
+  <button id="back-to-top" aria-label="Scroll back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
+
+  <!-- Toast container -->
+  <div id="toast-container" role="region" aria-live="polite" aria-label="Notifications"></div>
+
+  <!-- Scripts -->
+  <script src="../global-js/global.js" defer></script>
+  <script src="pricing.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <!-- ============================================================
+       Solar-Echos | Home Page 2 – Dashboard / SaaS Focus
+       Author: TechEchos Innovation  |  Version: 1.0.0
+       Goal: Sell the monitoring platform + subscription tiers
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Solar-Echos | Track Your Solar Power in Real-Time</title>
+  <meta name="description"
+    content="Monitor your solar system live, track savings, get maintenance alerts, and manage warranties — all from one smart dashboard. India's #1 solar monitoring platform." />
+  <meta name="keywords"
+    content="solar monitoring dashboard, real-time solar tracking, solar energy app, solar savings tracker, solar monitoring India" />
+  <meta name="author" content="TechEchos Innovation" />
+
+  <!-- OpenGraph -->
+  <meta property="og:title"       content="Solar-Echos – Real-Time Solar Monitoring Dashboard" />
+  <meta property="og:description" content="Track live solar output, savings, and system health from any device. Get started free." />
+  <meta property="og:type"        content="website" />
+  <meta property="og:image"       content="../global-images/og-image.jpg" />
+  <meta property="og:url"         content="https://solarechos.in/home-2/" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="../global-images/logo.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+  <!-- Global CSS -->
+      <link rel="stylesheet" href="../global-css/navbar.css">
+  <link rel="stylesheet" href="../global-css/footer.css">
+  <link rel="stylesheet" href="../global-css/global.css" />
+
+  <!-- Navbar + Footer CSS (from components folder) -->
+  <link rel="stylesheet" href="../components/navbar.css" />
+  <link rel="stylesheet" href="../components/footer.css" />
+
+  <!-- Page CSS -->
+  <link rel="stylesheet" href="home.css" />
+</head>
+
+<body data-components-path="../components">
+
+  <!-- ── NAVBAR PLACEHOLDER ── -->
+  <div id="navbar-placeholder" role="banner"></div>
+
+  <!-- ══════════════════════════════════════════════════════════
+       MAIN CONTENT
+       ══════════════════════════════════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 1 — HERO (Dark dashboard theme)
+         ══════════════════════════════════════════════════════ -->
+    <section class="h2-hero" id="hero" aria-label="Hero – Real-time solar dashboard">
+
+      <!-- Grid background decoration -->
+      <div class="h2-hero__grid-bg" aria-hidden="true"></div>
+
+      <!-- Animated particle field -->
+      <canvas id="particle-canvas" class="h2-hero__particles" aria-hidden="true"></canvas>
+
+      <div class="container h2-hero__inner">
+
+        <!-- Left text content -->
+        <div class="h2-hero__text" data-animate data-animate-delay="1">
+
+          <div class="h2-hero__eyebrow">
+            <span class="live-dot" aria-hidden="true"></span>
+            Live Monitoring Platform
+          </div>
+
+          <h1 class="h2-hero__headline">
+            Track Your Solar<br />
+            Power <span class="h2-gradient-text">in Real-Time</span>
+          </h1>
+
+          <p class="h2-hero__sub">
+            Know exactly how much energy your solar system is generating — minute by minute.
+            Monitor savings, track performance, and get instant alerts from any device.
+          </p>
+
+          <!-- Live stat pills -->
+          <div class="h2-hero__live-stats" aria-label="Live system statistics">
+            <div class="live-stat-pill" aria-label="4.8 kilowatts currently generating">
+              <i data-lucide="zap" width="14" height="14"></i>
+              <strong>4.8 kW</strong>
+              <span>Generating Now</span>
+            </div>
+            <div class="live-stat-pill live-stat-pill--green" aria-label="₹342 saved today">
+              <i data-lucide="trending-up" width="14" height="14"></i>
+              <strong>₹342</strong>
+              <span>Saved Today</span>
+            </div>
+            <div class="live-stat-pill live-stat-pill--yellow" aria-label="98.4% system uptime">
+              <i data-lucide="activity" width="14" height="14"></i>
+              <strong>98.4%</strong>
+              <span>Uptime</span>
+            </div>
+          </div>
+
+          <div class="h2-hero__ctas">
+            <a href="../admin-dashboard/dashboard.html"
+               class="btn btn-cta btn-lg"
+               aria-label="View your solar dashboard">
+              <i data-lucide="layout-dashboard" width="18" height="18"></i>
+              View Dashboard
+            </a>
+            <a href="../contact/contact.html"
+               class="btn btn-ghost btn-lg h2-hero__ghost-btn"
+               aria-label="Start monitoring for free">
+              <i data-lucide="play-circle" width="18" height="18"></i>
+              Start Free Trial
+            </a>
+          </div>
+
+          <!-- Social proof strip -->
+          <div class="h2-hero__proof">
+            <div class="h2-hero__avatars" aria-hidden="true">
+              <span style="background: linear-gradient(135deg,#045097,#0a6ac4);">PS</span>
+              <span style="background: linear-gradient(135deg,#4DBD33,#22c55e);">RG</span>
+              <span style="background: linear-gradient(135deg,#e15c23,#FFD700);">AN</span>
+              <span style="background: linear-gradient(135deg,#7c3aed,#a78bfa);">VP</span>
+            </div>
+            <p><strong>6,200+ homeowners</strong> monitoring with Solar-Echos</p>
+          </div>
+
+        </div><!-- /h2-hero__text -->
+
+        <!-- Right: Animated dashboard mockup -->
+        <div class="h2-hero__dashboard" data-animate data-animate-delay="2" aria-label="Solar monitoring dashboard preview">
+
+          <!-- Dashboard window chrome -->
+          <div class="dash-window">
+            <div class="dash-window__titlebar" aria-hidden="true">
+              <div class="dash-window__dots">
+                <span class="dot dot--red"></span>
+                <span class="dot dot--yellow"></span>
+                <span class="dot dot--green"></span>
+              </div>
+              <span class="dash-window__title">Solar-Echos Dashboard</span>
+              <div class="dash-window__controls">
+                <i data-lucide="maximize-2" width="12" height="12"></i>
+              </div>
+            </div>
+
+            <!-- Dashboard content -->
+            <div class="dash-content">
+
+              <!-- Top stat row -->
+              <div class="dash-stats-row" aria-label="Dashboard statistics">
+                <div class="dash-stat-card dash-stat-card--power">
+                  <div class="dash-stat-card__label">
+                    <i data-lucide="zap" width="12" height="12"></i> Live Output
+                  </div>
+                  <div class="dash-stat-card__value" id="dash-live-kw">4.8 kW</div>
+                  <div class="dash-stat-card__trend trend--up">
+                    <i data-lucide="trending-up" width="10" height="10"></i> +12%
+                  </div>
+                </div>
+                <div class="dash-stat-card dash-stat-card--savings">
+                  <div class="dash-stat-card__label">
+                    <i data-lucide="indian-rupee" width="12" height="12"></i> Today's Savings
+                  </div>
+                  <div class="dash-stat-card__value" id="dash-savings">₹342</div>
+                  <div class="dash-stat-card__trend trend--up">
+                    <i data-lucide="trending-up" width="10" height="10"></i> +8%
+                  </div>
+                </div>
+                <div class="dash-stat-card dash-stat-card--co2">
+                  <div class="dash-stat-card__label">
+                    <i data-lucide="leaf" width="12" height="12"></i> CO₂ Saved
+                  </div>
+                  <div class="dash-stat-card__value">2.1 T</div>
+                  <div class="dash-stat-card__trend trend--up">
+                    <i data-lucide="trending-up" width="10" height="10"></i> This year
+                  </div>
+                </div>
+                <div class="dash-stat-card dash-stat-card--uptime">
+                  <div class="dash-stat-card__label">
+                    <i data-lucide="activity" width="12" height="12"></i> System Health
+                  </div>
+                  <div class="dash-stat-card__value">98.4%</div>
+                  <div class="dash-stat-card__trend trend--up">
+                    <i data-lucide="check-circle" width="10" height="10"></i> Optimal
+                  </div>
+                </div>
+              </div><!-- /dash-stats-row -->
+
+              <!-- Chart area -->
+              <div class="dash-chart-area">
+                <div class="dash-chart-header">
+                  <span class="dash-chart-title">Energy Production — This Week</span>
+                  <div class="dash-chart-legend">
+                    <span><span class="legend-dot legend-dot--yellow"></span>Solar</span>
+                    <span><span class="legend-dot legend-dot--blue"></span>Grid</span>
+                  </div>
+                </div>
+                <canvas id="dash-chart" class="dash-chart-canvas" aria-label="Energy production chart"></canvas>
+              </div>
+
+              <!-- Bottom row: progress bars + alerts -->
+              <div class="dash-bottom-row">
+
+                <!-- Monthly goal progress -->
+                <div class="dash-progress-panel">
+                  <div class="dash-progress-title">Monthly Target</div>
+                  <div class="dash-progress-item">
+                    <span>Energy Goal</span>
+                    <strong>78%</strong>
+                  </div>
+                  <div class="dash-mini-bar">
+                    <div class="dash-mini-bar__fill" style="width:78%;background:var(--h2-yellow);"></div>
+                  </div>
+                  <div class="dash-progress-item">
+                    <span>Savings Goal</span>
+                    <strong>92%</strong>
+                  </div>
+                  <div class="dash-mini-bar">
+                    <div class="dash-mini-bar__fill" style="width:92%;background:var(--h2-green);"></div>
+                  </div>
+                </div>
+
+                <!-- System alerts -->
+                <div class="dash-alerts-panel">
+                  <div class="dash-alerts-title">
+                    <i data-lucide="bell" width="11" height="11"></i> Alerts
+                  </div>
+                  <div class="dash-alert dash-alert--ok">
+                    <i data-lucide="check-circle" width="10" height="10"></i>
+                    Inverter: Normal
+                  </div>
+                  <div class="dash-alert dash-alert--ok">
+                    <i data-lucide="check-circle" width="10" height="10"></i>
+                    Panels: Clean
+                  </div>
+                  <div class="dash-alert dash-alert--warning">
+                    <i data-lucide="alert-triangle" width="10" height="10"></i>
+                    Service in 12d
+                  </div>
+                </div>
+
+              </div><!-- /dash-bottom-row -->
+
+            </div><!-- /dash-content -->
+          </div><!-- /dash-window -->
+
+          <!-- Mobile phone overlay -->
+          <div class="dash-mobile-overlay" aria-label="Mobile app preview" aria-hidden="true">
+            <div class="dash-phone">
+              <div class="dash-phone__screen">
+                <div class="dash-phone__stat">
+                  <span>Live</span>
+                  <strong id="phone-kw">4.8 kW</strong>
+                </div>
+                <div class="dash-phone__bar-wrap">
+                  <canvas id="phone-chart" width="110" height="55" aria-hidden="true"></canvas>
+                </div>
+                <div class="dash-phone__saving">Saved ₹342 today</div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /h2-hero__dashboard -->
+
+      </div><!-- /h2-hero__inner -->
+
+      <!-- Scroll cue -->
+      <div class="h2-hero__scroll" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="h2-scroll-dot"></div>
+      </div>
+
+    </section><!-- /h2-hero -->
+
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 2 — KEY PLATFORM FEATURES
+         ══════════════════════════════════════════════════════ -->
+    <section class="h2-features section" id="features" aria-labelledby="features-title">
+      <div class="container">
+
+        <div class="section-title" data-animate>
+          <span class="eyebrow">Platform Features</span>
+          <h2 id="features-title">Everything You Need to <span>Monitor &amp; Optimise</span></h2>
+          <p>Our intelligent platform gives you complete visibility and control over your solar energy system — 24/7.</p>
+        </div>
+
+        <div class="h2-features__grid" role="list">
+
+          <!-- Feature 1 -->
+          <article class="h2-feature-card" role="listitem" data-animate data-animate-delay="1">
+            <div class="h2-feature-card__icon h2-feature-card__icon--yellow">
+              <i data-lucide="activity" width="26" height="26"></i>
+            </div>
+            <h3>Live Monitoring</h3>
+            <p>See real-time wattage, voltage, and current data updated every 30 seconds. Spot issues before they affect performance.</p>
+            <ul class="h2-feature-card__list">
+              <li><i data-lucide="check" width="12" height="12"></i> 30-second data refresh</li>
+              <li><i data-lucide="check" width="12" height="12"></i> Per-panel granularity</li>
+              <li><i data-lucide="check" width="12" height="12"></i> Inverter diagnostics</li>
+            </ul>
+          </article>
+
+          <!-- Feature 2 -->
+          <article class="h2-feature-card" role="listitem" data-animate data-animate-delay="2">
+            <div class="h2-feature-card__icon h2-feature-card__icon--green">
+              <i data-lucide="indian-rupee" width="26" height="26"></i>
+            </div>
+            <h3>Savings Tracker</h3>
+            <p>Track your daily, monthly, and lifetime savings in rupees and kWh. Compare to your pre-solar bills with visual charts.</p>
+            <ul class="h2-feature-card__list">
+              <li><i data-lucide="check" width="12" height="12"></i> Bill vs. solar comparison</li>
+              <li><i data-lucide="check" width="12" height="12"></i> ROI milestone tracking</li>
+              <li><i data-lucide="check" width="12" height="12"></i> Net metering credits</li>
+            </ul>
+          </article>
+
+          <!-- Feature 3 -->
+          <article class="h2-feature-card" role="listitem" data-animate data-animate-delay="3">
+            <div class="h2-feature-card__icon h2-feature-card__icon--blue">
+              <i data-lucide="shield-check" width="26" height="26"></i>
+            </div>
+            <h3>Warranty Portal</h3>
+            <p>All warranty documents, service history, and claim status in one place. Raise service tickets directly from your dashboard.</p>
+            <ul class="h2-feature-card__list">
+              <li><i data-lucide="check" width="12" height="12"></i> Digital warranty storage</li>
+              <li><i data-lucide="check" width="12" height="12"></i> One-tap claim filing</li>
+              <li><i data-lucide="check" width="12" height="12"></i> 25-year coverage tracker</li>
+            </ul>
+          </article>
+
+          <!-- Feature 4 -->
+          <article class="h2-feature-card" role="listitem" data-animate data-animate-delay="4">
+            <div class="h2-feature-card__icon h2-feature-card__icon--orange">
+              <i data-lucide="bell-ring" width="26" height="26"></i>
+            </div>
+            <h3>Smart Alerts</h3>
+            <p>Receive SMS, WhatsApp, and push notifications for underperformance, grid failures, and scheduled maintenance windows.</p>
+            <ul class="h2-feature-card__list">
+              <li><i data-lucide="check" width="12" height="12"></i> WhatsApp + SMS alerts</li>
+              <li><i data-lucide="check" width="12" height="12"></i> Performance thresholds</li>
+              <li><i data-lucide="check" width="12" height="12"></i> Weather-aware forecasts</li>
+            </ul>
+          </article>
+
+          <!-- Feature 5 -->
+          <article class="h2-feature-card" role="listitem" data-animate data-animate-delay="5">
+            <div class="h2-feature-card__icon h2-feature-card__icon--purple">
+              <i data-lucide="cloud" width="26" height="26"></i>
+            </div>
+            <h3>Cloud Reports</h3>
+            <p>Automated monthly PDF reports delivered to your inbox. Share performance summaries with your CA or facility manager.</p>
+            <ul class="h2-feature-card__list">
+              <li><i data-lucide="check" width="12" height="12"></i> Auto monthly PDF</li>
+              <li><i data-lucide="check" width="12" height="12"></i> Sharable report links</li>
+              <li><i data-lucide="check" width="12" height="12"></i> Tax & subsidy docs</li>
+            </ul>
+          </article>
+
+          <!-- Feature 6 -->
+          <article class="h2-feature-card" role="listitem" data-animate data-animate-delay="1">
+            <div class="h2-feature-card__icon h2-feature-card__icon--teal">
+              <i data-lucide="smartphone" width="26" height="26"></i>
+            </div>
+            <h3>Mobile App</h3>
+            <p>Full-featured Android and iOS app with offline mode, widget support, and Apple Watch / WearOS glanceable stats.</p>
+            <ul class="h2-feature-card__list">
+              <li><i data-lucide="check" width="12" height="12"></i> Android & iOS native</li>
+              <li><i data-lucide="check" width="12" height="12"></i> Home screen widgets</li>
+              <li><i data-lucide="check" width="12" height="12"></i> Smartwatch support</li>
+            </ul>
+          </article>
+
+        </div><!-- /h2-features__grid -->
+
+      </div>
+    </section>
+
+
+
+
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 4 — MOBILE APP SHOWCASE
+         ══════════════════════════════════════════════════════ -->
+    <section class="h2-app-section section" id="mobile-app" aria-labelledby="app-title">
+      <div class="container">
+        <div class="h2-app__wrapper">
+
+          <!-- Left: phone mockups -->
+          <div class="h2-app__visuals" data-animate aria-label="Mobile app screenshots">
+            <div class="h2-phones">
+
+              <!-- Phone 1 - Main -->
+              <div class="h2-phone h2-phone--main">
+                <div class="h2-phone__notch" aria-hidden="true"></div>
+                <div class="h2-phone__screen">
+                  <!-- App header -->
+                  <div class="app-header">
+                    <span class="app-greeting">Good morning ☀️</span>
+                    <div class="app-notif" aria-label="1 notification">1</div>
+                  </div>
+                  <!-- Power gauge -->
+                  <div class="app-gauge" aria-label="Current power output gauge">
+                    <canvas id="gauge-canvas" width="140" height="80" aria-hidden="true"></canvas>
+                    <div class="app-gauge__value" id="gauge-value">4.8 kW</div>
+                    <div class="app-gauge__label">Live Output</div>
+                  </div>
+                  <!-- Quick stats -->
+                  <div class="app-quick-stats">
+                    <div class="app-quick-stat">
+                      <i data-lucide="trending-up" width="12" height="12"></i>
+                      <span>₹342</span>
+                      <small>Today</small>
+                    </div>
+                    <div class="app-quick-stat">
+                      <i data-lucide="leaf" width="12" height="12"></i>
+                      <span>2.1T</span>
+                      <small>CO₂</small>
+                    </div>
+                    <div class="app-quick-stat">
+                      <i data-lucide="battery-charging" width="12" height="12"></i>
+                      <span>87%</span>
+                      <small>Battery</small>
+                    </div>
+                  </div>
+                  <!-- Mini bar chart -->
+                  <canvas id="app-bar-chart" width="160" height="60" aria-hidden="true" style="width:100%;margin-top:8px;"></canvas>
+                </div>
+                <div class="h2-phone__home-bar" aria-hidden="true"></div>
+              </div>
+
+              <!-- Phone 2 - Secondary (slightly behind) -->
+              <div class="h2-phone h2-phone--secondary" aria-hidden="true">
+                <div class="h2-phone__notch"></div>
+                <div class="h2-phone__screen h2-phone__screen--alt">
+                  <div class="app-alt-title">Monthly Summary</div>
+                  <div class="app-alt-stat">
+                    <span>Energy</span><strong>842 kWh</strong>
+                  </div>
+                  <div class="app-alt-stat">
+                    <span>Savings</span><strong>₹5,894</strong>
+                  </div>
+                  <div class="app-alt-stat">
+                    <span>CO₂</span><strong>69.1 Kg</strong>
+                  </div>
+                  <div class="app-alt-bar">
+                    <div style="width:84%;height:6px;background:linear-gradient(90deg,#FFD700,#e15c23);border-radius:3px;"></div>
+                  </div>
+                </div>
+                <div class="h2-phone__home-bar"></div>
+              </div>
+
+            </div><!-- /h2-phones -->
+
+            <!-- Floating badges -->
+            <div class="h2-app-badge h2-app-badge--store" aria-label="Available on Google Play and App Store">
+              <i data-lucide="smartphone" width="16" height="16"></i>
+              iOS &amp; Android
+            </div>
+            <div class="h2-app-badge h2-app-badge--rating" aria-label="4.9 star rating">
+              <i data-lucide="star" width="14" height="14"></i>
+              4.9 Rating
+            </div>
+
+          </div><!-- /h2-app__visuals -->
+
+          <!-- Right: copy -->
+          <div class="h2-app__text" data-animate data-animate-delay="2">
+            <div class="section-title text-left" style="margin-inline:0;">
+              <span class="eyebrow">Mobile First</span>
+              <h2 id="app-title">Your Solar Data,<br /><span>Always In Your Pocket</span></h2>
+              <p>The Solar-Echos app delivers a premium monitoring experience on Android and iOS. Live widgets, instant alerts, and one-tap service requests.</p>
+            </div>
+
+            <div class="h2-app__feature-list">
+              <div class="h2-app__feature-item" data-animate data-animate-delay="1">
+                <div class="h2-app__feature-icon">
+                  <i data-lucide="gauge" width="20" height="20"></i>
+                </div>
+                <div>
+                  <strong>Live Power Gauge</strong>
+                  <p>Animated real-time output gauge on your lock screen.</p>
+                </div>
+              </div>
+              <div class="h2-app__feature-item" data-animate data-animate-delay="2">
+                <div class="h2-app__feature-icon">
+                  <i data-lucide="map-pin" width="20" height="20"></i>
+                </div>
+                <div>
+                  <strong>Multi-Site Support</strong>
+                  <p>Manage multiple solar installations from a single account.</p>
+                </div>
+              </div>
+              <div class="h2-app__feature-item" data-animate data-animate-delay="3">
+                <div class="h2-app__feature-icon">
+                  <i data-lucide="wifi-off" width="20" height="20"></i>
+                </div>
+                <div>
+                  <strong>Offline Mode</strong>
+                  <p>Cached data is always accessible — even without internet.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- App store buttons -->
+            <div class="h2-app__store-btns">
+              <a href="#" class="h2-store-btn" aria-label="Download on the App Store">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11"/>
+                </svg>
+                <div>
+                  <small>Download on the</small>
+                  <strong>App Store</strong>
+                </div>
+              </a>
+              <a href="#" class="h2-store-btn" aria-label="Get it on Google Play">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="m3 3 18 9-18 9V3z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="currentColor"/>
+                </svg>
+                <div>
+                  <small>Get it on</small>
+                  <strong>Google Play</strong>
+                </div>
+              </a>
+            </div>
+
+          </div><!-- /h2-app__text -->
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 5 — SUBSCRIPTION / MONITORING PLANS
+         ══════════════════════════════════════════════════════ -->
+    <section class="h2-plans section" id="plans" aria-labelledby="plans-title">
+      <div class="container">
+
+        <div class="section-title" data-animate>
+          <span class="eyebrow">Monitoring Plans</span>
+          <h2 id="plans-title">Choose Your <span>Monitoring Tier</span></h2>
+          <p>All plans include real-time data. Upgrade for advanced analytics, alerts, and priority support.</p>
+        </div>
+
+        <!-- Billing toggle -->
+        <div class="h2-billing-toggle" role="group" aria-label="Billing period selector">
+          <button class="h2-billing-btn active" data-period="monthly" id="billing-monthly">Monthly</button>
+          <button class="h2-billing-btn" data-period="annual" id="billing-annual">
+            Annual
+            <span class="h2-billing-save">Save 20%</span>
+          </button>
+        </div>
+
+        <div class="h2-plans__grid" role="list">
+
+          <!-- Plan: Basic -->
+          <article class="h2-plan-card" role="listitem" data-animate data-animate-delay="1">
+            <div class="h2-plan-card__header">
+              <div class="h2-plan-card__icon">
+                <i data-lucide="eye" width="22" height="22"></i>
+              </div>
+              <h3>Basic</h3>
+              <p>Essential monitoring for new solar owners.</p>
+            </div>
+            <div class="h2-plan-card__price">
+              <span class="h2-price" data-monthly="₹299" data-annual="₹239">₹299</span>
+              <span class="h2-price-period">/ month</span>
+            </div>
+            <ul class="h2-plan-card__features">
+              <li class="included"><i data-lucide="check" width="14" height="14"></i> Real-time monitoring</li>
+              <li class="included"><i data-lucide="check" width="14" height="14"></i> Daily energy reports</li>
+              <li class="included"><i data-lucide="check" width="14" height="14"></i> Mobile app access</li>
+              <li class="included"><i data-lucide="check" width="14" height="14"></i> Email alerts</li>
+              <li class="excluded"><i data-lucide="x" width="14" height="14"></i> Advanced analytics</li>
+              <li class="excluded"><i data-lucide="x" width="14" height="14"></i> WhatsApp alerts</li>
+              <li class="excluded"><i data-lucide="x" width="14" height="14"></i> Multi-site support</li>
+            </ul>
+            <a href="../contact/contact.html" class="btn btn-outline h2-plan-card__cta">
+              Get Started
+            </a>
+          </article>
+
+          <!-- Plan: Pro (featured) -->
+          <article class="h2-plan-card h2-plan-card--featured" role="listitem" data-animate data-animate-delay="2">
+            <div class="h2-plan-card__badge">Most Popular</div>
+            <div class="h2-plan-card__header">
+              <div class="h2-plan-card__icon h2-plan-card__icon--featured">
+                <i data-lucide="zap" width="22" height="22"></i>
+              </div>
+              <h3>Pro</h3>
+              <p>Full-featured for owners who want more control.</p>
+            </div>
+            <div class="h2-plan-card__price">
+              <span class="h2-price" data-monthly="₹599" data-annual="₹479">₹599</span>
+              <span class="h2-price-period">/ month</span>
+            </div>
+            <ul class="h2-plan-card__features">
+              <li class="included"><i data-lucide="check" width="14" height="14"></i> Everything in Basic</li>
+              <li class="included"><i data-lucide="check" width="14" height="14"></i> Advanced analytics</li>
+              <li class="included"><i data-lucide="check" width="14" height="14"></i> WhatsApp &amp; SMS alerts</li>
+              <li class="included"><i data-lucide="check" width="14" height="14"></i> Weather integration</li>
+              <li class="included"><i data-lucide="check" width="14" height="14"></i> Monthly PDF reports</li>
+              <li class="included"><i data-lucide="check" width="14" height="14"></i> 1 installation</li>
+              <li class="excluded"><i data-lucide="x" width="14" height="14"></i> Multi-site support</li>
+            </ul>
+            <a href="../contact/contact.html" class="btn btn-primary h2-plan-card__cta">
+              Start Free Trial
+            </a>
+          </article>
+
+          <!-- Plan: Enterprise -->
+          <article class="h2-plan-card" role="listitem" data-animate data-animate-delay="3">
+            <div class="h2-plan-card__header">
+              <div class="h2-plan-card__icon h2-plan-card__icon--orange">
+                <i data-lucide="building-2" width="22" height="22"></i>
+              </div>
+              <h3>Enterprise</h3>
+              <p>For commercial & industrial installations at scale.</p>
+            </div>
+            <div class="h2-plan-card__price">
+              <span class="h2-price" data-monthly="₹1,499" data-annual="₹1,199">₹1,499</span>
+              <span class="h2-price-period">/ month</span>
+            </div>
+            <ul class="h2-plan-card__features">
+              <li class="included"><i data-lucide="check" width="14" height="14"></i> Everything in Pro</li>
+              <li class="included"><i data-lucide="check" width="14" height="14"></i> Multi-site support</li>
+              <li class="included"><i data-lucide="check" width="14" height="14"></i> API access</li>
+              <li class="included"><i data-lucide="check" width="14" height="14"></i> Custom dashboards</li>
+              <li class="included"><i data-lucide="check" width="14" height="14"></i> Dedicated account manager</li>
+              <li class="included"><i data-lucide="check" width="14" height="14"></i> SLA support (4-hr response)</li>
+              <li class="included"><i data-lucide="check" width="14" height="14"></i> White-label option</li>
+            </ul>
+            <a href="../contact/contact.html" class="btn btn-outline h2-plan-card__cta">
+              Contact Sales
+            </a>
+          </article>
+
+        </div><!-- /h2-plans__grid -->
+
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 6 — SMART HOME INTEGRATIONS
+         ══════════════════════════════════════════════════════ -->
+    <section class="h2-integrations section" id="integrations" aria-labelledby="integrations-title">
+      <div class="container">
+
+        <div class="section-title" data-animate>
+          <span class="eyebrow">Ecosystem</span>
+          <h2 id="integrations-title">Works With Your<br /><span>Smart Home</span></h2>
+          <p>Solar-Echos integrates with leading smart home and IoT platforms so your energy data flows everywhere it needs to.</p>
+        </div>
+
+        <!-- Integration logos grid -->
+        <div class="h2-integrations__grid" role="list" data-animate>
+
+          <div class="h2-integration-item" role="listitem" aria-label="Google Home integration">
+            <div class="h2-integration-logo">
+              <svg viewBox="0 0 48 48" width="36" height="36" aria-hidden="true">
+                <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+                <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+                <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+                <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+              </svg>
+            </div>
+            <span>Google Home</span>
+          </div>
+
+          <div class="h2-integration-item" role="listitem" aria-label="Amazon Alexa integration">
+            <div class="h2-integration-logo">
+              <svg viewBox="0 0 48 48" width="36" height="36" aria-hidden="true" fill="none">
+                <circle cx="24" cy="24" r="24" fill="#00CAFF" opacity="0.15"/>
+                <path d="M14 34c6-2 14-2 20 0" stroke="#00CAFF" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M24 12v16" stroke="#00CAFF" stroke-width="3" stroke-linecap="round"/>
+                <circle cx="24" cy="28" r="3" fill="#00CAFF"/>
+              </svg>
+            </div>
+            <span>Amazon Alexa</span>
+          </div>
+
+          <div class="h2-integration-item" role="listitem" aria-label="Apple HomeKit integration">
+            <div class="h2-integration-logo">
+              <svg viewBox="0 0 48 48" width="36" height="36" aria-hidden="true" fill="none">
+                <circle cx="24" cy="24" r="22" stroke="#333" stroke-width="2" opacity="0.15"/>
+                <path d="M24 8c-1.1 0-2 .9-2 2h4c0-1.1-.9-2-2-2z" fill="#555"/>
+                <path d="M18 10C11.4 11.8 7 18.1 7 25.5 7 34.1 14.2 41 23 41h2c8.8 0 16-6.9 16-15.5 0-7.4-4.4-13.7-11-15.5" stroke="#333" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.5"/>
+                <path d="M20 22l4 4 4-4" stroke="#e15c23" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M24 26v-8" stroke="#e15c23" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <span>Apple HomeKit</span>
+          </div>
+
+          <div class="h2-integration-item" role="listitem" aria-label="IFTTT integration">
+            <div class="h2-integration-logo" style="background:#333;">
+              <span style="font-weight:800;font-size:13px;color:#fff;font-family:'Poppins',sans-serif;">IFTTT</span>
+            </div>
+            <span>IFTTT</span>
+          </div>
+
+          <div class="h2-integration-item" role="listitem" aria-label="WhatsApp alerts integration">
+            <div class="h2-integration-logo" style="background:rgba(37,211,102,0.12);">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="#25D366" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+            </div>
+            <span>WhatsApp</span>
+          </div>
+
+          <div class="h2-integration-item" role="listitem" aria-label="Tata Power DISCOM integration">
+            <div class="h2-integration-logo" style="background:rgba(0,114,206,0.12);">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0072CE" stroke-width="2" aria-hidden="true">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+              </svg>
+            </div>
+            <span>DISCOM API</span>
+          </div>
+
+          <div class="h2-integration-item" role="listitem" aria-label="Tuya smart home integration">
+            <div class="h2-integration-logo" style="background:rgba(255,107,0,0.1);">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="#FF6B00" aria-hidden="true">
+                <rect x="2" y="2" width="9" height="9" rx="2"/>
+                <rect x="13" y="2" width="9" height="9" rx="2"/>
+                <rect x="2" y="13" width="9" height="9" rx="2"/>
+                <rect x="13" y="13" width="9" height="9" rx="2"/>
+              </svg>
+            </div>
+            <span>Tuya Smart</span>
+          </div>
+
+          <div class="h2-integration-item h2-integration-item--more" role="listitem" aria-label="And more integrations">
+            <div class="h2-integration-logo">
+              <i data-lucide="plus" width="24" height="24"></i>
+            </div>
+            <span>30+ More</span>
+          </div>
+
+        </div>
+
+        <p class="h2-integrations__note" data-animate>
+          <i data-lucide="info" width="14" height="14"></i>
+          All integrations are no-code. Connect in under 2 minutes from your dashboard settings.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 7 — SOCIAL PROOF / TESTIMONIALS (compact)
+         ══════════════════════════════════════════════════════ -->
+    <section class="h2-social-proof section" id="social-proof" aria-labelledby="proof-title">
+      <div class="container">
+
+        <div class="section-title" data-animate>
+          <span class="eyebrow">User Stories</span>
+          <h2 id="proof-title">Loved by <span>Solar Owners</span> Across India</h2>
+        </div>
+
+        <div class="h2-testimonials-grid" role="list">
+
+          <article class="h2-testi-card" role="listitem" data-animate data-animate-delay="1">
+            <div class="h2-testi-card__stars" aria-label="5 stars">
+              <i data-lucide="star" width="14" height="14"></i>
+              <i data-lucide="star" width="14" height="14"></i>
+              <i data-lucide="star" width="14" height="14"></i>
+              <i data-lucide="star" width="14" height="14"></i>
+              <i data-lucide="star" width="14" height="14"></i>
+            </div>
+            <blockquote>"The live dashboard is addictive — I check my solar output every morning like stock prices. Best decision to add the monitoring plan."</blockquote>
+            <footer>
+              <div class="h2-testi-avatar" style="background:linear-gradient(135deg,#045097,#0a6ac4)">PS</div>
+              <div>
+                <strong>Priya Sharma</strong>
+                <span>Pune, MH · 6 kW system</span>
+              </div>
+            </footer>
+          </article>
+
+          <article class="h2-testi-card" role="listitem" data-animate data-animate-delay="2">
+            <div class="h2-testi-card__stars" aria-label="5 stars">
+              <i data-lucide="star" width="14" height="14"></i>
+              <i data-lucide="star" width="14" height="14"></i>
+              <i data-lucide="star" width="14" height="14"></i>
+              <i data-lucide="star" width="14" height="14"></i>
+              <i data-lucide="star" width="14" height="14"></i>
+            </div>
+            <blockquote>"Managing 3 factory sites from one dashboard saves my team 5+ hours per week. The WhatsApp alerts caught an inverter fault early and saved us ₹40,000 in losses."</blockquote>
+            <footer>
+              <div class="h2-testi-avatar" style="background:linear-gradient(135deg,#e15c23,#FFD700)">RG</div>
+              <div>
+                <strong>Ramesh Gupta</strong>
+                <span>Surat, GJ · 500 kW system</span>
+              </div>
+            </footer>
+          </article>
+
+          <article class="h2-testi-card" role="listitem" data-animate data-animate-delay="3">
+            <div class="h2-testi-card__stars" aria-label="5 stars">
+              <i data-lucide="star" width="14" height="14"></i>
+              <i data-lucide="star" width="14" height="14"></i>
+              <i data-lucide="star" width="14" height="14"></i>
+              <i data-lucide="star" width="14" height="14"></i>
+              <i data-lucide="star" width="14" height="14"></i>
+            </div>
+            <blockquote>"Google Home + Solar-Echos integration is incredible. My home automations now respond to live solar output. It's exactly what I was looking for."</blockquote>
+            <footer>
+              <div class="h2-testi-avatar" style="background:linear-gradient(135deg,#4DBD33,#22c55e)">AN</div>
+              <div>
+                <strong>Anika Nair</strong>
+                <span>Bengaluru, KA · 8 kW system</span>
+              </div>
+            </footer>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 8 — CTA BANNER
+         ══════════════════════════════════════════════════════ -->
+    <section class="h2-cta-banner" id="cta" aria-label="Start monitoring your solar system">
+      <div class="container h2-cta-banner__inner">
+
+        <div class="h2-cta-banner__text" data-animate>
+          <span class="badge badge-yellow">14-Day Free Trial</span>
+          <h2>Start Monitoring Your Solar <span>Today</span></h2>
+          <p>No credit card required. Connect your inverter in under 5 minutes and start seeing live data immediately.</p>
+
+          <div class="h2-cta-banner__features">
+            <span><i data-lucide="check-circle" width="15" height="15"></i> Free 14-day trial</span>
+            <span><i data-lucide="check-circle" width="15" height="15"></i> No credit card needed</span>
+            <span><i data-lucide="check-circle" width="15" height="15"></i> All inverters supported</span>
+            <span><i data-lucide="check-circle" width="15" height="15"></i> Setup in 5 minutes</span>
+          </div>
+
+          <div class="h2-cta-banner__ctas">
+            <a href="../admin-dashboard/dashboard.html"
+               class="btn btn-cta btn-lg"
+               aria-label="Start your free dashboard trial">
+              <i data-lucide="layout-dashboard" width="18" height="18"></i>
+              Try Free Dashboard
+            </a>
+            <a href="../contact/contact.html"
+               class="btn btn-outline btn-lg h2-cta-outline"
+               aria-label="Talk to the Solar-Echos team">
+              <i data-lucide="phone" width="18" height="18"></i>
+              Talk to Our Team
+            </a>
+          </div>
+        </div>
+
+        <!-- Dashboard preview thumb -->
+        <div class="h2-cta-banner__visual" data-animate data-animate-delay="2" aria-hidden="true">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=700&q=80"
+               alt="Digital dashboard interface showing solar energy production analytics with graphs and charts"
+               loading="lazy"
+               width="700"
+               height="460" />
+          <div class="h2-cta-banner__visual-glow" aria-hidden="true"></div>
+        </div>
+
+      </div>
+    </section>
+
+  </main><!-- /main -->
+
+
+  <!-- ── FOOTER PLACEHOLDER ── -->
+  <footer class="site-footer" role="contentinfo" aria-label="Site footer">
+  <div class="container">
+
+    <div class="footer__main">
+
+      <!-- Brand column -->
+      <div class="footer__brand">
+        <a href="../home-1/home.html" class="navbar__logo" aria-label="Solar Echos home">
+          <div class="navbar__logo-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+            </svg>
+          </div>
+          <span class="navbar__logo-text">Solar<span style="color:var(--color-accent-orange)">Echos</span></span>
+        </a>
+
+        <p>India's most trusted solar energy partner. We design, install, and maintain premium solar systems for homes and businesses across 18 states.</p>
+
+        <div class="footer__certbadges" aria-label="Certifications">
+          <span class="footer__certbadge">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            MNRE Certified
+          </span>
+          <span class="footer__certbadge">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+            ISO 9001
+          </span>
+        </div>
+
+        <div class="footer__social" style="margin-top:var(--space-2);" aria-label="Social media links">
+          <a href="#" class="footer__social-link" aria-label="Follow on Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Follow on Twitter / X">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Follow on LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Subscribe on YouTube">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Follow on Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
+        </div>
+      </div><!-- /brand -->
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="footer__col-title">Quick Links</h3>
+        <ul class="footer__links">
+          <li><a href="../home-1/home.html">Home</a></li>
+          <li><a href="../about/about.html">About Us</a></li>
+          <li><a href="../services/services.html">Services</a></li>
+          <li><a href="../pricing/pricing.html">Pricing</a></li>
+          <li><a href="../blogs/blogs.html">Blog</a></li>
+          <li><a href="../contact/contact.html">Contact</a></li>
+          <li><a href="../admin-dashboard/dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <h3 class="footer__col-title">Our Services</h3>
+        <ul class="footer__links">
+          <li><a href="../service-details/service-details-1.html">Residential Solar</a></li>
+          <li><a href="../service-details/service-details-2.html">Commercial Solar</a></li>
+          <li><a href="../service-details/service-details-3.html">Battery Storage</a></li>
+          <li><a href="../service-details/service-details-4.html">EV Charging Setup</a></li>
+          <li><a href="../service-details/service-details-5.html">Solar Maintenance</a></li>
+          <li><a href="../service-details/service-details-6.html">Free Consultation</a></li>
+                 <a href="../404-page/404.html">FAQ</a>
+        <a href="../coming-soon/coming-soon.html">New Features</a>
+        </ul>
+      </div>
+
+      <!-- Newsletter + Contact -->
+      <div class="footer__newsletter">
+        <h3 class="footer__col-title">Stay Updated</h3>
+        <p>Get solar tips, subsidy alerts, and exclusive offers delivered to your inbox.</p>
+
+        <form class="footer__newsletter-form" onsubmit="handleNewsletterSubmit(event)" novalidate aria-label="Newsletter signup">
+          <input
+            type="email"
+            class="footer__newsletter-input"
+            placeholder="Your email address"
+            aria-label="Email address for newsletter"
+            required />
+          <button type="submit" class="btn btn-primary btn-sm" aria-label="Subscribe to newsletter">
+            Subscribe
+          </button>
+        </form>
+
+        <div style="margin-top:var(--space-3);">
+          <h4 style="font-size:var(--text-sm);color:white;margin-bottom:12px;font-family:var(--font-heading);">Contact Us</h4>
+          <ul class="footer__links">
+            <li>
+              <a href="tel:+91 (987) 654-3210" aria-label="Call us">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.39 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l1.97-1.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                +91 (987) 654-3210 (Toll Free)
+              </a>
+            </li>
+            <li>
+              <a href="mailto:hello@solarechos.in" aria-label="Email us">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                hello@solarechos.in
+              </a>
+            </li>
+            <li>
+              <a href="../contact/contact.html" aria-label="Office location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                Solar Echos HQ, Mumbai, MH
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div><!-- /footer__main -->
+
+    <!-- Bottom bar -->
+    <div class="footer__bottom">
+      <span>© <span id="footer-year"></span> Solar Echos.  All rights reserved.</span>
+      <div class="footer__bottom-links">
+        <a href="../404-page/404.html">Privacy Policy</a>
+        <a href="../coming-soon/coming-soon.html">Terms of Service</a>
+        <a href="../404-page/404.html">Sitemap</a>
+      </div>
+    </div>
+
+  </div><!-- /container -->
+</footer>
+
+  <!-- Toast container -->
+  <div id="toast-container" role="region" aria-live="polite" aria-label="Notifications"></div>
+
+  <!-- Global JS (loads navbar + footer, theme toggle, scroll animations) -->
+    <!-- Global JS -->
+  <script src="../global-js/navbar.js"></script>
+<script src="../global-js/footer.js"></script>
+  <script src="../global-js/global.js"></script>
+
+  <!-- Page-specific JS -->
+  <script src="home.js"></script>
+
+  <!-- Lucide icons init -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) lucide.createIcons();
+    });
+  </script>
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".h2-billing-btn");
+  const prices = document.querySelectorAll(".h2-price");
+  const periodLabels = document.querySelectorAll(".h2-price-period");
+
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      // Remove active from all
+      buttons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      const period = btn.dataset.period; // monthly or annual
+
+      prices.forEach(price => {
+        const value = price.dataset[period];
+        price.textContent = value;
+      });
+
+      // Update "/month" text
+      periodLabels.forEach(label => {
+        label.textContent = period === "annual" ? "/ month (billed yearly)" : "/ month";
+      });
+    });
+  });
+});
+</script>
+</body>
+</html>

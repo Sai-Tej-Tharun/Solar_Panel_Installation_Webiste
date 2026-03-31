@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <!-- ============================================================
+       Solar-Echos | Services Page
+       Author: TechEchos Innovation  |  Version: 1.0.0
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Our Services | Solar Echos – Solar Panel Installation India</title>
+  <meta name="description"
+    content="Explore Solar Echos' full range of solar services: residential solar, commercial solar, battery storage, EV charging, maintenance, and free consultation across India." />
+  <meta name="keywords"
+    content="solar panel installation, commercial solar, battery storage, EV charging, solar maintenance, solar consultation India" />
+  <meta name="author" content="TechEchos Innovation" />
+
+  <!-- OpenGraph -->
+  <meta property="og:title"       content="Solar Services | Solar Echos" />
+  <meta property="og:description" content="Comprehensive solar energy solutions for homes and businesses. Explore 6 specialist services with transparent pricing." />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://solarechos.in/services/" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="../global-images/logo.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+  <!-- Global CSS -->
+      <link rel="stylesheet" href="../global-css/navbar.css">
+  <link rel="stylesheet" href="../global-css/footer.css">
+  <link rel="stylesheet" href="../global-css/global.css" />
+
+  <!-- Page CSS -->
+  <link rel="stylesheet" href="services.css" />
+</head>
+
+<body data-components-path="../components">
+
+  <!-- Navbar mount -->
+  <div id="navbar-placeholder" role="banner"></div>
+
+  <main id="main-content">
+
+    <!-- ══════════════════════════════════════════════════════
+         PAGE HERO / BREADCRUMB
+         ══════════════════════════════════════════════════════ -->
+    <section class="page-hero" aria-label="Services page hero">
+      <!-- Decorative background canvas -->
+      <canvas id="hero-particles" aria-hidden="true"></canvas>
+
+      <!-- Floating geometric shapes -->
+      <div class="page-hero__shapes" aria-hidden="true">
+        <div class="shape shape--ring shape--ring-1"></div>
+        <div class="shape shape--ring shape--ring-2"></div>
+        <div class="shape shape--dot shape--dot-1"></div>
+        <div class="shape shape--dot shape--dot-2"></div>
+        <div class="shape shape--dot shape--dot-3"></div>
+      </div>
+
+      <div class="container page-hero__inner">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol role="list">
+            <li><a href="../home-1/home.html">Home</a></li>
+            <li aria-hidden="true">
+              <i data-lucide="chevron-right" width="14" height="14"></i>
+            </li>
+            <li aria-current="page">Services</li>
+          </ol>
+        </nav>
+
+        <div class="page-hero__content">
+          <span class="badge badge-orange page-hero__badge">
+            <i data-lucide="zap" width="12" height="12"></i>
+            6 Specialist Services
+          </span>
+          <h1>
+            Everything Solar,<br />
+            <span class="gradient-text">Under One Roof</span>
+          </h1>
+          <p>
+            From your first rooftop panel to a full commercial solar farm —
+            Solar Echos delivers end-to-end clean energy solutions backed by
+            15 years of expertise and 12,000+ satisfied installations.
+          </p>
+
+          <!-- Quick-jump pills -->
+          <div class="page-hero__jumps" role="navigation" aria-label="Jump to service">
+            <a href="#residential"    class="jump-pill">Residential</a>
+            <a href="#commercial"     class="jump-pill">Commercial</a>
+            <a href="#battery"        class="jump-pill">Battery Storage</a>
+            <a href="#ev-charging"    class="jump-pill">EV Charging</a>
+            <a href="#maintenance"    class="jump-pill">Maintenance</a>
+            <a href="#consultation"   class="jump-pill">Consultation</a>
+          </div>
+        </div>
+
+        <!-- Hero stat strip -->
+        <div class="page-hero__stats" aria-label="Key statistics">
+          <div class="page-hero__stat">
+            <strong>12K+</strong>
+            <span>Installs Done</span>
+          </div>
+          <div class="page-hero__stat-sep" aria-hidden="true"></div>
+          <div class="page-hero__stat">
+            <strong>18</strong>
+            <span>States Served</span>
+          </div>
+          <div class="page-hero__stat-sep" aria-hidden="true"></div>
+          <div class="page-hero__stat">
+            <strong>48 hr</strong>
+            <span>Avg Install Time</span>
+          </div>
+          <div class="page-hero__stat-sep" aria-hidden="true"></div>
+          <div class="page-hero__stat">
+            <strong>25 yr</strong>
+            <span>Panel Warranty</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         FILTER BAR
+         ══════════════════════════════════════════════════════ -->
+    <section class="filter-bar" aria-label="Service filter and search">
+      <div class="container filter-bar__inner">
+
+        <!-- Category filter buttons -->
+        <div class="filter-bar__tabs" role="tablist" aria-label="Filter services by category">
+          <button class="filter-tab active" data-filter="all" role="tab"
+            aria-selected="true" aria-label="Show all services">
+            All Services
+          </button>
+          <button class="filter-tab" data-filter="installation" role="tab"
+            aria-selected="false" aria-label="Show installation services">
+            <i data-lucide="hard-hat" width="14" height="14"></i>
+            Installation
+          </button>
+          <button class="filter-tab" data-filter="storage" role="tab"
+            aria-selected="false" aria-label="Show storage services">
+            <i data-lucide="battery-charging" width="14" height="14"></i>
+            Storage
+          </button>
+          <button class="filter-tab" data-filter="support" role="tab"
+            aria-selected="false" aria-label="Show support services">
+            <i data-lucide="headphones" width="14" height="14"></i>
+            Support
+          </button>
+        </div>
+
+        <!-- Search -->
+        <div class="filter-bar__search">
+          <label for="service-search" class="sr-only">Search services</label>
+          <div class="search-wrap">
+            <i data-lucide="search" width="16" height="16" class="search-icon" aria-hidden="true"></i>
+            <input
+              type="search"
+              id="service-search"
+              class="form-control search-input"
+              placeholder="Search services…"
+              aria-label="Search services"
+              autocomplete="off" />
+            <button class="search-clear" id="search-clear" aria-label="Clear search" hidden>
+              <i data-lucide="x" width="14" height="14"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- View toggle -->
+        <div class="filter-bar__view" role="group" aria-label="Switch view layout">
+          <button class="view-btn active" id="view-grid" aria-label="Grid view" aria-pressed="true">
+            <i data-lucide="layout-grid" width="16" height="16"></i>
+          </button>
+          <button class="view-btn" id="view-list" aria-label="List view" aria-pressed="false">
+            <i data-lucide="list" width="16" height="16"></i>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         SERVICES GRID
+         ══════════════════════════════════════════════════════ -->
+    <section class="services-section section" id="services-grid" aria-labelledby="services-heading">
+      <div class="container">
+
+        <p id="services-heading" class="sr-only">All solar services offered by Solar Echos</p>
+
+        <!-- No-results message (hidden by default) -->
+        <div class="no-results" id="no-results" hidden aria-live="polite">
+          <i data-lucide="search-x" width="48" height="48"></i>
+          <h3>No services found</h3>
+          <p>Try a different search term or browse all services.</p>
+          <button class="btn btn-outline" id="reset-search">
+            Show All Services
+          </button>
+        </div>
+
+        <!-- Services cards grid -->
+        <div class="services-grid" id="services-grid-container"
+          role="list" aria-label="Solar services">
+
+          <!-- ══ SERVICE 1: Residential Solar ══ -->
+          <article
+            class="svc-card"
+            id="residential"
+            data-category="installation"
+            data-keywords="residential home rooftop net metering panels kw"
+            role="listitem"
+            data-animate
+            data-animate-delay="1"
+            aria-label="Residential Solar Installation service">
+
+            <div class="svc-card__accent svc-card__accent--blue"></div>
+
+            <!-- Top image strip -->
+            <div class="svc-card__img">
+              <img
+                src="s1.jpg"
+                alt="Modern residential home with rooftop solar panels glowing in golden hour sunlight"
+                loading="lazy" width="800" height="420" />
+              <div class="svc-card__img-overlay">
+                <span class="badge badge-primary">Most Popular</span>
+              </div>
+            </div>
+
+            <!-- Icon badge -->
+            <div class="svc-card__icon-badge svc-card__icon-badge--blue" aria-hidden="true">
+              <i data-lucide="home" width="26" height="26"></i>
+            </div>
+
+            <div class="svc-card__body">
+              <div class="svc-card__meta">
+                <span class="svc-tag">Residential</span>
+                <span class="svc-tag">Installation</span>
+              </div>
+
+              <h2 class="svc-card__title">Residential Solar</h2>
+
+              <p class="svc-card__desc">
+                Custom-designed rooftop solar systems for homes of every size.
+                Our certified engineers handle everything — from site survey and
+                structural analysis to DISCOM approval and net-metering setup.
+                Start saving from Day 1.
+              </p>
+
+              <!-- Key highlights -->
+              <ul class="svc-card__highlights" aria-label="Service highlights">
+                <li>
+                  <i data-lucide="check-circle" width="15" height="15"></i>
+                  Systems from <strong>1 kW to 10 kW</strong>
+                </li>
+                <li>
+                  <i data-lucide="check-circle" width="15" height="15"></i>
+                  Net metering &amp; grid tie-in included
+                </li>
+                <li>
+                  <i data-lucide="check-circle" width="15" height="15"></i>
+                  Smart monitoring app (iOS &amp; Android)
+                </li>
+                <li>
+                  <i data-lucide="check-circle" width="15" height="15"></i>
+                  Subsidy application assistance
+                </li>
+              </ul>
+
+              <!-- Pricing teaser -->
+              <div class="svc-card__pricing">
+                <div class="svc-card__price">
+                  <span class="price-from">Starting from</span>
+                  <strong>₹55,000</strong>
+                  <span class="price-unit">per kW installed</span>
+                </div>
+                <div class="svc-card__roi">
+                  <i data-lucide="trending-up" width="14" height="14"></i>
+                  ROI in ~4 years
+                </div>
+              </div>
+
+              <!-- CTA row -->
+              <div class="svc-card__ctas">
+                <a href="../service-details/service-details-service-details-1.html"
+                   class="btn btn-primary svc-card__main-cta"
+                   aria-label="View full details for Residential Solar Installation">
+                  View Details
+                  <i data-lucide="arrow-right" width="15" height="15"></i>
+                </a>
+                <a href="../contact/contact.html#quote-form"
+                   class="btn btn-outline svc-card__quote-cta"
+                   aria-label="Get a free quote for residential solar">
+                  Get Quote
+                </a>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- ══ SERVICE 2: Commercial Solar ══ -->
+          <article
+            class="svc-card"
+            id="commercial"
+            data-category="installation"
+            data-keywords="commercial factory office warehouse ground mount large scale mw kw"
+            role="listitem"
+            data-animate
+            data-animate-delay="2"
+            aria-label="Commercial Solar Installation service">
+
+            <div class="svc-card__accent svc-card__accent--orange"></div>
+
+            <div class="svc-card__img">
+              <img
+                src="s2.jpg"
+                alt="Aerial view of large-scale commercial solar farm with symmetrical rows of panels at sunset"
+                loading="lazy" width="800" height="420" />
+              <div class="svc-card__img-overlay">
+                <span class="badge badge-orange">High ROI</span>
+              </div>
+            </div>
+
+            <div class="svc-card__icon-badge svc-card__icon-badge--orange" aria-hidden="true">
+              <i data-lucide="building-2" width="26" height="26"></i>
+            </div>
+
+            <div class="svc-card__body">
+              <div class="svc-card__meta">
+                <span class="svc-tag">Commercial</span>
+                <span class="svc-tag">Installation</span>
+              </div>
+
+              <h2 class="svc-card__title">Commercial &amp; Industrial</h2>
+
+              <p class="svc-card__desc">
+                High-output solar solutions for factories, offices, hospitals, and
+                warehouses. We design and install rooftop, carport, and ground-mount
+                systems that dramatically cut your operational energy expenditure
+                with payback periods under 4 years.
+              </p>
+
+              <ul class="svc-card__highlights" aria-label="Service highlights">
+                <li>
+                  <i data-lucide="check-circle" width="15" height="15"></i>
+                  Systems from <strong>10 kW to 5 MW</strong>
+                </li>
+                <li>
+                  <i data-lucide="check-circle" width="15" height="15"></i>
+                  Rooftop, carport &amp; ground-mount options
+                </li>
+                <li>
+                  <i data-lucide="check-circle" width="15" height="15"></i>
+                  DISCOM &amp; regulatory approvals handled
+                </li>
+                <li>
+                  <i data-lucide="check-circle" width="15" height="15"></i>
+                  SCADA-based enterprise monitoring
+                </li>
+              </ul>
+
+              <div class="svc-card__pricing">
+                <div class="svc-card__price">
+                  <span class="price-from">Starting from</span>
+                  <strong>₹48,000</strong>
+                  <span class="price-unit">per kW installed</span>
+                </div>
+                <div class="svc-card__roi">
+                  <i data-lucide="trending-up" width="14" height="14"></i>
+                  ROI in ~3.5 years
+                </div>
+              </div>
+
+              <div class="svc-card__ctas">
+                <a href="../service-details/service-details-service-details-2.html"
+                   class="btn btn-primary svc-card__main-cta"
+                   aria-label="View full details for Commercial Solar">
+                  View Details
+                  <i data-lucide="arrow-right" width="15" height="15"></i>
+                </a>
+                <a href="../contact/contact.html#quote-form"
+                   class="btn btn-outline svc-card__quote-cta"
+                   aria-label="Get a free quote for commercial solar">
+                  Get Quote
+                </a>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- ══ SERVICE 3: Battery Storage ══ -->
+          <article
+            class="svc-card"
+            id="battery"
+            data-category="storage"
+            data-keywords="battery storage lifepo4 backup power outage bms inverter"
+            role="listitem"
+            data-animate
+            data-animate-delay="3"
+            aria-label="Solar Battery Storage service">
+
+            <div class="svc-card__accent svc-card__accent--green"></div>
+
+            <div class="svc-card__img">
+              <img
+                src="s3.webp"
+                alt="Advanced battery storage units with glowing energy indicators in a modern clean energy facility"
+                loading="lazy" width="800" height="420" />
+              <div class="svc-card__img-overlay">
+                <span class="badge badge-green">24/7 Backup</span>
+              </div>
+            </div>
+
+            <div class="svc-card__icon-badge svc-card__icon-badge--green" aria-hidden="true">
+              <i data-lucide="battery-charging" width="26" height="26"></i>
+            </div>
+
+            <div class="svc-card__body">
+              <div class="svc-card__meta">
+                <span class="svc-tag">Storage</span>
+                <span class="svc-tag">Backup</span>
+              </div>
+
+              <h2 class="svc-card__title">Solar Battery Storage</h2>
+
+              <p class="svc-card__desc">
+                Store surplus solar energy and stay powered through grid outages —
+                day or night. Our LiFePO4 battery systems with intelligent BMS
+                give you complete energy independence, maximising self-consumption
+                and eliminating time-of-use rate peaks.
+              </p>
+
+              <ul class="svc-card__highlights" aria-label="Service highlights">
+                <li>
+                  <i data-lucide="check-circle" width="15" height="15"></i>
+                  LiFePO4 chemistry — <strong>10+ yr lifespan</strong>
+                </li>
+                <li>
+                  <i data-lucide="check-circle" width="15" height="15"></i>
+                  Smart BMS with real-time app control
+                </li>
+                <li>
+                  <i data-lucide="check-circle" width="15" height="15"></i>
+                  Seamless solar + grid integration
+                </li>
+                <li>
+                  <i data-lucide="check-circle" width="15" height="15"></i>
+                  Scalable capacity: 5 kWh to 100 kWh+
+                </li>
+              </ul>
+
+              <div class="svc-card__pricing">
+                <div class="svc-card__price">
+                  <span class="price-from">Starting from</span>
+                  <strong>₹40,000</strong>
+                  <span class="price-unit">per kWh capacity</span>
+                </div>
+                <div class="svc-card__roi">
+                  <i data-lucide="zap" width="14" height="14"></i>
+                  Zero outage downtime
+                </div>
+              </div>
+
+              <div class="svc-card__ctas">
+                <a href="../service-details/service-details-battery.html"
+                   class="btn btn-primary svc-card__main-cta"
+                   aria-label="View full details for Battery Storage">
+                  View Details
+                  <i data-lucide="arrow-right" width="15" height="15"></i>
+                </a>
+                <a href="../contact/contact.html#quote-form"
+                   class="btn btn-outline svc-card__quote-cta"
+                   aria-label="Get a free quote for battery storage">
+                  Get Quote
+                </a>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- ══ SERVICE 4: EV Charging Setup ══ -->
+          <article
+            class="svc-card"
+            id="ev-charging"
+            data-category="installation"
+            data-keywords="ev charging electric car vehicle home charger solar"
+            role="listitem"
+            data-animate
+            data-animate-delay="4"
+            aria-label="EV Charging Setup service">
+
+            <div class="svc-card__accent svc-card__accent--yellow"></div>
+
+            <div class="svc-card__img">
+              <img
+                src="s4.webp"
+                alt="Electric vehicle charging at home with rooftop solar panels visible in bright daylight"
+                loading="lazy" width="800" height="420" />
+              <div class="svc-card__img-overlay">
+                <span class="badge badge-yellow">Drive Free</span>
+              </div>
+            </div>
+
+            <div class="svc-card__icon-badge svc-card__icon-badge--yellow" aria-hidden="true">
+              <i data-lucide="car" width="26" height="26"></i>
+            </div>
+
+            <div class="svc-card__body">
+              <div class="svc-card__meta">
+                <span class="svc-tag">EV</span>
+                <span class="svc-tag">Installation</span>
+              </div>
+
+              <h2 class="svc-card__title">EV Charging Setup</h2>
+
+              <p class="svc-card__desc">
+                Pair your electric vehicle with rooftop solar and charge your car
+                for virtually nothing. We install AC home chargers and DC fast
+                chargers integrated directly with your solar system, giving you
+                the ultimate green driving experience.
+              </p>
+
+              <ul class="svc-card__highlights" aria-label="Service highlights">
+                <li>
+                  <i data-lucide="check-circle" width="15" height="15"></i>
+                  AC (3.3–22 kW) &amp; DC fast chargers
+                </li>
+                <li>
+                  <i data-lucide="check-circle" width="15" height="15"></i>
+                  Solar-priority smart charging logic
+                </li>
+                <li>
+                  <i data-lucide="check-circle" width="15" height="15"></i>
+                  Compatible with all EV brands
+                </li>
+                <li>
+                  <i data-lucide="check-circle" width="15" height="15"></i>
+                  App scheduling &amp; energy tracking
+                </li>
+              </ul>
+
+              <div class="svc-card__pricing">
+                <div class="svc-card__price">
+                  <span class="price-from">Starting from</span>
+                  <strong>₹35,000</strong>
+                  <span class="price-unit">charger + installation</span>
+                </div>
+                <div class="svc-card__roi">
+                  <i data-lucide="fuel" width="14" height="14"></i>
+                  Drive for ₹0.80/km
+                </div>
+              </div>
+
+              <div class="svc-card__ctas">
+                <a href="../service-details/service-details-ev.html"
+                   class="btn btn-primary svc-card__main-cta"
+                   aria-label="View full details for EV Charging Setup">
+                  View Details
+                  <i data-lucide="arrow-right" width="15" height="15"></i>
+                </a>
+                <a href="../contact/contact.html#quote-form"
+                   class="btn btn-outline svc-card__quote-cta"
+                   aria-label="Get a free quote for EV charging">
+                  Get Quote
+                </a>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- ══ SERVICE 5: Maintenance & AMC ══ -->
+          <article
+            class="svc-card"
+            id="maintenance"
+            data-category="support"
+            data-keywords="maintenance repair amc annual contract cleaning inspection support"
+            role="listitem"
+            data-animate
+            data-animate-delay="5"
+            aria-label="Solar Maintenance and AMC service">
+
+            <div class="svc-card__accent svc-card__accent--purple"></div>
+
+            <div class="svc-card__img">
+              <img
+                src="s5.jpg"
+                alt="Professional solar technicians in safety gear performing maintenance on rooftop solar panels"
+                loading="lazy" width="800" height="420" />
+              <div class="svc-card__img-overlay">
+                <span class="badge badge-primary">AMC Plans</span>
+              </div>
+            </div>
+
+            <div class="svc-card__icon-badge svc-card__icon-badge--purple" aria-hidden="true">
+              <i data-lucide="wrench" width="26" height="26"></i>
+            </div>
+
+            <div class="svc-card__body">
+              <div class="svc-card__meta">
+                <span class="svc-tag">Maintenance</span>
+                <span class="svc-tag">Support</span>
+              </div>
+
+              <h2 class="svc-card__title">Maintenance &amp; AMC</h2>
+
+              <p class="svc-card__desc">
+                Protect your solar investment with our Annual Maintenance Contracts.
+                Our technicians perform preventive cleaning, electrical checks, inverter
+                diagnostics, and remote health monitoring to keep your system delivering
+                maximum power output year after year.
+              </p>
+
+              <ul class="svc-card__highlights" aria-label="Service highlights">
+                <li>
+                  <i data-lucide="check-circle" width="15" height="15"></i>
+                  Quarterly on-site inspections
+                </li>
+                <li>
+                  <i data-lucide="check-circle" width="15" height="15"></i>
+                  Remote SCADA monitoring 24/7
+                </li>
+                <li>
+                  <i data-lucide="check-circle" width="15" height="15"></i>
+                  Panel cleaning &amp; de-soiling
+                </li>
+                <li>
+                  <i data-lucide="check-circle" width="15" height="15"></i>
+                  Emergency response within 24 hrs
+                </li>
+              </ul>
+
+              <div class="svc-card__pricing">
+                <div class="svc-card__price">
+                  <span class="price-from">AMC starting from</span>
+                  <strong>₹4,000</strong>
+                  <span class="price-unit">per year / kW</span>
+                </div>
+                <div class="svc-card__roi">
+                  <i data-lucide="shield-check" width="14" height="14"></i>
+                  Extends system life by 5 yrs
+                </div>
+              </div>
+
+              <div class="svc-card__ctas">
+                <a href="../service-details/service-details-service-details-4.html"
+                   class="btn btn-primary svc-card__main-cta"
+                   aria-label="View full details for Maintenance and AMC">
+                  View Details
+                  <i data-lucide="arrow-right" width="15" height="15"></i>
+                </a>
+                <a href="../contact/contact.html#quote-form"
+                   class="btn btn-outline svc-card__quote-cta"
+                   aria-label="Get a free AMC quote">
+                  Get Quote
+                </a>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- ══ SERVICE 6: Free Solar Consultation ══ -->
+          <article
+            class="svc-card"
+            id="consultation"
+            data-category="support"
+            data-keywords="consultation survey site visit free audit assessment advice"
+            role="listitem"
+            data-animate
+            data-animate-delay="6"
+            aria-label="Free Solar Consultation service">
+
+            <div class="svc-card__accent svc-card__accent--teal"></div>
+
+            <div class="svc-card__img">
+              <img
+                src="s6.jpg"
+                alt="Diverse team of solar engineers and designers discussing a solar energy project in a modern office"
+                loading="lazy" width="800" height="420" />
+              <div class="svc-card__img-overlay">
+                <span class="badge badge-green">100% Free</span>
+              </div>
+            </div>
+
+            <div class="svc-card__icon-badge svc-card__icon-badge--teal" aria-hidden="true">
+              <i data-lucide="message-circle" width="26" height="26"></i>
+            </div>
+
+            <div class="svc-card__body">
+              <div class="svc-card__meta">
+                <span class="svc-tag">Consultation</span>
+                <span class="svc-tag">Support</span>
+              </div>
+
+              <h2 class="svc-card__title">Free Solar Consultation</h2>
+
+              <p class="svc-card__desc">
+                Not sure where to start? Our solar experts visit your site at zero cost,
+                assess your roof, shading, energy usage patterns, and local grid conditions —
+                then deliver a fully personalised feasibility report with ROI projections,
+                subsidy eligibility, and a custom system design.
+              </p>
+
+              <ul class="svc-card__highlights" aria-label="Service highlights">
+                <li>
+                  <i data-lucide="check-circle" width="15" height="15"></i>
+                  On-site roof &amp; shade analysis
+                </li>
+                <li>
+                  <i data-lucide="check-circle" width="15" height="15"></i>
+                  Custom feasibility report
+                </li>
+                <li>
+                  <i data-lucide="check-circle" width="15" height="15"></i>
+                  Subsidy &amp; financing guidance
+                </li>
+                <li>
+                  <i data-lucide="check-circle" width="15" height="15"></i>
+                  No obligation, no pressure
+                </li>
+              </ul>
+
+              <div class="svc-card__pricing">
+                <div class="svc-card__price">
+                  <span class="price-from">Completely</span>
+                  <strong class="price-free">FREE</strong>
+                  <span class="price-unit">No hidden charges</span>
+                </div>
+                <div class="svc-card__roi svc-card__roi--teal">
+                  <i data-lucide="calendar-check" width="14" height="14"></i>
+                  Book in 60 seconds
+                </div>
+              </div>
+
+              <div class="svc-card__ctas">
+                <a href="../service-details/service-details-service-details-6.html"
+                   class="btn btn-primary svc-card__main-cta"
+                   aria-label="View full details for Free Solar Consultation">
+                  View Details
+                  <i data-lucide="arrow-right" width="15" height="15"></i>
+                </a>
+                <a href="../contact/contact.html#quote-form"
+                   class="btn btn-cta svc-card__quote-cta"
+                   aria-label="Book your free consultation now">
+                  Book Now
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- /services-grid -->
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         WHY CHOOSE US — HORIZONTAL FEATURE STRIP
+         ══════════════════════════════════════════════════════ -->
+    <section class="why-us section" aria-labelledby="why-us-title">
+      <div class="container">
+
+        <div class="section-title" data-animate>
+          <span class="eyebrow">Why Solar Echos</span>
+          <h2 id="why-us-title">The Solar Echos <span>Difference</span></h2>
+          <p>Every service we offer is backed by our commitment to quality, transparency, and long-term support.</p>
+        </div>
+
+        <div class="why-us__grid" role="list">
+
+          <div class="why-us__item" role="listitem" data-animate data-animate-delay="1">
+            <div class="why-us__icon">
+              <i data-lucide="shield-check" width="24" height="24"></i>
+            </div>
+            <h3>MNRE Certified</h3>
+            <p>All installations meet Ministry of New &amp; Renewable Energy standards with full warranty coverage.</p>
+          </div>
+
+          <div class="why-us__item" role="listitem" data-animate data-animate-delay="2">
+            <div class="why-us__icon why-us__icon--orange">
+              <i data-lucide="clock" width="24" height="24"></i>
+            </div>
+            <h3>48-Hour Install</h3>
+            <p>Most residential systems are fully commissioned within 48 hours of work order sign-off.</p>
+          </div>
+
+          <div class="why-us__item" role="listitem" data-animate data-animate-delay="3">
+            <div class="why-us__icon why-us__icon--green">
+              <i data-lucide="indian-rupee" width="24" height="24"></i>
+            </div>
+            <h3>0% EMI Financing</h3>
+            <p>Go solar with zero upfront cost. Flexible EMI plans from 12 to 84 months available.</p>
+          </div>
+
+          <div class="why-us__item" role="listitem" data-animate data-animate-delay="4">
+            <div class="why-us__icon why-us__icon--yellow">
+              <i data-lucide="headphones" width="24" height="24"></i>
+            </div>
+            <h3>Lifetime Support</h3>
+            <p>Our customer success team is reachable 24/7 for monitoring alerts, queries, and urgent repairs.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         PROCESS TIMELINE (compact)
+         ══════════════════════════════════════════════════════ -->
+    <section class="process section" aria-labelledby="process-title">
+      <div class="container">
+
+        <div class="section-title" data-animate>
+          <span class="eyebrow">How We Work</span>
+          <h2 id="process-title">Your Journey From <span>Quote to Kilowatts</span></h2>
+        </div>
+
+        <div class="process__timeline" role="list">
+
+          <div class="process__step" role="listitem" data-animate data-animate-delay="1">
+            <div class="process__step-num" aria-hidden="true">1</div>
+            <div class="process__step-body">
+              <h3>Book Free Consultation</h3>
+              <p>Schedule online or call us. Our expert visits your site within 48 hours — zero cost.</p>
+            </div>
+          </div>
+
+          <div class="process__line" aria-hidden="true"></div>
+
+          <div class="process__step" role="listitem" data-animate data-animate-delay="2">
+            <div class="process__step-num" aria-hidden="true">2</div>
+            <div class="process__step-body">
+              <h3>Custom Design &amp; Quote</h3>
+              <p>We prepare a tailored system design with exact savings projections and a transparent fixed-price quote.</p>
+            </div>
+          </div>
+
+          <div class="process__line" aria-hidden="true"></div>
+
+          <div class="process__step" role="listitem" data-animate data-animate-delay="3">
+            <div class="process__step-num" aria-hidden="true">3</div>
+            <div class="process__step-body">
+              <h3>Permits &amp; Approvals</h3>
+              <p>We handle all DISCOM paperwork, subsidy applications, and municipal permissions on your behalf.</p>
+            </div>
+          </div>
+
+          <div class="process__line" aria-hidden="true"></div>
+
+          <div class="process__step" role="listitem" data-animate data-animate-delay="4">
+            <div class="process__step-num" aria-hidden="true">4</div>
+            <div class="process__step-body">
+              <h3>Professional Installation</h3>
+              <p>Certified technicians install your system cleanly and safely, typically within 1–2 days.</p>
+            </div>
+          </div>
+
+          <div class="process__line" aria-hidden="true"></div>
+
+          <div class="process__step" role="listitem" data-animate data-animate-delay="5">
+            <div class="process__step-num" aria-hidden="true">5</div>
+            <div class="process__step-body">
+              <h3>Go Live &amp; Save</h3>
+              <p>System is commissioned, app is set up, and you start saving from the very first sunrise.</p>
+            </div>
+          </div>
+
+        </div><!-- /process__timeline -->
+
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         BOTTOM CTA BANNER
+         ══════════════════════════════════════════════════════ -->
+    <section class="svc-cta-banner" aria-label="Call to action – get a free solar quote">
+      <div class="svc-cta-banner__bg" aria-hidden="true"></div>
+      <div class="container svc-cta-banner__inner" data-animate>
+        <div class="svc-cta-banner__text">
+          <h2>Ready to Harness the Sun?</h2>
+          <p>Join 12,000+ happy customers who made the switch. Get your free site survey and personalised quote today — no obligation, no pressure.</p>
+          <div class="svc-cta-banner__ctas">
+            <a href="../contact/contact.html#quote-form" class="btn btn-cta btn-lg"
+               aria-label="Get a free solar quote">
+              <i data-lucide="send" width="18" height="18"></i>
+              Get Free Quote
+            </a>
+            <a href="tel:+91 (987) 654-3210" class="btn btn-lg svc-cta-banner__call"
+               aria-label="Call Solar Echos now">
+              <i data-lucide="phone" width="18" height="18"></i>
+              +91 (987) 654-3210
+            </a>
+          </div>
+        </div>
+        <div class="svc-cta-banner__visual" aria-hidden="true">
+          <!-- Decorative energy ring animation -->
+          <div class="energy-ring energy-ring--1"></div>
+          <div class="energy-ring energy-ring--2"></div>
+          <div class="energy-ring energy-ring--3"></div>
+          <div class="energy-ring__sun">
+            <i data-lucide="sun" width="52" height="52"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer mount -->
+  <footer class="site-footer" role="contentinfo" aria-label="Site footer">
+  <div class="container">
+
+    <div class="footer__main">
+
+      <!-- Brand column -->
+      <div class="footer__brand">
+        <a href="../home-1/home.html" class="navbar__logo" aria-label="Solar Echos home">
+          <div class="navbar__logo-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+            </svg>
+          </div>
+          <span class="navbar__logo-text">Solar<span style="color:var(--color-accent-orange)">Echos</span></span>
+        </a>
+
+        <p>India's most trusted solar energy partner. We design, install, and maintain premium solar systems for homes and businesses across 18 states.</p>
+
+        <div class="footer__certbadges" aria-label="Certifications">
+          <span class="footer__certbadge">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            MNRE Certified
+          </span>
+          <span class="footer__certbadge">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+            ISO 9001
+          </span>
+        </div>
+
+        <div class="footer__social" style="margin-top:var(--space-2);" aria-label="Social media links">
+          <a href="#" class="footer__social-link" aria-label="Follow on Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Follow on Twitter / X">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Follow on LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Subscribe on YouTube">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Follow on Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
+        </div>
+      </div><!-- /brand -->
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="footer__col-title">Quick Links</h3>
+        <ul class="footer__links">
+          <li><a href="../home-1/home.html">Home</a></li>
+          <li><a href="../about/about.html">About Us</a></li>
+          <li><a href="../services/services.html">Services</a></li>
+          <li><a href="../pricing/pricing.html">Pricing</a></li>
+          <li><a href="../blogs/blogs.html">Blog</a></li>
+          <li><a href="../contact/contact.html">Contact</a></li>
+          <li><a href="../admin-dashboard/dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <h3 class="footer__col-title">Our Services</h3>
+        <ul class="footer__links">
+          <li><a href="../service-details/service-details-1.html">Residential Solar</a></li>
+          <li><a href="../service-details/service-details-2.html">Commercial Solar</a></li>
+          <li><a href="../service-details/service-details-3.html">Battery Storage</a></li>
+          <li><a href="../service-details/service-details-4.html">EV Charging Setup</a></li>
+          <li><a href="../service-details/service-details-5.html">Solar Maintenance</a></li>
+          <li><a href="../service-details/service-details-6.html">Free Consultation</a></li>
+                 <a href="../404-page/404.html">FAQ</a>
+        <a href="../coming-soon/coming-soon.html">New Features</a>
+        </ul>
+      </div>
+
+      <!-- Newsletter + Contact -->
+      <div class="footer__newsletter">
+        <h3 class="footer__col-title">Stay Updated</h3>
+        <p>Get solar tips, subsidy alerts, and exclusive offers delivered to your inbox.</p>
+
+        <form class="footer__newsletter-form" onsubmit="handleNewsletterSubmit(event)" novalidate aria-label="Newsletter signup">
+          <input
+            type="email"
+            class="footer__newsletter-input"
+            placeholder="Your email address"
+            aria-label="Email address for newsletter"
+            required />
+          <button type="submit" class="btn btn-primary btn-sm" aria-label="Subscribe to newsletter">
+            Subscribe
+          </button>
+        </form>
+
+        <div style="margin-top:var(--space-3);">
+          <h4 style="font-size:var(--text-sm);color:white;margin-bottom:12px;font-family:var(--font-heading);">Contact Us</h4>
+          <ul class="footer__links">
+            <li>
+              <a href="tel:+91 (987) 654-3210" aria-label="Call us">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.39 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l1.97-1.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                +91 (987) 654-3210 (Toll Free)
+              </a>
+            </li>
+            <li>
+              <a href="mailto:hello@solarechos.in" aria-label="Email us">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                hello@solarechos.in
+              </a>
+            </li>
+            <li>
+              <a href="../contact/contact.html" aria-label="Office location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                Solar Echos HQ, Mumbai, MH
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div><!-- /footer__main -->
+
+    <!-- Bottom bar -->
+    <div class="footer__bottom">
+      <span>© <span id="footer-year"></span> Solar Echos.  All rights reserved.</span>
+      <div class="footer__bottom-links">
+        <a href="../404-page/404.html">Privacy Policy</a>
+        <a href="../coming-soon/coming-soon.html">Terms of Service</a>
+        <a href="../404-page/404.html">Sitemap</a>
+      </div>
+    </div>
+
+  </div><!-- /container -->
+</footer>
+
+  <!-- Back to top -->
+  <button id="back-to-top" aria-label="Scroll back to top">
+    <i data-lucide="arrow-up" width="20" height="20"></i>
+  </button>
+
+  <!-- Toast container -->
+  <div id="toast-container" role="region" aria-live="polite" aria-label="Notifications"></div>
+
+  <!-- Global JS -->
+    <!-- Global JS -->
+  <script src="../global-js/navbar.js"></script>
+<script src="../global-js/footer.js"></script>
+  <script src="../global-js/global.js"></script>
+
+  <!-- Page JS -->
+  <script src="services.js"></script>
+
+  <!-- Lucide init -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) lucide.createIcons();
+    });
+  </script>
+</body>
+</html>

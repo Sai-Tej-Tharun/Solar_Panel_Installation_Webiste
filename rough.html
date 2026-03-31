@@ -1,0 +1,61 @@
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 3 — LIVE GRAPH PREVIEW (interactive)
+         ══════════════════════════════════════════════════════ -->
+    <section class="h2-graph-section section" id="live-graph" aria-labelledby="graph-title">
+      <div class="container">
+        <div class="h2-graph__wrapper">
+
+          <!-- Left: copy -->
+          <div class="h2-graph__text" data-animate>
+            <div class="section-title text-left" style="margin-inline:0;">
+              <span class="eyebrow">Energy Insights</span>
+              <h2 id="graph-title">Visualise Your <span>Daily Production</span></h2>
+              <p>Switch between hourly, weekly, and monthly views. Overlay weather data and compare against the same period last year.</p>
+            </div>
+
+            <div class="h2-graph__view-btns" role="group" aria-label="Chart time range selector">
+              <button class="h2-view-btn active" data-range="day">Today</button>
+              <button class="h2-view-btn" data-range="week">This Week</button>
+              <button class="h2-view-btn" data-range="month">This Month</button>
+            </div>
+
+            <!-- Mini KPI list -->
+            <div class="h2-graph__kpis">
+              <div class="h2-kpi" data-animate data-animate-delay="1">
+                <div class="h2-kpi__icon">
+                  <i data-lucide="sun" width="18" height="18"></i>
+                </div>
+                <div>
+                  <strong id="kpi-generated">36.2 kWh</strong>
+                  <span>Generated Today</span>
+                </div>
+              </div>
+              <div class="h2-kpi" data-animate data-animate-delay="2">
+                <div class="h2-kpi__icon h2-kpi__icon--green">
+                  <i data-lucide="plug-zap" width="18" height="18"></i>
+                </div>
+                <div>
+                  <strong id="kpi-consumed">28.4 kWh</strong>
+                  <span>Consumed</span>
+                </div>
+              </div>
+              <div class="h2-kpi" data-animate data-animate-delay="3">
+                <div class="h2-kpi__icon h2-kpi__icon--yellow">
+                  <i data-lucide="upload-cloud" width="18" height="18"></i>
+                </div>
+                <div>
+                  <strong id="kpi-exported">7.8 kWh</strong>
+                  <span>Exported to Grid</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: full chart -->
+          <div class="h2-graph__chart-panel" data-animate data-animate-delay="2">
+            <canvas id="main-energy-chart" aria-label="Daily energy production chart"></canvas>
+          </div>
+
+        </div>
+      </div>
+    </section>
